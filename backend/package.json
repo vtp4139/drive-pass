@@ -1,0 +1,25 @@
+{
+  "name": "drive-pass-backend",
+  "version": "1.0.0",
+  "description": "Backend API cho ứng dụng học lý thuyết lái xe",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "db:setup": "node scripts/setup-database.js",
+    "db:import": "node scripts/import-questions.js",
+    "db:test": "node scripts/test-connection.js"
+  },
+  "keywords": ["driving", "license", "exam", "api"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
