@@ -1,12 +1,33 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useStats } from '../../store/StatsContext';
+import { useAuth } from '../../store/AuthContext';
 import { useTimer } from '../../hooks/useTimer';
 import { useToast } from '../../components/Toast/ToastProvider';
+import { ExamHistoryService } from '../../services';
 import { EXAM_CONFIG } from '../../config/exam.config';
 import { QuestionCard } from './components/QuestionCard';
 import { QuizHeader } from './components/QuizHeader';
 import { QuizNavigation } from './components/QuizNavigation';
 import { ResultScreen } from './components/ResultScreen';
+
+function buildExamResult(questions, answers, mode, timer) {
+    const correct = questions.filter((q) => answers[q.id] === q.correct).length;
+    const answered = Object.keys(answers).length;
+    const criticalFail = questions.some(
+        (q) => q.isCritical && answers[q.id] !== undefined && answers[q.id] !== q.correct
+    );
+    const accuracy = Math.round((correct / questions.length) * 100);
+
+    return {
+        correct,
+        incorrect: answered - correct,
+        total: questions.length,
+        accuracy,
+        timeSeconds: mode === 'exam' ? EXAM_CONFIG.examDuration * 60 - timer.remaining : timer.elapsed,
+        criticalFail,
+        isExam: mode === 'exam',
+    };
+}
 
 /**
  * Quiz cho cả mode practice và exam.
@@ -18,7 +39,9 @@ export function QuizPage({ mode, questions, startIndex = 0, onExit }) {
     const [finished, setFinished] = useState(false);
 
     const { recordAnswer, advancePracticeProgress, recordExamScore } = useStats();
+    const { user } = useAuth();
     const toast = useToast();
+    const hasFinishedRef = useRef(false);
 
     const timer = useTimer(
         mode === 'exam'
@@ -56,17 +79,45 @@ export function QuizPage({ mode, questions, startIndex = 0, onExit }) {
 
     const handleFinish = useCallback(
         (timeUp = false) => {
+            if (hasFinishedRef.current) return;
+            hasFinishedRef.current = true;
+
             timer.stop();
             if (timeUp) toast.error('⏰ Hết giờ! Bài thi đã kết thúc.');
 
             if (mode === 'exam') {
-                const correct = questions.filter((q) => answers[q.id] === q.correct).length;
-                const percent = Math.round((correct / questions.length) * 100);
-                recordExamScore(percent);
+                const examResult = buildExamResult(questions, answers, mode, timer);
+                recordExamScore(examResult.accuracy);
+
+                if (user) {
+                    ExamHistoryService.save(user.id, {
+                        examType: 'mock_exam',
+                        score: examResult.accuracy,
+                        totalQuestions: examResult.total,
+                        correctAnswers: examResult.correct,
+                        timeTaken: examResult.timeSeconds,
+                        answers: {
+                            selectedAnswers: answers,
+                            questionIds: questions.map((question) => question.id),
+                            questions: questions.map((question) => ({
+                                id: question.id,
+                                question: question.question,
+                                answers: question.answers,
+                                correct: question.correct,
+                                explanation: question.explanation,
+                                isCritical: question.isCritical,
+                                image: question.image || null,
+                            })),
+                        },
+                    }).catch(() => {
+                        toast.error('Không lưu được lịch sử thi lên server.');
+                    });
+                }
             }
+
             setFinished(true);
         },
-        [timer, toast, mode, questions, answers, recordExamScore]
+        [timer, toast, mode, questions, answers, recordExamScore, user]
     );
 
     const handleNext = () => {
@@ -93,7 +144,6 @@ export function QuizPage({ mode, questions, startIndex = 0, onExit }) {
         }
     };
 
-    // Keyboard shortcuts
     useEffect(() => {
         const handler = (e) => {
             if (finished) return;
@@ -145,23 +195,8 @@ export function QuizPage({ mode, questions, startIndex = 0, onExit }) {
 
     const result = useMemo(() => {
         if (!finished) return null;
-        const correct = questions.filter((q) => answers[q.id] === q.correct).length;
-        const answered = Object.keys(answers).length;
-        const criticalFail = questions.some(
-            (q) => q.isCritical && answers[q.id] !== undefined && answers[q.id] !== q.correct
-        );
-        const accuracy = Math.round((correct / questions.length) * 100);
-
-        return {
-            correct,
-            incorrect: answered - correct,
-            total: questions.length,
-            accuracy,
-            timeSeconds: mode === 'exam' ? EXAM_CONFIG.examDuration * 60 - timer.remaining : timer.elapsed,
-            criticalFail,
-            isExam: mode === 'exam',
-        };
-    }, [finished, questions, answers, mode, timer.remaining, timer.elapsed]);
+        return buildExamResult(questions, answers, mode, timer);
+    }, [finished, questions, answers, mode, timer]);
 
     if (finished && result) {
         return <ResultScreen result={result} onBack={onExit} />;

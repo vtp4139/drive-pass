@@ -4,6 +4,7 @@ import { useStats } from './store/StatsContext';
 import { useAuth } from './store/AuthContext';
 import { useToast } from './components/Toast/ToastProvider';
 import { AuthPanel } from './features/home/components/AuthPanel';
+import { ExamHistoryPage } from './features/history/ExamHistoryPage';
 import { HomePage } from './features/home/HomePage';
 import { QuizPage } from './features/quiz/QuizPage';
 import { EXAM_CONFIG } from './config/exam.config';
@@ -15,7 +16,7 @@ export function App() {
     const { user } = useAuth();
     const toast = useToast();
 
-    const [mode, setMode] = useState(null);
+    const [mode, setMode] = useState(null); // null | 'practice' | 'exam' | 'history'
     const [quizQuestions, setQuizQuestions] = useState([]);
     const [startIndex, setStartIndex] = useState(0);
 
@@ -92,11 +93,12 @@ export function App() {
                     <HomePage
                         onStartPractice={handleStartPractice}
                         onStartExam={handleStartExam}
+                        onViewHistory={() => setMode('history')}
                         totalQuestions={totalQuestions || EXAM_CONFIG.totalQuestions}
                     />
                 )}
 
-                {mode && (
+                {(mode === 'practice' || mode === 'exam') && (
                     <QuizPage
                         mode={mode}
                         questions={quizQuestions}
@@ -104,6 +106,8 @@ export function App() {
                         onExit={handleExit}
                     />
                 )}
+
+                {mode === 'history' && <ExamHistoryPage questions={questions} onBack={handleExit} />}
             </main>
         </div>
     );
