@@ -5,7 +5,7 @@ import { useStats } from '../../store/StatsContext';
 
 export function HomePage({ onStartPractice, onStartExam, onViewHistory, totalQuestions }) {
     const { stats } = useStats();
-    const feedbackEmail = 'tuanphuong4139@gamil.com';
+    const feedbackEmail = 'tuanphuong4139@gmail.com';
 
     const derived = useMemo(() => {
         const totalStudied = stats.totalStudied || 0;
