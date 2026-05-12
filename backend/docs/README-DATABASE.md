@@ -20,7 +20,7 @@ Truy cập Supabase Dashboard và chạy file `init-database.sql` trong SQL Edit
 
 Hoặc sử dụng psql:
 ```bash
-psql "postgresql://postgres:Votuanphuong@4139@db.vliejziranmnbxgiguvy.supabase.co:5432/postgres" -f init-database.sql
+psql "postgresql://postgres:[YOUR_DB_PASSWORD]@db.[YOUR_PROJECT_REF].supabase.co:5432/postgres" -f init-database.sql
 ```
 
 ### 3. Chạy server
@@ -89,7 +89,7 @@ POST /api/stats/:userId         - Lưu thống kê người dùng
 
 File `.env` chứa thông tin kết nối:
 ```
-DATABASE_URL=postgresql://postgres:Votuanphuong@4139@db.vliejziranmnbxgiguvy.supabase.co:5432/postgres
+DATABASE_URL=postgresql://postgres:[YOUR_DB_PASSWORD]@db.[YOUR_PROJECT_REF].supabase.co:5432/postgres
 PORT=3000
 ```
 

@@ -8,7 +8,7 @@
 3. Đăng nhập vào tài khoản
 
 ### Bước 2: Chọn Project
-- Chọn project có database: `db.vliejziranmnbxgiguvy.supabase.co`
+- Chọn project database của bạn
 
 ### Bước 3: Mở SQL Editor
 1. Click vào **SQL Editor** ở menu bên trái

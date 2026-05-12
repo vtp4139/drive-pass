@@ -5,7 +5,7 @@
 ### Bước 1: Truy cập Supabase Dashboard
 1. Mở trình duyệt và truy cập: https://supabase.com
 2. Đăng nhập vào tài khoản của bạn
-3. Chọn project có database: `db.vliejziranmnbxgiguvy.supabase.co`
+3. Chọn project database của bạn
 
 ### Bước 2: Mở SQL Editor
 1. Trong dashboard, click vào **SQL Editor** ở menu bên trái
@@ -37,7 +37,7 @@ Sau khi chạy xong, bạn sẽ thấy:
 Nếu bạn có psql installed:
 
 ```bash
-psql "postgresql://postgres:Votuanphuong@4139@db.vliejziranmnbxgiguvy.supabase.co:5432/postgres" -f init-database.sql
+psql "postgresql://postgres:[YOUR_DB_PASSWORD]@db.[YOUR_PROJECT_REF].supabase.co:5432/postgres" -f init-database.sql
 ```
 
 ---
@@ -46,11 +46,11 @@ psql "postgresql://postgres:Votuanphuong@4139@db.vliejziranmnbxgiguvy.supabase.c
 
 1. Mở pgAdmin
 2. Tạo connection mới với thông tin:
-   - Host: `db.vliejziranmnbxgiguvy.supabase.co`
+   - Host: `db.[YOUR_PROJECT_REF].supabase.co`
    - Port: `5432`
    - Database: `postgres`
    - Username: `postgres`
-   - Password: `Votuanphuong@4139`
+   - Password: `[YOUR_DB_PASSWORD]`
    - SSL Mode: `require`
 3. Mở Query Tool
 4. Copy nội dung file `init-database.sql` và chạy
@@ -74,16 +74,16 @@ Nếu gặp lỗi `ENOTFOUND` khi chạy từ Node.js:
 4. Tắt VPN nếu đang dùng
 5. Thử ping hostname:
    ```bash
-   ping db.vliejziranmnbxgiguvy.supabase.co
+   ping db.[YOUR_PROJECT_REF].supabase.co
    ```
 
 ### Kiểm tra kết nối:
 ```bash
 # Test với curl
-curl https://db.vliejziranmnbxgiguvy.supabase.co
+curl https://db.[YOUR_PROJECT_REF].supabase.co
 
 # Test với telnet
-telnet db.vliejziranmnbxgiguvy.supabase.co 5432
+telnet db.[YOUR_PROJECT_REF].supabase.co 5432
 ```
 
 ---
