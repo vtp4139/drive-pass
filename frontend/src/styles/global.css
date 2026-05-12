@@ -74,6 +74,15 @@ body {
 .stat-item { display: flex; flex-direction: column; align-items: flex-end; }
 .stat-label { font-size: 12px; color: var(--text-muted); font-weight: 500; }
 .stat-value { font-size: 16px; font-weight: 700; color: var(--primary); }
+.header-auth {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header-auth-btn {
+    min-width: 110px;
+    justify-content: center;
+}
 
 .main-content { flex: 1; padding-bottom: 40px; }
 
@@ -91,25 +100,95 @@ body {
 .welcome-section h2 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
 .welcome-section p { font-size: 16px; color: var(--text-secondary); }
 
-.auth-panel {
-    background: linear-gradient(135deg, #FFFFFF, #F4F7FF);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-xl);
+.auth-subtitle { font-size: 14px; color: var(--text-secondary); }
+.auth-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 24, 39, 0.56);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 24px;
-    box-shadow: var(--shadow-md);
-    margin-bottom: 28px;
+    z-index: 1100;
+}
+.auth-modal {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    background: linear-gradient(180deg, #FFFFFF, #F8FAFF);
+    border-radius: 28px;
+    box-shadow: var(--shadow-xl);
+    padding: 28px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
 }
-.auth-panel-logged-in {
-    flex-direction: row;
+.auth-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.auth-modal-close:hover {
+    background: #E9EEF9;
+    color: var(--text-primary);
+}
+.auth-modal-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-right: 32px;
+}
+.auth-modal-kicker {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+.auth-modal-copy h3 {
+    font-size: 28px;
+    line-height: 1.2;
+}
+.account-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    border-radius: var(--radius-lg);
+    background: #F3F6FD;
+    border: 1px solid #DCE5F5;
+}
+.account-summary-row {
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 16px;
 }
-.auth-copy { display: flex; flex-direction: column; gap: 4px; }
-.auth-title { font-size: 18px; font-weight: 700; }
-.auth-subtitle { font-size: 14px; color: var(--text-secondary); }
+.account-summary-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+.account-summary-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+.account-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
 .auth-switch {
     display: inline-flex;
     gap: 8px;
@@ -139,6 +218,9 @@ body {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
     gap: 12px;
     align-items: center;
+}
+.auth-form-modal {
+    grid-template-columns: 1fr;
 }
 .auth-input {
     width: 100%;
@@ -461,11 +543,11 @@ body {
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .header { padding: 16px 0; margin-bottom: 24px; }
+    .header-stats { gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
     .header-stats { gap: 10px; }
     .stat-item { align-items: flex-start; }
     .logo h1 { font-size: 16px; }
     .welcome-section h2 { font-size: 22px; }
-    .auth-panel-logged-in { flex-direction: column; align-items: flex-start; }
     .auth-form { grid-template-columns: 1fr; }
     .mode-cards { grid-template-columns: 1fr; gap: 16px; }
     .mode-card { padding: 24px; }
@@ -483,6 +565,11 @@ body {
     .container { padding: 0 12px; }
     .header { flex-direction: column; align-items: flex-start; gap: 12px; }
     .header-stats { width: 100%; justify-content: space-between; }
+    .header-auth { width: 100%; justify-content: flex-end; }
+    .header-auth-btn { min-width: 0; }
+    .auth-modal { padding: 22px 18px; border-radius: 24px; }
+    .auth-modal-copy h3 { font-size: 24px; }
+    .account-summary-row, .account-actions { flex-direction: column; align-items: flex-start; }
     .stats-grid { grid-template-columns: 1fr 1fr; }
     .stat-card { padding: 14px; }
     .stat-icon { font-size: 24px; }

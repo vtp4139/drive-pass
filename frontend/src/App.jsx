@@ -3,6 +3,7 @@ import { useQuestions } from './hooks/useQuestions';
 import { useStats } from './store/StatsContext';
 import { useAuth } from './store/AuthContext';
 import { useToast } from './components/Toast/ToastProvider';
+import { AuthPanel } from './features/home/components/AuthPanel';
 import { HomePage } from './features/home/HomePage';
 import { QuizPage } from './features/quiz/QuizPage';
 import { EXAM_CONFIG } from './config/exam.config';
@@ -74,6 +75,7 @@ export function App() {
                         <span className="stat-label">Đã học</span>
                         <span className="stat-value">{headerLabel}</span>
                     </div>
+                    <AuthPanel />
                 </div>
             </header>
 
