@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { Button } from '../../components/Button/Button';
 import { EXAM_CONFIG } from '../../config/exam.config';
 import { useStats } from '../../store/StatsContext';
+import { AuthPanel } from './components/AuthPanel';
 
 export function HomePage({ onStartPractice, onStartExam, totalQuestions }) {
     const { stats } = useStats();
@@ -25,6 +26,8 @@ export function HomePage({ onStartPractice, onStartExam, totalQuestions }) {
                 <h2>Chào mừng đến với hệ thống ôn thi GPLX</h2>
                 <p>Bộ đề {EXAM_CONFIG.totalQuestions} câu hỏi chuẩn Bộ Công An</p>
             </div>
+
+            <AuthPanel />
 
             <div className="mode-cards">
                 <div className="mode-card" onClick={onStartPractice} role="button" tabIndex={0}>
