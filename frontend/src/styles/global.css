@@ -154,6 +154,32 @@ body {
 .welcome-section { text-align: center; margin-bottom: 40px; }
 .welcome-section h2 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
 .welcome-section p { font-size: 16px; color: var(--text-secondary); }
+.site-warning {
+    margin-bottom: 28px;
+    padding: 18px 20px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, #FFF8E1, #FFFDF5);
+    border: 1px solid #FCD34D;
+    box-shadow: var(--shadow-sm);
+}
+.site-warning strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #92400E;
+    font-size: 15px;
+}
+.site-warning p {
+    font-size: 14px;
+    color: #78350F;
+}
+.site-warning a {
+    color: #B45309;
+    font-weight: 700;
+    text-decoration: none;
+}
+.site-warning a:hover {
+    text-decoration: underline;
+}
 
 .auth-subtitle { font-size: 14px; color: var(--text-secondary); }
 .auth-modal-backdrop {

@@ -5,6 +5,7 @@ import { useStats } from '../../store/StatsContext';
 
 export function HomePage({ onStartPractice, onStartExam, onViewHistory, totalQuestions }) {
     const { stats } = useStats();
+    const feedbackEmail = 'tuanphuong4139@gamil.com';
 
     const derived = useMemo(() => {
         const totalStudied = stats.totalStudied || 0;
@@ -24,6 +25,13 @@ export function HomePage({ onStartPractice, onStartExam, onViewHistory, totalQue
             <div className="welcome-section">
                 <h2>Chào mừng đến với hệ thống ôn thi GPLX</h2>
                 <p>Bộ đề {EXAM_CONFIG.totalQuestions} câu hỏi chuẩn Bộ Công An</p>
+            </div>
+            <div className="site-warning" role="status" aria-live="polite">
+                <strong>{'\u26A0\uFE0F Website \u0111ang trong qu\u00E1 tr\u00ECnh x\u00E2y d\u1EF1ng'}</strong>
+                <p>
+                    {'Website ch\u01B0a \u0111\u01B0\u1EE3c ho\u00E0n thi\u1EC7n. B\u1EA1n v\u1EABn c\u00F3 th\u1EC3 s\u1EED d\u1EE5ng c\u00E1c ch\u1EE9c n\u0103ng, nh\u01B0ng b\u1ED9 c\u00E2u h\u1ECFi hi\u1EC7n ch\u01B0a \u0111\u1EA7y \u0111\u1EE7. N\u1EBFu c\u00F3 g\u00F3p \u00FD, vui l\u00F2ng g\u1EEDi v\u1EC1 email '}
+                    <a href={`mailto:${feedbackEmail}`}>{feedbackEmail}</a>.
+                </p>
             </div>
             <div className="mode-cards">
                 <div className="mode-card" onClick={onStartPractice} role="button" tabIndex={0}>
