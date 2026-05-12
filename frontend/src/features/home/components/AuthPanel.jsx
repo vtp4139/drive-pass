@@ -4,29 +4,16 @@ import { useToast } from '../../../components/Toast/ToastProvider';
 import { useAuth } from '../../../store/AuthContext';
 
 export function AuthPanel() {
-    const { user, logout } = useAuth();
-    const toast = useToast();
+    const { user } = useAuth();
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <>
             <div className="header-auth">
                 {user ? (
-                    <>
-                        <Button variant="outline" className="header-auth-btn" onClick={() => setIsOpen(true)}>
-                            @{user.username}
-                        </Button>
-                        <Button
-                            variant="primary"
-                            className="header-auth-btn"
-                            onClick={() => {
-                                logout();
-                                toast.success('Đã đăng xuất, app quay về lưu local');
-                            }}
-                        >
-                            Đăng xuất
-                        </Button>
-                    </>
+                    <Button variant="outline" className="header-auth-btn" onClick={() => setIsOpen(true)}>
+                        @{user.username}
+                    </Button>
                 ) : (
                     <Button variant="primary" className="header-auth-btn" onClick={() => setIsOpen(true)}>
                         Đăng nhập
@@ -40,7 +27,7 @@ export function AuthPanel() {
 }
 
 function AuthModal({ onClose }) {
-    const { user, login, register } = useAuth();
+    const { user, login, register, logout } = useAuth();
     const toast = useToast();
     const [mode, setMode] = useState(user ? 'account' : 'login');
     const [username, setUsername] = useState(user?.username || '');
@@ -119,11 +106,18 @@ function AuthModal({ onClose }) {
                     </div>
 
                     <div className="account-actions">
-                        <Button type="button" variant="outline" onClick={() => setMode('login')}>
-                            Đăng nhập tài khoản khác
-                        </Button>
-                        <Button type="button" variant="primary" onClick={onClose}>
-                            Xong
+                        <Button
+                            type="button"
+                            variant="danger"
+                            className="logout-btn"
+                            onClick={() => {
+                                logout();
+                                onClose();
+                                toast.success('Đã đăng xuất, app quay về lưu local');
+                            }}
+                        >
+                            <span aria-hidden="true">↩</span>
+                            Đăng xuất
                         </Button>
                     </div>
                 </div>

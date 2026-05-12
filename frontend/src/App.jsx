@@ -1,7 +1,7 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
+import logoUrl from './assets/drive-pass-logo.svg';
 import { useQuestions } from './hooks/useQuestions';
 import { useStats } from './store/StatsContext';
-import { useAuth } from './store/AuthContext';
 import { useToast } from './components/Toast/ToastProvider';
 import { AuthPanel } from './features/home/components/AuthPanel';
 import { ExamHistoryPage } from './features/history/ExamHistoryPage';
@@ -12,22 +12,14 @@ import { shuffleArray } from './utils/array';
 
 export function App() {
     const { questions, isLoading, error } = useQuestions();
-    const { stats, isHydrating, isRemoteSync } = useStats();
-    const { user } = useAuth();
+    const { stats, isHydrating } = useStats();
     const toast = useToast();
 
-    const [mode, setMode] = useState(null); // null | 'practice' | 'exam' | 'history'
+    const [mode, setMode] = useState(null);
     const [quizQuestions, setQuizQuestions] = useState([]);
     const [startIndex, setStartIndex] = useState(0);
 
-    const totalLearned = stats.practiceProgress || 0;
     const totalQuestions = questions.length;
-
-    const headerLabel = useMemo(() => {
-        return totalQuestions > 0
-            ? `${totalLearned}/${totalQuestions}`
-            : `${totalLearned}/${EXAM_CONFIG.totalQuestions}`;
-    }, [totalLearned, totalQuestions]);
 
     const handleStartPractice = () => {
         if (!questions.length) {
@@ -62,20 +54,13 @@ export function App() {
         <div className="container">
             <header className="header">
                 <div className="logo">
-                    <span style={{ fontSize: 28 }}>🚗</span>
-                    <h1>Lý Thuyết Lái Xe</h1>
+                    <img src={logoUrl} alt="Drive Pass" className="logo-mark" />
+                    <div className="logo-copy">
+                        <span className="logo-eyebrow">Drive Pass</span>
+                        <h1>Ôn luyện lý thuyết lái xe</h1>
+                    </div>
                 </div>
-                <div className="header-stats">
-                    <div className="stat-item">
-                        <span className="stat-label">Lưu tiến độ</span>
-                        <span className="stat-value">
-                            {isRemoteSync && user ? `@${user.username}` : 'Thiết bị này'}
-                        </span>
-                    </div>
-                    <div className="stat-item">
-                        <span className="stat-label">Đã học</span>
-                        <span className="stat-value">{headerLabel}</span>
-                    </div>
+                <div className="header-actions">
                     <AuthPanel />
                 </div>
             </header>
@@ -109,6 +94,20 @@ export function App() {
 
                 {mode === 'history' && <ExamHistoryPage questions={questions} onBack={handleExit} />}
             </main>
+
+            <footer className="site-footer">
+                <div className="site-footer-brand">
+                    <img src={logoUrl} alt="Drive Pass" className="site-footer-logo" />
+                    <div>
+                        <strong>Drive Pass</strong>
+                        <p>Nền tảng ôn luyện lý thuyết lái xe với thi thử, thống kê tiến độ và lịch sử thi.</p>
+                    </div>
+                </div>
+                <div className="site-footer-meta">
+                    <span>Tác giả: Vo Tuan Phuong</span>
+                    <span>© Drive Pass</span>
+                </div>
+            </footer>
         </div>
     );
 }
