@@ -3,7 +3,7 @@ import { Button } from '../../components/Button/Button';
 import { EXAM_CONFIG } from '../../config/exam.config';
 import { useStats } from '../../store/StatsContext';
 
-export function HomePage({ onStartPractice, onStartExam, totalQuestions }) {
+export function HomePage({ onStartPractice, onStartExam, onViewHistory, totalQuestions }) {
     const { stats } = useStats();
 
     const derived = useMemo(() => {
@@ -25,7 +25,6 @@ export function HomePage({ onStartPractice, onStartExam, totalQuestions }) {
                 <h2>Chào mừng đến với hệ thống ôn thi GPLX</h2>
                 <p>Bộ đề {EXAM_CONFIG.totalQuestions} câu hỏi chuẩn Bộ Công An</p>
             </div>
-
             <div className="mode-cards">
                 <div className="mode-card" onClick={onStartPractice} role="button" tabIndex={0}>
                     <div className="mode-icon practice">📘</div>
@@ -57,6 +56,17 @@ export function HomePage({ onStartPractice, onStartExam, totalQuestions }) {
                         </div>
                     </div>
                     <Button variant="secondary">Thi ngay</Button>
+                </div>
+
+                <div className="mode-card mode-card-history" onClick={onViewHistory} role="button" tabIndex={0}>
+                    <div className="mode-icon history">🗂️</div>
+                    <h3>Lịch Sử Thi</h3>
+                    <p>Xem lại các lần thi trước, câu đúng sai và trạng thái đạt hay fail</p>
+                    <div className="history-preview">
+                        <span className="history-preview-pill">Xem từng câu hỏi</span>
+                        <span className="history-preview-pill">Phân tích đạt / fail</span>
+                    </div>
+                    <Button variant="outline">Mở lịch sử</Button>
                 </div>
             </div>
 

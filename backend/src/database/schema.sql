@@ -13,6 +13,14 @@ CREATE TABLE IF NOT EXISTS questions (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE TABLE IF NOT EXISTS user_stats (
     id SERIAL PRIMARY KEY,
     user_id VARCHAR(100) UNIQUE NOT NULL,
@@ -39,6 +47,7 @@ CREATE TABLE IF NOT EXISTS exam_history (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE INDEX IF NOT EXISTS idx_users_username ON users(username);
 CREATE INDEX IF NOT EXISTS idx_questions_category ON questions(category);
 CREATE INDEX IF NOT EXISTS idx_user_stats_user_id ON user_stats(user_id);
 CREATE INDEX IF NOT EXISTS idx_exam_history_user_id ON exam_history(user_id);

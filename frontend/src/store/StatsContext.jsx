@@ -1,18 +1,72 @@
-// ===== STATS STORE =====
-// Thống kê học tập. Hiện tại dùng LocalStatsService (localStorage).
-// Nếu muốn đồng bộ qua backend: swap sang UserStatsService — component không đổi.
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
-import { LocalStatsService } from '../services';
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
+import { createDefaultStats, HttpError, LocalStatsService, UserStatsService } from '../services';
+import { useAuth } from './AuthContext';
 
 const StatsContext = createContext(null);
 
 export function StatsProvider({ children }) {
-    const [stats, setStats] = useState(() => LocalStatsService.load());
+    const { user } = useAuth();
+    const [stats, setStats] = useState(() => createDefaultStats());
+    const [isHydrating, setIsHydrating] = useState(true);
+    const hasHydratedRef = useRef(false);
 
-    // Mỗi khi stats đổi, persist ngay lập tức
     useEffect(() => {
+        let active = true;
+
+        async function hydrateStats() {
+            setIsHydrating(true);
+            const localStats = LocalStatsService.load();
+
+            if (!user) {
+                if (!active) return;
+                setStats(localStats);
+                setIsHydrating(false);
+                hasHydratedRef.current = true;
+                return;
+            }
+
+            try {
+                const remoteStats = await UserStatsService.get(user.id);
+                if (!active) return;
+                setStats({ ...createDefaultStats(), ...remoteStats });
+            } catch (error) {
+                if (!active) return;
+
+                if (error instanceof HttpError && error.status === 404) {
+                    await UserStatsService.save(user.id, localStats);
+                    if (!active) return;
+                }
+
+                setStats(localStats);
+            } finally {
+                if (!active) return;
+                setIsHydrating(false);
+                hasHydratedRef.current = true;
+            }
+        }
+
+        hydrateStats();
+
+        return () => {
+            active = false;
+        };
+    }, [user]);
+
+    useEffect(() => {
+        if (!hasHydratedRef.current || isHydrating) return;
+
         LocalStatsService.save(stats);
-    }, [stats]);
+
+        if (!user) {
+            return;
+        }
+
+        const timeoutId = setTimeout(() => {
+            UserStatsService.save(user.id, stats).catch(() => {});
+        }, 250);
+
+        return () => clearTimeout(timeoutId);
+    }, [stats, user, isHydrating]);
 
     const updateStats = useCallback((updater) => {
         setStats((prev) => (typeof updater === 'function' ? updater(prev) : { ...prev, ...updater }));
@@ -47,8 +101,16 @@ export function StatsProvider({ children }) {
     }, []);
 
     const value = useMemo(
-        () => ({ stats, updateStats, recordAnswer, advancePracticeProgress, recordExamScore }),
-        [stats, updateStats, recordAnswer, advancePracticeProgress, recordExamScore]
+        () => ({
+            stats,
+            isHydrating,
+            isRemoteSync: Boolean(user),
+            updateStats,
+            recordAnswer,
+            advancePracticeProgress,
+            recordExamScore,
+        }),
+        [stats, isHydrating, user, updateStats, recordAnswer, advancePracticeProgress, recordExamScore]
     );
 
     return <StatsContext.Provider value={value}>{children}</StatsContext.Provider>;

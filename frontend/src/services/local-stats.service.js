@@ -2,7 +2,7 @@
 // Giữ logic cũ: lưu stats vào localStorage khi chạy offline / chưa có user.
 const STORAGE_KEY = 'drivingLicenseStats';
 
-const defaultStats = () => ({
+export const createDefaultStats = () => ({
     practiceProgress: 0,
     totalStudied: 0,
     correctAnswers: 0,
@@ -16,9 +16,9 @@ export const LocalStatsService = {
     load() {
         try {
             const raw = localStorage.getItem(STORAGE_KEY);
-            return raw ? { ...defaultStats(), ...JSON.parse(raw) } : defaultStats();
+            return raw ? { ...createDefaultStats(), ...JSON.parse(raw) } : createDefaultStats();
         } catch {
-            return defaultStats();
+            return createDefaultStats();
         }
     },
 
