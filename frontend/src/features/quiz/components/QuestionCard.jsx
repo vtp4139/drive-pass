@@ -1,12 +1,19 @@
 const LETTERS = ['A', 'B', 'C', 'D'];
 
-export function QuestionCard({ question, selectedIndex, onSelect, showExplanation }) {
+export function QuestionCard({
+    question,
+    selectedIndex,
+    onSelect,
+    showExplanation,
+    revealAnswer = false,
+}) {
     const isAnswered = selectedIndex !== undefined && selectedIndex !== null;
+    const displayNumber = question.displayNumber ?? question.id;
 
     return (
         <div className="question-card">
             <div className="question-number">
-                Câu {question.id}
+                Câu {displayNumber}
                 {question.isCritical && (
                     <span
                         style={{
@@ -29,7 +36,7 @@ export function QuestionCard({ question, selectedIndex, onSelect, showExplanatio
                 <div className="question-image">
                     <img
                         src={question.image}
-                        alt={`Hình minh họa câu ${question.id}`}
+                        alt={`Hình minh họa câu ${displayNumber}`}
                         onError={(e) => (e.currentTarget.parentElement.style.display = 'none')}
                     />
                 </div>
@@ -40,8 +47,12 @@ export function QuestionCard({ question, selectedIndex, onSelect, showExplanatio
                     let className = 'answer-option';
                     if (isAnswered) {
                         className += ' disabled';
-                        if (index === question.correct) className += ' correct';
-                        else if (index === selectedIndex) className += ' incorrect';
+                        if (revealAnswer) {
+                            if (index === question.correct) className += ' correct';
+                            else if (index === selectedIndex) className += ' incorrect';
+                        } else if (index === selectedIndex) {
+                            className += ' selected';
+                        }
                     } else if (index === selectedIndex) {
                         className += ' selected';
                     }

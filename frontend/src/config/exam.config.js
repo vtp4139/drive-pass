@@ -1,7 +1,7 @@
 // ===== EXAM CONFIGURATION =====
 export const EXAM_CONFIG = {
     totalQuestions: 600,
-    examQuestions: 25,
+    examQuestions: 30,
     examDuration: 19, // phút
     passingScore: 21,
     criticalFailLimit: 1,

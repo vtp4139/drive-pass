@@ -25,7 +25,7 @@ function normalizeHistoryRecord(record, fallbackQuestions = []) {
         : fallbackQuestions;
 
     const reviewItems = questionIds
-        .map((questionId) => {
+        .map((questionId, index) => {
             const numericId = Number(questionId);
             const question = questions.find((item) => item.id === numericId);
             if (!question) return null;
@@ -35,6 +35,7 @@ function normalizeHistoryRecord(record, fallbackQuestions = []) {
 
             return {
                 ...question,
+                displayNumber: question.displayNumber ?? index + 1,
                 selectedIndex,
                 isCorrect,
                 isUnanswered: selectedIndex === undefined || selectedIndex === null,
@@ -219,10 +220,10 @@ function ExamReview({ exam }) {
             {exam.hasReviewData && (
                 <div className="review-questions">
                     {exam.reviewItems.map((item) => (
-                        <div key={item.id} className="review-question-card">
+                        <div key={`${item.id}-${item.displayNumber}`} className="review-question-card">
                             <div className="review-question-head">
                                 <div className="question-number">
-                                    Câu {item.id}
+                                    Câu {item.displayNumber}
                                     {item.isCritical && <span className="critical-pill">Điểm liệt</span>}
                                 </div>
                                 <span
@@ -238,7 +239,7 @@ function ExamReview({ exam }) {
 
                             {item.image && (
                                 <div className="question-image">
-                                    <img src={item.image} alt={`Hình minh họa câu ${item.id}`} />
+                                    <img src={item.image} alt={`Hình minh họa câu ${item.displayNumber}`} />
                                 </div>
                             )}
 

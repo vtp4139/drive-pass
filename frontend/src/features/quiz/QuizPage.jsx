@@ -29,14 +29,26 @@ function buildExamResult(questions, answers, mode, timer) {
     };
 }
 
-/**
- * Quiz cho cả mode practice và exam.
- * @param {'practice'|'exam'} mode
- */
+function buildReviewItems(questions, answers) {
+    return questions.map((question, index) => {
+        const selectedIndex = answers[question.id];
+        const isUnanswered = selectedIndex === undefined || selectedIndex === null;
+
+        return {
+            ...question,
+            displayNumber: question.displayNumber ?? index + 1,
+            selectedIndex,
+            isCorrect: !isUnanswered && selectedIndex === question.correct,
+            isUnanswered,
+        };
+    });
+}
+
 export function QuizPage({ mode, questions, startIndex = 0, onExit }) {
     const [currentIndex, setCurrentIndex] = useState(startIndex);
     const [answers, setAnswers] = useState({});
     const [finished, setFinished] = useState(false);
+    const [reviewItems, setReviewItems] = useState([]);
 
     const { recordAnswer, advancePracticeProgress, recordExamScore } = useStats();
     const { user } = useAuth();
@@ -68,11 +80,12 @@ export function QuizPage({ mode, questions, startIndex = 0, onExit }) {
 
             if (mode === 'practice') {
                 advancePracticeProgress(currentIndex);
+                toast[isCorrect ? 'success' : 'error'](
+                    isCorrect ? '✅ Chính xác!' : '❌ Sai rồi! Xem giải thích bên dưới.'
+                );
+            } else {
+                toast.show('Đã ghi nhận đáp án của bạn.');
             }
-
-            toast[isCorrect ? 'success' : 'error'](
-                isCorrect ? '✅ Chính xác!' : '❌ Sai rồi! Xem giải thích bên dưới.'
-            );
         },
         [answers, currentQuestion, mode, currentIndex, recordAnswer, advancePracticeProgress, toast]
     );
@@ -87,7 +100,9 @@ export function QuizPage({ mode, questions, startIndex = 0, onExit }) {
 
             if (mode === 'exam') {
                 const examResult = buildExamResult(questions, answers, mode, timer);
+                const reviewData = buildReviewItems(questions, answers);
                 recordExamScore(examResult.accuracy);
+                setReviewItems(reviewData);
 
                 if (user) {
                     ExamHistoryService.save(user.id, {
@@ -99,8 +114,9 @@ export function QuizPage({ mode, questions, startIndex = 0, onExit }) {
                         answers: {
                             selectedAnswers: answers,
                             questionIds: questions.map((question) => question.id),
-                            questions: questions.map((question) => ({
+                            questions: questions.map((question, index) => ({
                                 id: question.id,
+                                displayNumber: question.displayNumber ?? index + 1,
                                 question: question.question,
                                 answers: question.answers,
                                 correct: question.correct,
@@ -199,7 +215,7 @@ export function QuizPage({ mode, questions, startIndex = 0, onExit }) {
     }, [finished, questions, answers, mode, timer]);
 
     if (finished && result) {
-        return <ResultScreen result={result} onBack={onExit} />;
+        return <ResultScreen result={result} reviewItems={reviewItems} onBack={onExit} />;
     }
 
     if (!currentQuestion) {
@@ -223,7 +239,8 @@ export function QuizPage({ mode, questions, startIndex = 0, onExit }) {
                     question={currentQuestion}
                     selectedIndex={answers[currentQuestion.id]}
                     onSelect={handleSelect}
-                    showExplanation={answers[currentQuestion.id] !== undefined}
+                    showExplanation={mode === 'practice' && answers[currentQuestion.id] !== undefined}
+                    revealAnswer={mode === 'practice' && answers[currentQuestion.id] !== undefined}
                 />
                 <QuizNavigation
                     canGoBack={currentIndex > 0}

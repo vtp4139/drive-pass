@@ -39,7 +39,13 @@ export function App() {
             return;
         }
         const count = Math.min(EXAM_CONFIG.examQuestions, questions.length);
-        setQuizQuestions(shuffleArray(questions).slice(0, count));
+        const examQuestions = shuffleArray(questions)
+            .slice(0, count)
+            .map((question, index) => ({
+                ...question,
+                displayNumber: index + 1,
+            }));
+        setQuizQuestions(examQuestions);
         setStartIndex(0);
         setMode('exam');
     };
