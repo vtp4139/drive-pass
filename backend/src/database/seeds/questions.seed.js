@@ -1,365 +1,8175 @@
 // ===== QUESTIONS SEED DATA =====
-// Tách data khỏi logic. Import-script sẽ đọc mảng này.
+// Đồng bộ từ bộ 600 câu hỏi GPLX 2025.
 module.exports = [
     {
-        id: 1,
-        category: 'Khái niệm và quy tắc giao thông',
-        question: "Khái niệm 'Người điều khiển giao thông' được hiểu như thế nào trong các khái niệm dưới đây?",
-        answers: [
-            'A. Là người điều khiển phương tiện tham gia giao thông tham gia giao thông đường bộ.',
-            'B. Là cảnh sát giao thông, người được giao nhiệm vụ hướng dẫn giao thông tại nơi thi công, nơi xảy ra ùn tắc giao thông, ở bến phà, tại cầu đường bộ đi chung với đường sắt.',
-            'C. Là người tham gia giao thông tham gia giao thông đường bộ.',
+        "id": 1,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Phần của đường bộ được sử dụng cho phương tiện giao thông đường bộ đi lại là gì?",
+        "answers": [
+            "Phần mặt đường và lề đường.",
+            "Phần đường xe chạy.",
+            "Phần đường xe cơ giới."
         ],
-        correct: 1,
-        explanation:
-            'Theo Luật Giao thông đường bộ, người điều khiển giao thông là cảnh sát giao thông hoặc người được giao nhiệm vụ điều khiển, hướng dẫn giao thông.',
-        isCritical: false,
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 2,
-        category: 'Khái niệm và quy tắc giao thông',
-        question: 'Người lái xe sử dụng rượu, bia có nồng độ cồn vượt quá quy định bị xử phạt như thế nào?',
-        answers: [
-            'A. Phạt tiền và tước giấy phép lái xe từ 10-12 tháng.',
-            'B. Phạt tiền và tước giấy phép lái xe từ 16-18 tháng.',
-            'C. Phạt tiền và tước giấy phép lái xe từ 22-24 tháng.',
+        "id": 2,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Làn đường là gì?",
+        "answers": [
+            "Là một phần của phần đường xe chạy được chia theo chiều dọc của đường, sử dụng cho xe chạy.",
+            "Là một phần của phần đường xe chạy được chia theo chiều dọc của đường, có đủ chiều rộng cho xe chạy an toàn.",
+            "Là đường cho xe ô tô chạy, dừng, đỗ an toàn."
         ],
-        correct: 2,
-        explanation:
-            'Đây là lỗi nghiêm trọng, vi phạm an toàn giao thông. Người lái xe vi phạm sẽ bị phạt tiền và tước GPLX từ 22-24 tháng.',
-        isCritical: true,
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 3,
-        category: 'Khái niệm và quy tắc giao thông',
-        question: 'Khi tham gia giao thông, người lái xe phải mang theo các loại giấy tờ gì?',
-        answers: [
-            'A. Giấy phép lái xe, giấy đăng ký xe, giấy chứng nhận bảo hiểm trách nhiệm dân sự.',
-            'B. Giấy phép lái xe, giấy đăng ký xe.',
-            'C. Giấy phép lái xe.',
+        "id": 3,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khổ giới hạn của đường bộ được hiểu như thế nào là đúng?",
+        "answers": [
+            "Khổ giới hạn của đường bộ là khoảng trống có kích thước giới hạn về chiều rộng, chiều cao của đường bộ để các xe, bao gồm cả hàng hoá xếp trên xe đi qua được an toàn và được xác định theo quy chuẩn, tiêu chuẩn kỹ thuật của đường bộ.",
+            "Là khoảng trống có kích thước giới hạn về chiều rộng của đường, cầu, bến phà, hầm trên đường bộ để các xe kể cả hàng hóa xếp trên xe đi qua được an toàn.",
+            "Là khoảng trống có kích thước giới hạn về chiều cao của cầu, bến phà, hầm trên đường bộ để các xe đi qua được an toàn."
         ],
-        correct: 0,
-        explanation:
-            'Người lái xe phải mang đầy đủ 3 loại giấy tờ: GPLX, giấy đăng ký xe và giấy bảo hiểm trách nhiệm dân sự.',
-        isCritical: false,
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 4,
-        category: 'Khái niệm và quy tắc giao thông',
-        question: 'Tốc độ tối đa cho phép xe ô tô con đi trong khu dân cư là bao nhiêu?',
-        answers: ['A. 40 km/h.', 'B. 50 km/h.', 'C. 60 km/h.', 'D. 70 km/h.'],
-        correct: 1,
-        explanation:
-            'Trong khu dân cư, tốc độ tối đa cho phép xe ô tô con là 50 km/h theo quy định của Luật Giao thông đường bộ.',
-        isCritical: false,
-    },
-    {
-        id: 5,
-        category: 'Khái niệm và quy tắc giao thông',
-        question: 'Khi gặp đèn tín hiệu màu vàng, người điều khiển phương tiện phải làm gì?',
-        answers: [
-            'A. Tăng tốc để vượt qua nhanh.',
-            'B. Dừng lại trước vạch dừng, trừ trường hợp đã đi quá vạch dừng thì được đi tiếp.',
-            'C. Tiếp tục đi bình thường.',
-            'D. Giảm tốc độ và chuẩn bị dừng.',
+        "id": 4,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Dải phân cách được lắp đặt để làm gì?",
+        "answers": [
+            "Để phân chia các làn đường dành cho xe cơ giới và xe thô sơ trên đường cao tốc.",
+            "Để phân chia phần đường xe chạy thành hai chiều riêng biệt hoặc để phân chia phần đường dành cho xe cơ giới và xe thô sơ hoặc của nhiều loại xe khác nhau trên cùng một chiều đường.",
+            "Để phân tách phần đường xe chạy và hành lang an toàn giao thông."
         ],
-        correct: 1,
-        explanation:
-            'Đèn vàng báo hiệu sắp chuyển sang đỏ. Người lái xe phải dừng trước vạch dừng, trừ khi đã vượt qua vạch dừng thì được đi tiếp.',
-        isCritical: false,
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 6,
-        category: 'Khái niệm và quy tắc giao thông',
-        question: 'Khoảng cách an toàn tối thiểu giữa hai xe khi đi với tốc độ 60 km/h là bao nhiêu?',
-        answers: ['A. 25 mét.', 'B. 35 mét.', 'C. 50 mét.', 'D. 70 mét.'],
-        correct: 1,
-        explanation:
-            'Ở tốc độ 60 km/h, khoảng cách an toàn tối thiểu là 35 mét để đảm bảo đủ thời gian phản ứng và phanh xe.',
-        isCritical: false,
-    },
-    {
-        id: 7,
-        category: 'Khái niệm và quy tắc giao thông',
-        question:
-            'Người điều khiển xe mô tô, xe gắn máy có nồng độ cồn trong máu vượt quá 50 miligam/100 mililít máu bị xử phạt như thế nào?',
-        answers: [
-            'A. Phạt cảnh cáo.',
-            'B. Phạt tiền từ 2.000.000 đến 3.000.000 đồng, tước GPLX 10-12 tháng.',
-            'C. Phạt tiền từ 6.000.000 đến 8.000.000 đồng, tước GPLX 22-24 tháng.',
-            'D. Phạt tiền từ 4.000.000 đến 5.000.000 đồng.',
+        "id": 5,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Vạch kẻ đường là gì?",
+        "answers": [
+            "Là báo hiệu đường bộ để hỗ trợ cảnh báo nguy hiểm cho người tham gia giao thông đường bộ.",
+            "Là vạch chỉ sự phân chia làn đường, vị trí hoặc hướng đi, vị trí dừng lại.",
+            "Là báo hiệu cho người tham gia giao thông đường bộ về các thông tin của đường bộ.",
+            "Cả ba ý trên."
         ],
-        correct: 2,
-        explanation:
-            'Đây là vi phạm nghiêm trọng. Mức phạt cao nhất cho vi phạm nồng độ cồn vượt mức quy định là 6-8 triệu đồng và tước GPLX 22-24 tháng.',
-        isCritical: true,
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 8,
-        category: 'Khái niệm và quy tắc giao thông',
-        question: 'Xe nào được ưu tiên đi trước tại nơi đường giao nhau không có tín hiệu đèn, biển báo?',
-        answers: [
-            'A. Xe đi từ bên trái.',
-            'B. Xe đi từ bên phải.',
-            'C. Xe đi thẳng.',
-            'D. Xe lớn hơn.',
+        "id": 6,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người điều khiển phương tiện tham gia giao thông đường bộ được hiểu như thế nào là đúng?",
+        "answers": [
+            "Là người điều khiển xe cơ giới, người điều khiển xe thô sơ, người điều khiển xe máy chuyên dùng.",
+            "Là người được giao nhiệm vụ hướng dẫn giao thông trên đường bộ.",
+            "Cả hai ý trên."
         ],
-        correct: 1,
-        explanation: 'Tại nơi đường giao nhau không có tín hiệu, xe đến từ bên phải được quyền ưu tiên đi trước.',
-        isCritical: false,
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 9,
-        category: 'Khái niệm và quy tắc giao thông',
-        question: 'Người lái xe ô tô không được sử dụng điện thoại di động khi đang lái xe, trừ trường hợp nào?',
-        answers: [
-            'A. Khi đang dừng chờ đèn đỏ.',
-            'B. Khi sử dụng thiết bị tai nghe không dây.',
-            'C. Khi đang đi trên đường vắng.',
-            'D. Không có trường hợp ngoại lệ nào.',
+        "id": 7,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe được hiểu như thế nào là đúng?",
+        "answers": [
+            "Là người điều khiển xe cơ giới.",
+            "Là người điều khiển xe thô sơ.",
+            "Là người điều khiển xe máy chuyên dùng."
         ],
-        correct: 3,
-        explanation:
-            'Tuyệt đối không được sử dụng điện thoại khi lái xe, kể cả tai nghe không dây. Đây là quy định bắt buộc để đảm bảo an toàn.',
-        isCritical: false,
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 10,
-        category: 'Khái niệm và quy tắc giao thông',
-        question: 'Khi muốn vượt xe phía trước, người lái xe phải làm gì trước tiên?',
-        answers: [
-            'A. Tăng tốc và vượt ngay.',
-            'B. Quan sát, bật xi nhan trái, đảm bảo an toàn rồi mới vượt.',
-            'C. Bấm còi liên tục để báo hiệu.',
-            'D. Chờ xe trước nhường đường.',
+        "id": 8,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trong nhóm các phương tiện giao thông đường bộ dưới đây, nhóm phương tiện nào là xe cơ giới?",
+        "answers": [
+            "Xe ô tô; máy kéo; xe mô tô hai bánh; xe mô tô ba bánh; xe gắn máy; xe cơ giới dùng cho người khuyết tật và xe máy chuyên dùng; xe đạp, xe đạp máy, xe đạp điện.",
+            "Xe ô tô; rơ moóc được kéo bởi xe ô tô; sơ mi rơ moóc được kéo bởi ô tô đầu kéo; xe chở người bốn bánh có gắn động cơ; xe chở hàng bốn bánh có gắn động cơ; xe mô tô, xe gắn máy và các loại xe tương tự."
         ],
-        correct: 1,
-        explanation:
-            'Trước khi vượt xe phải quan sát kỹ, bật xi nhan trái để báo hiệu, đảm bảo đủ khoảng cách an toàn và không có xe ngược chiều.',
-        isCritical: false,
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 101,
-        category: 'Biển báo hiệu đường bộ',
-        question: 'Biển báo hình tam giác đều, viền đỏ, nền màu vàng hoặc trắng thuộc nhóm biển báo nào?',
-        answers: [
-            'A. Biển báo nguy hiểm.',
-            'B. Biển báo cấm.',
-            'C. Biển báo hiệu lệnh.',
-            'D. Biển báo chỉ dẫn.',
+        "id": 9,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trong nhóm các phương tiện giao thông đường bộ dưới đây, nhóm phương tiện nào là xe thô sơ?",
+        "answers": [
+            "Xe đạp, xe đạp máy, xe đạp điện; xe xích lô; xe lăn dùng cho người khuyết tật; xe vật nuôi kéo và các loại xe tương tự.",
+            "Xe đạp (kể cả xe đạp máy, xe đạp điện), xe gắn máy, xe cơ giới dùng cho người khuyết tật và xe máy chuyên dùng.",
+            "Xe ô tô, máy kéo, rơ moóc hoặc sơ mi rơ moóc được kéo bởi xe ô tô, máy kéo."
         ],
-        correct: 0,
-        explanation:
-            'Biển báo nguy hiểm có hình tam giác đều, viền đỏ, nền vàng hoặc trắng để cảnh báo các tình huống nguy hiểm.',
-        isCritical: false,
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 102,
-        category: 'Biển báo hiệu đường bộ',
-        question: 'Biển báo hình tròn, viền đỏ, nền trắng, có thanh sọc đỏ chéo góc từ trên xuống có ý nghĩa gì?',
-        answers: ['A. Cấm đỗ xe.', 'B. Cấm dừng xe và đỗ xe.', 'C. Hết cấm dừng xe và đỗ xe.'],
-        correct: 1,
-        explanation: 'Biển này cấm cả dừng xe và đỗ xe. Nếu chỉ có 1 sọc chéo thì chỉ cấm đỗ xe.',
-        isCritical: false,
-    },
-    {
-        id: 103,
-        category: 'Biển báo hiệu đường bộ',
-        question: 'Biển báo hình tròn, nền xanh lam, có mũi tên trắng chỉ hướng có ý nghĩa gì?',
-        answers: [
-            'A. Cấm đi theo hướng mũi tên.',
-            'B. Bắt buộc đi theo hướng mũi tên.',
-            'C. Được phép đi theo hướng mũi tên.',
-            'D. Đường một chiều.',
+        "id": 10,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Phương tiện giao thông đường bộ gồm những loại nào?",
+        "answers": [
+            "Phương tiện giao thông cơ giới đường bộ.",
+            "Phương tiện giao thông thô sơ đường bộ, xe máy chuyên dùng và các loại xe tương tự.",
+            "Cả hai ý trên."
         ],
-        correct: 1,
-        explanation:
-            'Biển hình tròn nền xanh là biển hiệu lệnh, bắt buộc người tham gia giao thông phải thực hiện theo.',
-        isCritical: false,
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 104,
-        category: 'Biển báo hiệu đường bộ',
-        question: "Biển báo 'P' màu xanh có ý nghĩa gì?",
-        answers: [
-            'A. Cấm đỗ xe.',
-            'B. Nơi đỗ xe.',
-            'C. Bãi đỗ xe trả phí.',
-            'D. Khu vực dừng xe.',
+        "id": 11,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người tham gia giao thông đường bộ gồm những đối tượng nào?",
+        "answers": [
+            "Người điều khiển, người được chở trên phương tiện tham gia giao thông đường bộ.",
+            "Người điều khiển, dẫn dắt vật nuôi trên đường bộ; người đi bộ trên đường bộ.",
+            "Cả hai ý trên."
         ],
-        correct: 1,
-        explanation: "Biển 'P' màu xanh là biển chỉ dẫn nơi đỗ xe, cho phép đỗ xe tại khu vực đó.",
-        isCritical: false,
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 105,
-        category: 'Biển báo hiệu đường bộ',
-        question: "Biển báo số '40' trong hình tròn viền đỏ có ý nghĩa gì?",
-        answers: [
-            'A. Tốc độ tối thiểu 40 km/h.',
-            'B. Tốc độ tối đa 40 km/h.',
-            'C. Cách 40 km đến điểm tiếp theo.',
-            'D. Đường rộng 40 mét.',
+        "id": 12,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người điều khiển phương tiện tham gia giao thông đường bộ gồm những đối tượng nào dưới đây?",
+        "answers": [
+            "Người điều khiển xe cơ giới, người điều khiển xe thô sơ.",
+            "Người điều khiển xe máy chuyên dùng.",
+            "Cả hai ý trên."
         ],
-        correct: 1,
-        explanation:
-            'Biển hình tròn viền đỏ với số là biển cấm, quy định tốc độ tối đa không được vượt quá con số đó.',
-        isCritical: false,
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 251,
-        category: 'Sa hình - Tình huống giao thông',
-        question: 'Xe nào được quyền đi trước trong tình huống này?',
-        answers: ['A. Xe con.', 'B. Xe tải.', 'C. Xe mô tô.'],
-        correct: 0,
-        explanation: 'Theo quy tắc nhường đường, xe đi từ bên phải được quyền ưu tiên đi trước.',
-        isCritical: false,
-        image: 'images/question-251.jpg',
-    },
-    {
-        id: 252,
-        category: 'Sa hình - Tình huống giao thông',
-        question: 'Khi đang lái xe trên đường cao tốc, xe bị nổ lốp, bạn phải làm gì?',
-        answers: [
-            'A. Phanh gấp ngay lập tức.',
-            'B. Giữ vô lăng thẳng, từ từ giảm tốc, đưa xe vào lề đường an toàn.',
-            'C. Đánh lái sang làn khác.',
-            'D. Tăng tốc để thoát khỏi tình huống.',
+        "id": 13,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người điều khiển giao thông đường bộ được hiểu như thế nào là đúng?",
+        "answers": [
+            "Là người điều khiển phương tiện tham gia giao thông đường bộ.",
+            "Là Cảnh sát giao thông và người được giao nhiệm vụ hướng dẫn giao thông trên đường bộ.",
+            "Là người tham gia giao thông đường bộ."
         ],
-        correct: 1,
-        explanation:
-            'Khi nổ lốp, không phanh gấp vì dễ mất lái. Cần giữ vô lăng thẳng, từ từ nhả ga và đưa xe vào lề an toàn.',
-        isCritical: false,
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 253,
-        category: 'Sa hình - Tình huống giao thông',
-        question: 'Khi lái xe trong điều kiện trời mưa lớn, tầm nhìn hạn chế, bạn cần làm gì?',
-        answers: [
-            'A. Bật đèn pha và tăng tốc để qua nhanh.',
-            'B. Giảm tốc độ, bật đèn sương mù, tăng khoảng cách an toàn.',
-            'C. Dừng xe ngay lập tức.',
-            'D. Đi sát lề đường bên phải.',
+        "id": 14,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Dừng xe được hiểu như thế nào là đúng?",
+        "answers": [
+            "Là trạng thái đứng yên của xe không giới hạn thời gian để cho người lên, xuống xe, xếp dỡ hàng hóa hoặc thực hiện công việc khác.",
+            "Là trạng thái đứng yên tạm thời của xe trong một khoảng thời gian cần thiết đủ để cho người lên xe, xuống xe, xếp dỡ hàng hóa, kiểm tra kỹ thuật xe hoặc hoạt động khác. Khi dừng xe không được tắt máy và không được rời khỏi vị trí lái, trừ trường hợp rời khỏi vị trí lái để đóng, mở cửa xe, xếp dỡ hàng hóa, kiểm tra kỹ thuật xe nhưng phải sử dụng phanh đỗ xe hoặc thực hiện biện pháp an toàn khác.",
+            "Là trạng thái đứng yên của xe không giới hạn thời gian giữa 02 lần vận chuyển hàng hóa hoặc hành khách."
         ],
-        correct: 1,
-        explanation:
-            'Trong điều kiện tầm nhìn kém, cần giảm tốc độ, bật đèn sương mù và tăng khoảng cách an toàn với xe phía trước.',
-        isCritical: false,
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 401,
-        category: 'Kỹ thuật lái xe',
-        question: 'Khi xuống dốc dài, người lái xe cần thực hiện các thao tác nào để đảm bảo an toàn?',
-        answers: [
-            'A. Nhả hết chân ga, tắt máy, về số 0 để xe tự lăn.',
-            'B. Sử dụng phanh liên tục.',
-            'C. Giữ chân ga vừa phải, kết hợp phanh và sử dụng phanh động cơ.',
+        "id": 15,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Đỗ xe được hiểu như thế nào là đúng?",
+        "answers": [
+            "Là trạng thái đứng yên của xe có giới hạn thời gian trong một khoảng thời gian cần thiết đủ để cho người lên, xuống xe đó, xếp dỡ hàng hóa hoặc thực hiện công việc khác.",
+            "Là trạng thái đứng yên của xe không giới hạn thời gian. Khi đỗ xe, người điều khiển phương tiện tham gia giao thông đường bộ chỉ được rời khỏi xe khi đã sử dụng phanh đỗ xe hoặc thực hiện biện pháp an toàn khác. Xe đỗ trên đoạn đường dốc phải đánh lái về phía lề đường, chèn bánh."
         ],
-        correct: 2,
-        explanation:
-            'Khi xuống dốc dài cần kết hợp phanh và phanh động cơ, tránh phanh liên tục gây quá nhiệt.',
-        isCritical: false,
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 402,
-        category: 'Kỹ thuật lái xe',
-        question: 'Khi lái xe lên dốc, người lái xe cần lưu ý điều gì?',
-        answers: [
-            'A. Tăng tốc mạnh để leo dốc nhanh.',
-            'B. Chuyển số thấp hơn trước khi lên dốc, không sang số khi đang leo dốc.',
-            'C. Giữ nguyên số đang đi.',
-            'D. Tắt máy lạnh để tiết kiệm nhiên liệu.',
+        "id": 16,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Đường cao tốc được hiểu như thế nào là đúng?",
+        "answers": [
+            "Là một cấp kỹ thuật của đường bộ, chỉ dành cho một số loại xe cơ giới, xe máy chuyên dùng tham gia giao thông theo quy định của pháp luật. Có dải phân cách phân chia hai chiều xe chạy riêng biệt, không giao nhau cùng mức với một hoặc các đường khác, chỉ cho xe ra, vào ở những điểm nhất định. Có hàng rào bảo vệ, trang thiết bị phục vụ, bảo đảm giao thông liên tục, an toàn, rút ngắn thời gian hành trình.",
+            "Là đường nối liền Thủ đô Hà Nội với trung tâm hành chính cấp tỉnh; đường nối liền các trung tâm hành chính cấp tỉnh; đường có vị trí quan trọng đối với sự phát triển kinh tế - xã hội, bảo đảm quốc phòng, an ninh của vùng, khu vực."
         ],
-        correct: 1,
-        explanation:
-            'Trước khi lên dốc cần chuyển về số thấp để có đủ lực kéo. Không sang số khi đang leo dốc vì dễ mất đà.',
-        isCritical: false,
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 403,
-        category: 'Kỹ thuật lái xe',
-        question: 'Khi phanh xe trên đường trơn ướt, kỹ thuật nào sau đây là đúng?',
-        answers: [
-            'A. Đạp phanh thật mạnh và giữ nguyên.',
-            'B. Phanh nhẹ và nhịp nhàng, tránh khóa bánh xe.',
-            'C. Chỉ sử dụng phanh tay.',
-            'D. Không phanh, chỉ nhả ga.',
+        "id": 17,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Thiết bị an toàn cho trẻ em được hiểu như thế nào là đúng?",
+        "answers": [
+            "Là thiết bị có đủ khả năng bảo đảm an toàn cho trẻ em ở tư thế ngồi hoặc nằm trên xe ô tô, được thiết kế để giảm nguy cơ chấn thương cho người dùng trong trường hợp xảy ra va chạm hoặc xe ô tô giảm tốc độ đột ngột, bằng cách hạn chế sự di chuyển của cơ thể trẻ em.",
+            "Là thiết bị có đủ khả năng bảo đảm an toàn cho trẻ em ở tư thế đứng hoặc nằm trên xe ô tô, được thiết kế để giảm nguy cơ chấn thương cho người dùng trong trường hợp xe ô tô lưu thông bình thường."
         ],
-        correct: 1,
-        explanation:
-            'Trên đường trơn, phanh nhẹ và nhịp nhàng giúp tránh khóa bánh xe, duy trì khả năng lái và giảm tốc hiệu quả.',
-        isCritical: false,
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 501,
-        category: 'Cấu tạo và sửa chữa xe',
-        question: 'Công dụng của hệ thống treo trên ô tô là gì?',
-        answers: [
-            'A. Giảm chấn động từ mặt đường truyền lên thân xe.',
-            'B. Tăng độ bám đường của bánh xe.',
-            'C. Cả A và B đều đúng.',
+        "id": 18,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Theo chức năng phục vụ thì đường bộ được phân loại như thế nào?",
+        "answers": [
+            "Đường chính, đường nhánh, đường gom, đường bên, đường dành cho giao thông công cộng, đường nội bộ, đường dành riêng cho người đi bộ, người đi xe đạp và các đường khác.",
+            "Đường chính, đường nhánh, đường gom, đường dành cho giao thông công cộng, đường nội bộ, đường dành riêng cho người đi bộ, người đi xe đạp và các đường khác.",
+            "Đường chính, đường nhánh, đường gom, đường bên, đường dành cho giao thông công cộng, đường dành riêng cho người đi bộ, người đi xe đạp và các đường khác."
         ],
-        correct: 2,
-        explanation: 'Hệ thống treo có cả hai chức năng: giảm chấn động và tăng độ bám đường.',
-        isCritical: false,
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
     },
     {
-        id: 502,
-        category: 'Cấu tạo và sửa chữa xe',
-        question: 'Đèn báo nhiệt độ nước làm mát sáng đỏ khi đang lái xe, bạn phải làm gì?',
-        answers: [
-            'A. Tiếp tục lái xe bình thường.',
-            'B. Tắt máy lạnh, dừng xe an toàn, tắt máy và kiểm tra.',
-            'C. Tăng tốc để làm mát động cơ nhanh hơn.',
-            'D. Đổ thêm nước vào két nước ngay lập tức.',
+        "id": 19,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Hành vi nào dưới đây bị nghiêm cấm?",
+        "answers": [
+            "Sử dụng xe đạp đi trên các tuyến quốc lộ.",
+            "Rải vật sắc nhọn, đổ chất gây trơn trượt trên đường bộ.",
+            "Cả hai ý trên."
         ],
-        correct: 1,
-        explanation:
-            'Đèn nhiệt độ đỏ báo hiệu động cơ quá nóng. Cần dừng xe ngay, tắt máy và để nguội trước khi kiểm tra. Không mở nắp két nước khi máy còn nóng.',
-        isCritical: false,
+        "correct": 1,
+        "explanation": "",
+        "isCritical": true
     },
     {
-        id: 503,
-        category: 'Cấu tạo và sửa chữa xe',
-        question: 'Áp suất lốp xe không đủ ảnh hưởng như thế nào đến xe?',
-        answers: [
-            'A. Tăng độ bám đường.',
-            'B. Tăng tiêu hao nhiên liệu, giảm tuổi thọ lốp, ảnh hưởng khả năng lái.',
-            'C. Không ảnh hưởng gì.',
-            'D. Giảm tiêu hao nhiên liệu.',
+        "id": 20,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Hành vi đưa xe cơ giới, xe máy chuyên dùng tham gia giao thông đường bộ nào dưới đây bị cấm?",
+        "answers": [
+            "Không có chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường.",
+            "Hết niên hạn sử dụng.",
+            "Cả hai ý trên."
         ],
-        correct: 1,
-        explanation:
-            'Lốp thiếu áp suất làm tăng ma sát, tiêu hao nhiên liệu nhiều hơn, lốp mòn nhanh và giảm khả năng kiểm soát xe.',
-        isCritical: false,
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
     },
     {
-        id: 561,
-        category: 'Đạo đức người lái xe',
-        question: 'Người lái xe cần có thái độ như thế nào khi tham gia giao thông?',
-        answers: [
-            'A. Chấp hành nghiêm chỉnh luật giao thông, tôn trọng người khác.',
-            'B. Lái xe nhanh để tiết kiệm thời gian.',
-            'C. Chỉ cần tuân thủ khi có cảnh sát.',
-            'D. Ưu tiên lợi ích cá nhân.',
+        "id": 21,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Tổ chức đua xe được phép thực hiện khi nào?",
+        "answers": [
+            "Trên đường phố không có người qua lại.",
+            "Được người dân ủng hộ.",
+            "Được cơ quan có thẩm quyền cấp phép."
         ],
-        correct: 0,
-        explanation: 'Người lái xe cần có ý thức chấp hành luật và tôn trọng người tham gia giao thông khác.',
-        isCritical: false,
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
     },
     {
-        id: 562,
-        category: 'Đạo đức người lái xe',
-        question: 'Khi gặp tai nạn giao thông, người lái xe có trách nhiệm gì?',
-        answers: [
-            'A. Bỏ đi để tránh rắc rối.',
-            'B. Dừng xe, sơ cứu nạn nhân, báo cơ quan chức năng và ở lại hiện trường.',
-            'C. Chỉ cần gọi điện báo cảnh sát.',
-            'D. Tiếp tục đi và báo cáo sau.',
+        "id": 22,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Hành vi đua xe trái phép bị xử lý như thế nào?",
+        "answers": [
+            "Chỉ bị nhắc nhở.",
+            "Tùy theo mức độ của hành vi vi phạm có thể bị xử lý hành chính hoặc xử lý hình sự."
         ],
-        correct: 1,
-        explanation:
-            'Người lái xe có trách nhiệm pháp lý và đạo đức phải dừng lại, sơ cứu nạn nhân, báo cơ quan chức năng và ở lại hiện trường.',
-        isCritical: false,
+        "correct": 1,
+        "explanation": "",
+        "isCritical": true
     },
+    {
+        "id": 23,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Hành vi của người điều khiển xe ô tô và các loại xe tương tự khi tham gia giao thông đường bộ mà trong cơ thể có chất ma túy thì bị áp dụng hình thức xử phạt vi phạm hành chính nào dưới đây?",
+        "answers": [
+            "Bị phạt tiền.",
+            "Bị tước giấy phép lái xe.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 24,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người điều khiển phương tiện tham gia giao thông đường bộ mà trong máu hoặc hơi thở có nồng độ cồn có bị nghiêm cấm không?",
+        "answers": [
+            "Bị nghiêm cấm.",
+            "Không bị nghiêm cấm.",
+            "Không bị nghiêm cấm, nếu nồng độ cồn trong máu ở mức nhẹ, có thể điều khiển phương tiện tham gia giao thông."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 25,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Hành vi của người điều khiển xe ô tô và các loại xe tương tự khi tham gia giao thông đường bộ mà trong máu hoặc hơi thở có nồng độ cồn thì bị áp dụng hình thức xử phạt vi phạm hành chính nào dưới đây?",
+        "answers": [
+            "Bị phạt tiền.",
+            "Có thể bị tước giấy phép lái xe.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 26,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Theo Luật Phòng chống tác hại của rượu, bia, đối tượng nào dưới đây bị cấm sử dụng rượu, bia khi tham gia giao thông?",
+        "answers": [
+            "Người điều khiển xe ô tô, xe mô tô, xe đạp, xe gắn máy.",
+            "Người được chở trên xe cơ giới.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 27,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Hành vi giao xe ô tô, mô tô cho người nào sau đây tham gia giao thông đường bộ bị nghiêm cấm?",
+        "answers": [
+            "Người chưa đủ tuổi theo quy định.",
+            "Người không có giấy phép lái xe.",
+            "Người có giấy phép lái xe nhưng đã bị trừ hết 12 điểm.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 28,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Hành vi nào sau đây bị nghiêm cấm?",
+        "answers": [
+            "Điều khiển xe cơ giới lạng lách, đánh võng, rú ga liên tục khi tham gia giao thông trên đường.",
+            "Xúc phạm, đe dọa, cản trở, chống đối hoặc không chấp hành hiệu lệnh, hướng dẫn, yêu cầu kiểm tra, kiểm soát của người thi hành công vụ về bảo đảm trật tự, an toàn giao thông đường bộ.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 29,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Các hành vi nào sau đây bị cấm đối với phương tiện tham gia giao thông đường bộ?",
+        "answers": [
+            "Cải tạo xe ô tô loại khác thành xe ô tô chở người phục vụ mục đích quốc phòng, an ninh.",
+            "Cải tạo trái phép; cố ý can thiệp làm sai lệch chỉ số trên đồng hồ báo quãng đường đã chạy của xe ô tô; cắt, hàn, tẩy xóa, đục sửa, đóng lại trái phép số khung, số động cơ của xe cơ giới, xe máy chuyên dùng."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 30,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Hành vi nào sau đây bị cấm?",
+        "answers": [
+            "Lắp đặt, sử dụng thiết bị âm thanh, ánh sáng trên xe cơ giới, xe máy chuyên dùng gây mất trật tự, an toàn giao thông đường bộ.",
+            "Cản trở người, phương tiện tham gia giao thông trên đường bộ; ném gạch, đất, đá, cát hoặc vật thể khác vào người, phương tiện đang tham gia giao thông trên đường bộ.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 31,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Việc sản xuất, sử dụng, mua, bán trái phép biển số xe có bị nghiêm cấm hay không?",
+        "answers": [
+            "Không bị nghiêm cấm.",
+            "Bị nghiêm cấm.",
+            "Bị nghiêm cấm tuỳ trường hợp."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 32,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi điều khiển phương tiện tham gia giao thông, những hành vi nào dưới đây bị nghiêm cấm?",
+        "answers": [
+            "Thay đổi tốc độ của xe nhiều lần.",
+            "Điều khiển phương tiện sau 23 giờ trong ngày.",
+            "Lạng lách, đánh võng, rú ga liên tục."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 33,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Có bao nhiêu nhóm biển báo hiệu đường bộ?",
+        "answers": [
+            "Ba nhóm: Biển báo cấm, biển báo nguy hiểm và biển hiệu lệnh.",
+            "Bốn nhóm: Biển báo cấm, biển báo nguy hiểm, biển hiệu lệnh và biển phụ.",
+            "Năm nhóm: Biển báo cấm, biển báo nguy hiểm, biển hiệu lệnh, biển chỉ dẫn, biển phụ."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 34,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Tại nơi có vạch kẻ đường hoặc tại nơi mà người đi bộ, xe lăn của người khuyết tật đang qua đường, người điều khiển phương tiện tham gia giao thông phải thực hiện như thế nào?",
+        "answers": [
+            "Giảm tốc độ và nhường đường cho người đi bộ, xe lăn của người khuyết tật qua đường đảm bảo an toàn.",
+            "Quan sát, giảm tốc độ hoặc dừng lại để bảo đảm an toàn cho người đi bộ, xe lăn của người khuyết tật qua đường.",
+            "Quan sát, tăng tốc độ và điều khiển phương tiện nhanh chóng đi qua."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 35,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người điều khiển xe mô tô phải phải quan sát, giảm tốc độ hoặc dừng lại để bảo đảm an toàn trong các trường hợp nào dưới đây?",
+        "answers": [
+            "Đường hẹp, đường vòng, đường quanh co, đường đèo, dốc.",
+            "Nơi cầu, cống hẹp, đập tràn, đường ngầm, hầm chui, hầm đường bộ.",
+            "Trời mưa, gió, sương, khói, bụi, mặt đường trơn trượt, lầy lội, có nhiều đất đá, vật liệu rơi vãi ảnh hưởng đến an toàn giao thông đường bộ.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 36,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi gặp hiệu lệnh điều khiển của Cảnh sát giao thông như hình dưới đây thì người tham gia giao thông đường bộ phải đi như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Người tham gia giao thông đường bộ ở các hướng phải dừng lại.",
+            "Người tham gia giao thông đường bộ ở các hướng được đi theo chiều gậy chỉ của Cảnh sát giao thông.",
+            "Người tham gia giao thông đường bộ ở phía trước và phía sau người điều khiển được đi tất cả các hướng; người tham gia giao thông đường bộ ở phía bên phải và phía bên trái người điều khiển phải dừng lại.",
+            "Người tham gia giao thông đường bộ ở phía trước và phía sau người điều khiển phải dừng lại; người tham gia giao thông đường bộ ở phía bên phải và phía bên trái người điều khiển được đi tất cả các hướng."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": true,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-36.jpeg"
+    },
+    {
+        "id": 37,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi gặp hiệu lệnh điều khiển của Cảnh sát giao thông như hình dưới đây thì người tham gia giao thông đường bộ phải đi như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Người tham gia giao thông đường bộ ở phía sau Cảnh sát giao thông được đi, các hướng khác phải dừng lại.",
+            "Người tham gia giao thông đường bộ được rẽ phải theo chiều mũi tên màu xanh ở bục Cảnh sát giao thông.",
+            "Người tham gia giao thông đường bộ ở tất cả các hướng phải dừng lại, trừ các xe đã ở trong khu vực giao nhau.",
+            "Người tham gia giao thông đường bộ ở phía trước Cảnh sát giao thông phải dừng lại, các hướng khác được đi."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-37.jpeg"
+    },
+    {
+        "id": 38,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi hiệu lệnh của người điều khiển giao thông trái với tín hiệu đèn giao thông hoặc biển báo hiệu đường bộ thì người tham gia giao thông đường bộ phải chấp hành báo hiệu đường bộ nào dưới đây?",
+        "answers": [
+            "Theo hiệu lệnh của người điều khiển giao thông.",
+            "Theo tín hiệu đèn giao thông.",
+            "Theo biển báo hiệu đường bộ."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 39,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi ở một vị trí vừa có biển báo hiệu đặt cố định vừa có biển báo hiệu tạm thời mà hai biển có ý nghĩa khác nhau, người tham gia giao thông đường bộ phải chấp hành hiệu lệnh của biển báo hiệu nào?",
+        "answers": [
+            "Biển báo hiệu đặt cố định.",
+            "Biển báo hiệu tạm thời.",
+            "Theo quyết định của người tham gia giao thông nhưng phải bảo đảm an toàn."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 40,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Tại nơi đường giao nhau, khi đèn điều khiển giao thông có tín hiệu màu vàng, người điều khiển phương tiện tham gia giao thông phải chấp hành như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Dừng lại trước vạch dừng; trường hợp đang đi trên vạch dừng hoặc đã đi qua vạch dừng mà tín hiệu đèn màu vàng thì được đi tiếp; trường hợp tín hiệu đèn màu vàng nhấp nháy, người điều khiển phương tiện tham gia giao thông đường bộ được đi nhưng phải quan sát, giảm tốc độ hoặc dừng lại nhường đường cho người đi bộ, xe lăn của người khuyết tật qua đường hoặc các phương tiện khác.",
+            "Tăng tốc độ nhanh chóng vượt qua nút giao.",
+            "Quan sát, giảm tốc độ, từ từ vượt qua nút giao."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 41,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe trên đường cần chấp hành quy định về tốc độ tối đa như thế nào?",
+        "answers": [
+            "Chỉ lớn hơn tốc độ tối đa cho phép khi đường vắng.",
+            "Chỉ lớn hơn tốc độ tối đa cho phép khi vào ban đêm.",
+            "Không vượt quá tốc độ tối đa cho phép."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 42,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi chở trẻ em dưới 10 tuổi và chiều cao dưới 1,35 mét trên xe ô tô, người lái xe phải thực hiện quy tắc nào dưới đây để bảo đảm an toàn?",
+        "answers": [
+            "Không được cho trẻ em ngồi cùng hàng ghế với người lái xe, trừ loại xe ô tô chỉ có một hàng ghế; người lái xe phải sử dụng, hướng dẫn sử dụng thiết bị an toàn phù hợp cho trẻ em.",
+            "Cho trẻ em ngồi cùng hàng ghế với người lái xe, người lái xe phải sử dụng, hướng dẫn sử dụng thiết bị an toàn phù hợp cho trẻ em."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 43,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Phương tiện tham gia giao thông đường bộ di chuyển với tốc độ thấp hơn phải đi như thế nào?",
+        "answers": [
+            "Đi về bên trái theo chiều đi của mình.",
+            "Đi về bên phải theo chiều đi của mình.",
+            "Đi ở bất cứ bên nào nhưng phải bấm đèn cảnh báo nguy hiểm để báo hiệu cho các phương tiện khác."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 44,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên một chiều đường có vạch kẻ phân làn đường, người lái xe cơ giới, xe máy chuyên dùng phải điều khiển xe đi trên làn đường nào?",
+        "answers": [
+            "Đi trên làn đường bên phải trong cùng.",
+            "Đi trên làn đường bên trái.",
+            "Đi ở bất cứ làn nào nhưng phải bảo đảm tốc độ cho phép."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 45,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe phải giảm tốc độ, có tín hiệu rẽ phải và đi sát về bên phải của phần đường xe chạy trong các trường hợp nào dưới đây?",
+        "answers": [
+            "Khi xe chạy phía trước có tín hiệu vượt xe khác.",
+            "Khi phía trước có xe chạy ngược chiều.",
+            "Khi xe sau xin vượt nếu đủ điều kiện an toàn.",
+            "Khi xe sau có tín hiệu vượt bên phải."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 46,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Vượt xe là gì?",
+        "answers": [
+            "Là tình huống giao thông trên đường mà mỗi chiều đường xe chạy chỉ có một làn đường dành cho xe cơ giới, xe đi phía sau di chuyển sang bên trái để di chuyển lên trước xe phía trước.",
+            "Là tình huống giao thông trên đường có từ hai làn đường dành cho xe cơ giới cùng chiều trở lên được phân biệt bằng vạch kẻ đường, xe đi phía sau di chuyển lên trước xe phía trước theo quy tắc sử dụng làn đường."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 47,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe được phép vượt xe trên cầu hẹp có một làn đường, đường cong có tầm nhìn bị hạn chế hay không?",
+        "answers": [
+            "Được phép vượt khi đường vắng.",
+            "Không được phép vượt.",
+            "Được phép vượt khi có việc gấp."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 48,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Muốn vượt xe phía trước, người lái xe mô tô phải có tín hiệu như thế nào dưới đây để bảo đảm an toàn?",
+        "answers": [
+            "Bấm còi liên tục để xe phía trước biết xe mình xin vượt.",
+            "Rú ga liên tục để xe phía trước biết xe mình xin vượt.",
+            "Báo hiệu nhấp nháy bằng đèn chiếu sáng phía trước hoặc còi."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 49,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi lái xe trong khu đông dân cư, khu vực cơ sở khám bệnh, chữa bệnh trừ các khu vực có biển cấm sử dụng còi, người lái xe được sử dụng còi trong thời gian nào?",
+        "answers": [
+            "Từ 22 giờ ngày hôm trước đến 05 giờ ngày hôm sau.",
+            "Từ 05 giờ đến 22 giờ.",
+            "Từ 23 giờ ngày hôm trước đến 05 giờ sáng hôm sau."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 50,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Phương tiện tham gia giao thông đường bộ chỉ được sử dụng tín hiệu còi trong các trường hợp nào sau đây?",
+        "answers": [
+            "Để báo hiệu cho người tham gia giao thông đường bộ khi xuất hiện tình huống có thể mất an toàn giao thông hoặc báo hiệu chuẩn bị vượt xe.",
+            "Để báo hiệu cho người tham gia giao thông đường bộ từ 22 giờ ngày hôm trước đến 05 giờ ngày hôm sau trong khu đông dân cư, khu vực cơ sở khám bệnh, chữa bệnh, trừ xe ưu tiên.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 51,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe sử dụng đèn như thế nào khi đi trên các đoạn đường qua khu đông dân cư có hệ thống chiếu sáng đang hoạt động?",
+        "answers": [
+            "Chỉ bật đèn chiếu xa (đèn pha).",
+            "Bật đèn chiếu xa (đèn pha) khi đường vắng, bật đèn chiếu gần (đèn cốt) khi có xe đi ngược chiều.",
+            "Chỉ bật đèn chiếu gần (đèn cốt)."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 52,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi điều khiển phương tiện tham gia giao thông, hành vi nào sau đây bị cấm?",
+        "answers": [
+            "Dùng tay cầm và sử dụng điện thoại hoặc thiết bị điện tử khác.",
+            "Chỉ được chở người trên thùng xe ô tô chở hàng trong trường hợp chở người đi làm nhiệm vụ cứu nạn, cứu hộ, phòng, chống thiên tai, dịch bệnh hoặc thực hiện nhiệm vụ khẩn cấp."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 53,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe không được vượt xe khác khi gặp trường hợp nào dưới đây?",
+        "answers": [
+            "Trên cầu hẹp có một làn đường; nơi đường giao nhau, đường bộ giao nhau cùng mức với đường sắt; khi gặp xe ưu tiên.",
+            "Trên cầu có từ 02 làn xe trở lên.",
+            "Trên đường có 02 làn đường được phân chia làn bằng vạch kẻ nét đứt."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 54,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Nơi nào cấm quay đầu xe?",
+        "answers": [
+            "Ở phần đường dành cho người đi bộ qua đường, trên cầu, đầu cầu, gầm cầu vượt, ngầm.",
+            "Tại nơi đường bộ giao nhau cùng mức với đường sắt, đường hẹp, đường dốc, đoạn đường cong tầm nhìn bị che khuất, trên đường cao tốc, trong hầm đường bộ, trên đường một chiều.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 55,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe không được quay đầu xe trong các trường hợp nào dưới đây?",
+        "answers": [
+            "Ở phần đường dành cho người đi bộ qua đường, trên cầu, đầu cầu, trên đường cao tốc, tại nơi đường bộ giao nhau cùng mức với đường sắt, đường hẹp, đường dốc.",
+            "Ở phía trước hoặc phía sau của phần đường dành cho người đi bộ qua đường, trên đường quốc lộ.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 56,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trước khi cho xe chuyển hướng, người lái xe phải làm gì để bảo đảm an toàn giao thông?",
+        "answers": [
+            "Phải quan sát, bảo đảm khoảng cách an toàn với xe phía sau.",
+            "Giảm tốc độ và có tín hiệu báo hướng rẽ.",
+            "Chuyển dần sang làn gần nhất với hướng rẽ. Khi bảo đảm an toàn, không gây trở ngại cho người và phương tiện khác mới được chuyển hướng.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 57,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi chuyển làn đường, người lái xe phải bật đèn tín hiệu báo rẽ như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Khi bắt đầu chuyển làn đường.",
+            "Trước khi thay đổi làn đường.",
+            "Sau khi thay đổi làn đường."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 58,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe không được lùi xe ở những khu vực nào dưới đây?",
+        "answers": [
+            "Ở đường một chiều, khu vực cấm dừng, trên phần đường dành cho người đi bộ qua đường.",
+            "Nơi đường bộ giao nhau, đường bộ giao nhau cùng mức với đường sắt.",
+            "Nơi tầm nhìn bị che khuất, trong hầm đường bộ, trên đường cao tốc.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 59,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người điều khiển phương tiện tham gia giao thông không được dừng xe, đỗ xe ở những vị trí nào sau đây?",
+        "answers": [
+            "Trên miệng cống thoát nước, miệng hầm của đường điện thoại, điện cao thế, chỗ dành riêng cho xe chữa cháy lấy nước.",
+            "Trong phạm vi an toàn của đường sắt.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 60,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường phố, người điều khiển phương tiện tham gia giao thông đường bộ được dừng xe, đỗ xe sát theo lề đường, vỉa hè phía bên phải theo chiều đi của mình; bánh xe gần nhất không được cách xa lề đường, vỉa hè không quá bao nhiêu mét trong các trường hợp dưới đây và không gây cản trở, nguy hiểm cho người và phương tiện tham gia giao thông đường bộ?",
+        "answers": [
+            "0,25 mét.",
+            "0,3 mét.",
+            "0,4 mét.",
+            "0,5 mét."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 61,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi dừng, đỗ xe trên đường phố hẹp, người lái xe ô tô phải dừng, đỗ xe ở vị trí cách xe ô tô đang đỗ ngược chiều khoảng cách tối thiểu là bao nhiêu mét trong các trường hợp dưới đây để bảo đảm an toàn?",
+        "answers": [
+            "10 mét.",
+            "15 mét.",
+            "20 mét.",
+            "25 mét."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 62,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người điều khiển phương tiện tham gia giao thông đường bộ không được dừng xe, đỗ xe tại các vị trí nào sau đây?",
+        "answers": [
+            "Nơi có lề đường rộng hoặc khu đất ở bên ngoài phần đường xe chạy.",
+            "Song song cùng chiều với một xe khác đang dừng, đỗ trên đường; trên đoạn đường cong hoặc gần đầu dốc mà tầm nhìn bị che khuất; bên trái đường một chiều.",
+            "Cả hai ý trên."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 63,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người điều khiển xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy có được phép sử dụng xe để kéo hoặc đẩy các phương tiện khác khi tham gia giao thông không?",
+        "answers": [
+            "Được phép.",
+            "Nếu phương tiện được kéo, đẩy có khối lượng nhỏ hơn phương tiện của mình.",
+            "Tùy trường hợp.",
+            "Không được phép."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 64,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi điều khiển xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy, những hành vi nào sau đây không được phép?",
+        "answers": [
+            "Buông cả hai tay; đứng, nằm trên xe điều khiển xe; sử dụng chân chống hoặc vật khác quệt xuống đường khi xe đang chạy.",
+            "Chở tối đa hai người phía sau khi chở người bệnh đi cấp cứu, áp giải người có hành vi vi phạm pháp luật, trẻ em dưới 12 tuổi và người già yếu hoặc người khuyết tật."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 65,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi điều khiển xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy, những hành vi nào sau đây không được phép?",
+        "answers": [
+            "Buông cả hai tay; sử dụng xe để kéo, đẩy xe khác, vật khác; sử dụng chân chống hoặc vật khác quệt xuống đường khi xe đang chạy.",
+            "Sử dụng xe để chở người hoặc hàng hóa; để chân chạm xuống đất khi khởi hành.",
+            "Đội mũ bảo hiểm; chạy xe đúng tốc độ quy định và chấp hành đúng quy tắc giao thông đường bộ.",
+            "Chở người ngồi sau dưới 16 tuổi."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 66,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người được chở trên xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy khi tham gia giao thông đường bộ không được thực hiện hành vi nào sau đây?",
+        "answers": [
+            "Mang, vác vật cồng kềnh.",
+            "Bám, kéo hoặc đẩy các phương tiện khác.",
+            "Dùng tay cầm điện thoại hoặc các thiết bị điện tử khác.",
+            "Ý 1 và ý 2."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 67,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người được chở trên xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy khi tham gia giao thông đường bộ có được bám, kéo hoặc đẩy các phương tiện khác không?",
+        "answers": [
+            "Được phép.",
+            "Được bám trong trường hợp phương tiện của mình bị hỏng.",
+            "Được kéo, đẩy trong trường hợp phương tiện khác bị hỏng.",
+            "Không được phép."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 68,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe, người được chở trên xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy phải thực hiện quy định nào dưới đây?",
+        "answers": [
+            "Đội mũ bảo hiểm theo đúng quy chuẩn kỹ thuật quốc gia và cài quai đúng quy cách.",
+            "Người lái xe phải đội mũ bảo hiểm, người được chở trên xe không nhất thiết phải đội mũ bảo hiểm.",
+            "Phải đội mũ bảo hiểm nhưng không nhất thiết phải cài quai."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 69,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe mô tô hai bánh, xe gắn máy được phép chở tối đa hai người trong những trường hợp nào?",
+        "answers": [
+            "Chở người bệnh đi cấp cứu; áp giải người có hành vi vi phạm pháp luật; trẻ em dưới 12 tuổi; người già yếu hoặc người khuyết tật.",
+            "Người đã uống rượu, bia; người trong cơ thể có chất ma tuý.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 70,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy không được thực hiện các hành vi nào dưới đây?",
+        "answers": [
+            "Đi xe dàn hàng ngang; buông cả hai tay.",
+            "Sử dụng xe để kéo, đẩy xe khác, vật khác, dẫn dắt vật nuôi, mang, vác và chở vật cồng kềnh; chở người đứng trên xe, giá đèo hàng hoặc ngồi trên tay lái; xếp hàng hóa trên xe quá giới hạn quy định.",
+            "Ngồi về một bên điều khiển xe; đứng, nằm trên xe điều khiển xe; thay người lái xe khi xe đang chạy; quay người về phía sau để điều khiển xe hoặc bịt mắt điều khiển xe; sử dụng chân chống hoặc vật khác quệt xuống đường khi xe đang chạy.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 71,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy không được thực hiện các hành vi nào sau đây?",
+        "answers": [
+            "Đi xe dàn hàng ngang; đi xe vào phần đường dành cho người đi bộ và phương tiện khác.",
+            "Sử dụng ô, thiết bị âm thanh, trừ thiết bị trợ thính.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 72,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy không được thực hiện hành vi nào sau đây?",
+        "answers": [
+            "Đi trên phần đường, làn đường quy định, chấp hành hiệu lệnh của người điều khiển giao thông, đèn tín hiệu giao thông.",
+            "Đi xe dàn hàng ngang, đi xe vào phần đường dành cho người đi bộ.",
+            "Cả hai ý trên."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 73,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người được chở trên xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy khi tham gia giao thông đường bộ có được sử dụng ô khi trời mưa hay không?",
+        "answers": [
+            "Được sử dụng.",
+            "Chỉ người ngồi sau được sử dụng.",
+            "Không được sử dụng.",
+            "Được sử dụng nếu không có áo mưa."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 74,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người được chở trên xe mô tô có được kéo theo người đang điều khiển xe đạp hay không?",
+        "answers": [
+            "Chỉ được phép nếu cả hai đội mũ bảo hiểm.",
+            "Không được phép.",
+            "Chỉ được thực hiện trên đường vắng."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 75,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trường hợp người được chở trên xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy không đội \"mũ bảo hiểm cho người đi mô tô, xe máy\" hoặc không cài quai đúng quy cách (trừ trường hợp chở người bệnh đi cấp cứu, trẻ em dưới 06 tuổi, áp giải người có hành vi vi phạm pháp luật) thì việc xử phạt vi phạm hành chính được quy định như thế nào?",
+        "answers": [
+            "Không bị xử phạt chỉ bị nhắc nhở.",
+            "Người được chở không bị xử phạt, chỉ xử phạt người điều khiển xe mô tô, xe gắn máy.",
+            "Người được chở bị xử phạt, không xử phạt người điều khiển xe mô tô, xe gắn máy.",
+            "Xử phạt cả người điều khiển và người được chở trên xe mô tô, xe gắn máy."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 76,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trong các trường hợp dưới đây, để bảo đảm an toàn khi tham gia giao thông, người lái xe mô tô cần thực hiện như thế nào?",
+        "answers": [
+            "Phải đội mũ bảo hiểm theo đúng quy chuẩn kỹ thuật quốc gia và cài quai đúng quy cách, không sử dụng ô, điện thoại di động, thiết bị âm thanh (trừ thiết bị trợ thính).",
+            "Phải đội mũ bảo hiểm khi trời mưa gió hoặc trời quá nắng; có thể sử dụng ô, điện thoại di động, thiết bị âm thanh nhưng phải bảo đảm an toàn.",
+            "Phải đội mũ bảo hiểm khi cảm thấy mất an toàn giao thông hoặc khi chuẩn bị di chuyển quãng đường xa."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 77,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Thứ tự xuống phà như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe thô sơ, người đi bộ xuống trước, xe cơ giới, xe máy chuyên dùng xuống sau.",
+            "Xe cơ giới, xe máy chuyên dùng xuống trước, xe thô sơ, người đi bộ xuống sau.",
+            "Xe cơ giới, xe thô sơ xuống trước, xe máy chuyên dùng, người đi bộ xuống sau."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 78,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường có nhiều làn đường cho xe đi cùng chiều được phân biệt bằng vạch kẻ phân làn đường, người điều khiển phương tiện tham gia giao thông đường bộ phải cho xe đi như thế nào?",
+        "answers": [
+            "Cho xe đi trên bất kỳ làn đường nào hoặc giữa 02 làn đường nếu không có xe đi phía trước; khi cần thiết phải chuyển làn đường, người lái xe phải quan sát xe phía trước để bảo đảm an toàn.",
+            "Phải cho xe đi trong một làn đường và chỉ được chuyển làn đường ở những nơi cho phép; mỗi lần chuyển làn đường chỉ được phép chuyển sang một làn đường liền kề; khi chuyển làn đường phải có tín hiệu báo trước; phải quan sát bảo đảm khoảng cách an toàn với xe phía trước, phía sau và hai bên mới được chuyển làn.",
+            "Phải cho xe đi trong một làn đường, chỉ được chuyển làn đường khi vượt xe phía trước cùng làn đường."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 79,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường một chiều có vạch kẻ phân làn đường, xe thô sơ và xe cơ giới phải đi như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe thô sơ phải đi trên làn đường bên trái, xe cơ giới, xe máy chuyên dùng đi trên làn đường bên phải trong cùng.",
+            "Xe thô sơ phải đi trên làn đường bên phải trong cùng, xe cơ giới, xe máy chuyên dùng đi trên làn đường bên trái.",
+            "Xe thô sơ phải đi trên làn đường bên phải trong cùng, xe cơ giới, xe máy chuyên dùng được đi trên tất cả các làn đường."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 80,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi lái xe trong đô thị và khu đông dân cư trong thời gian từ 22 giờ ngày hôm trước đến 05 giờ ngày hôm sau, nếu cần vượt một xe khác, người lái xe phải báo hiệu như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Chỉ được báo hiệu bằng còi.",
+            "Phải báo hiệu bằng cả còi và đèn.",
+            "Chỉ được báo hiệu bằng đèn."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 81,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi điều khiển xe chạy trên đường, biết có xe sau xin vượt, nếu đủ điều kiện an toàn người điều khiển phương tiện phải làm gì?",
+        "answers": [
+            "Tăng tốc độ và ra hiệu cho xe sau vượt, không được gây trở ngại cho xe xin vượt.",
+            "Giảm tốc độ, có tín hiệu rẽ phải để báo hiệu cho người điều khiển phương tiện tham gia giao thông đường bộ phía sau biết được vượt và đi sát về bên phải của phần đường xe chạy cho đến khi xe sau đã vượt qua, không được cản trở đối với xe xin vượt.",
+            "Cho xe đi sát về bên trái của phần đường xe chạy và ra hiệu cho xe sau vượt, không được gây trở ngại cho xe xin vượt."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 82,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi điều khiển xe chạy trên đường, biết có xe sau xin vượt, nếu không đủ điều kiện an toàn người điều khiển phương tiện phải làm gì?",
+        "answers": [
+            "Có tín hiệu rẽ trái để báo hiệu cho người điều khiển phương tiện tham gia giao thông đường bộ phía sau biết là chưa được vượt.",
+            "Tiếp tục đi cho đến khi đủ điều kiện an toàn, nếu xe sau vẫn xin vượt thì báo hiệu cho xe sau vượt.",
+            "Tăng tốc độ để báo hiệu cho xe xin vượt biết là chưa được vượt."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 83,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi chuyển hướng, người lái xe, người điều khiển xe máy chuyên dùng phải làm gì để bảo đảm an toàn?",
+        "answers": [
+            "Phải nhường đường cho người đi bộ, xe thô sơ, xe đi ngược chiều và chỉ chuyển hướng khi không gây trở ngại hoặc nguy hiểm cho người, phương tiện khác.",
+            "Nhanh chóng chuyển hướng để không gây trở ngại hoặc nguy hiểm cho người, phương tiện khác.",
+            "Ra tín hiệu chuyển hướng để yêu cầu các phương tiện khác dừng lại cho xe chuyển hướng di chuyển."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 84,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trước khi chuyển hướng, người điều khiển phương tiện tham gia giao thông đường bộ phải thực hiện như thế nào để bảo đảm an toàn?",
+        "answers": [
+            "Quan sát gương, nếu không có phương tiện gần hướng rẽ thì nhanh chóng chuyển hướng.",
+            "Quan sát, bảo đảm khoảng cách an toàn với xe phía sau, giảm tốc độ và có tín hiệu báo hướng rẽ hoặc có tín hiệu bằng tay theo hướng rẽ đối với xe thô sơ không có đèn báo hướng rẽ, chuyển dần sang làn gần nhất với hướng rẽ. Tín hiệu báo hướng rẽ hoặc tín hiệu bằng tay phải sử dụng liên tục trong quá trình chuyển hướng. Khi bảo đảm an toàn, không gây trở ngại cho người và phương tiện khác mới được chuyển hướng.",
+            "Quan sát gương, tăng tốc độ, ra tín hiệu và chuyển hướng."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 85,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi lùi xe, người điều khiển phương tiện tham gia giao thông đường bộ phải làm gì để bảo đảm an toàn?",
+        "answers": [
+            "Quan sát phía sau và cho lùi xe ở tốc độ chậm.",
+            "Có tín hiệu báo lùi, nếu phía sau không có người hoặc phương tiện khác thì nhanh chóng lùi để bảo đảm an toàn.",
+            "Phải quan sát hai bên và phía sau xe, có tín hiệu lùi và chỉ lùi xe khi bảo đảm an toàn."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 86,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi muốn lùi xe ở nơi có tầm nhìn bị che khuất, người lái xe phải xử lý như thế nào để đảm bảo an toàn?",
+        "answers": [
+            "Phải lùi thật chậm.",
+            "Bấm còi 3 lần liên tiếp trước khi lùi.",
+            "Không được lùi xe."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 87,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường không phân chia thành hai chiều xe chạy riêng biệt, người điều khiển phương tiện tham gia giao thông đường bộ phải tránh xe đi ngược chiều như thế nào để bảo đảm an toàn?",
+        "answers": [
+            "Giảm tốc độ và cho xe đi về bên phải theo chiều xe chạy của mình.",
+            "Một trong hai xe phải dừng lại cho xe kia đi qua mới được đi.",
+            "Tăng tốc độ, cho xe đi về bên phải theo chiều xe chạy của mình để nhanh chóng vượt qua."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 88,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi tránh xe đi ngược chiều, các xe phải nhường đường như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Nơi đường hẹp chỉ đủ cho một xe chạy và có chỗ tránh xe thì xe nào ở gần chỗ tránh hơn phải vào vị trí tránh, nhường đường cho xe đi ngược chiều.",
+            "Xe xuống dốc phải nhường đường cho xe lên dốc.",
+            "Xe có chướng ngại vật phía trước phải nhường đường cho xe không có chướng ngại vật phía trước.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 89,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi đang lái xe xuống dốc gặp một xe đang đi lên dốc, người lái xe phải làm gì?",
+        "answers": [
+            "Tiếp tục đi và phát tín hiệu cho xe lên dốc nhường đường cho xe bạn.",
+            "Nhường đường cho xe lên dốc.",
+            "Chỉ nhường đường khi xe lên dốc nháy đèn."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 90,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe phải làm gì để bảo đảm an toàn khi lái xe trên đường cong có tầm nhìn bị hạn chế?",
+        "answers": [
+            "Quan sát, giảm tốc độ hoặc dừng lại để bảo đảm an toàn.",
+            "Đi sang làn đường của xe ngược chiều để mở rộng tầm nhìn và vượt xe khác.",
+            "Cho xe đi sát bên phải làn đường, bật tín hiệu báo hiệu để vượt bên phải xe khác."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 91,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Tại nơi đường giao nhau, người lái xe đang đi trên đường không ưu tiên, đường nhánh phải nhường đường như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Nhường đường cho xe đi ở bên phải mình tới.",
+            "Nhường đường cho xe đi ở bên trái mình tới.",
+            "Nhường đường cho xe đi trên đường ưu tiên hoặc đường chính từ bất kỳ hướng nào tới."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 92,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Tại nơi đường giao nhau có báo hiệu đi theo vòng xuyến, người lái xe phải nhường đường như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Nhường đường cho xe đi đến từ bên phải.",
+            "Nhường đường cho xe đi đến từ bên trái.",
+            "Không phải nhường đường."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 93,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Tại nơi đường giao nhau không có báo hiệu đi theo vòng xuyến, người điều khiển phương tiện phải nhường đường như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Phải nhường đường cho xe đi đến từ bên phải.",
+            "Xe báo hiệu xin đường trước, xe đó được đi trước.",
+            "Phải nhường đường cho xe đi đến từ bên trái."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 94,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe phải nhanh chóng giảm tốc độ, đi sát lề đường bên phải hoặc dừng lại để nhường đường cho các loại xe nào dưới đây?",
+        "answers": [
+            "Xe chữa cháy của Cảnh sát phòng cháy, chữa cháy và cứu nạn, cứu hộ và xe chữa cháy của các lực lượng khác; xe của lực lượng quân sự, công an và kiểm sát; đoàn xe có xe Cảnh sát giao thông dẫn đường; xe cứu thương; xe hộ đê không có tín hiệu ưu tiên theo quy định.",
+            "Xe ưu tiên gồm xe chữa cháy của Cảnh sát phòng cháy, chữa cháy và cứu nạn, cứu hộ và xe chữa cháy của các lực lượng khác được huy động đi làm nhiệm vụ chữa cháy; xe của lực lượng quân sự, công an và kiểm sát đi làm nhiệm vụ khẩn cấp; đoàn xe có xe Cảnh sát giao thông dẫn đường; xe cứu thương đi làm nhiệm vụ cấp cứu; xe hộ đê đi làm nhiệm vụ; xe đi làm nhiệm vụ cứu nạn, cứu hộ, khắc phục sự cố thiên tai, dịch bệnh hoặc xe đi làm nhiệm vụ trong tình trạng khẩn cấp theo quy định của pháp luật; đoàn xe tang.",
+            "Xe ô tô, xe máy, đoàn xe đang diễu hành có tổ chức có báo tín hiệu xin vượt bằng còi và đèn."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 95,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Xe ưu tiên (trừ đoàn xe tang) tham gia giao thông đường bộ khi đi làm nhiệm vụ được quyền ưu tiên nào dưới đây?",
+        "answers": [
+            "Không bị hạn chế tốc độ.",
+            "Được phép đi không phụ thuộc vào tín hiệu đèn giao thông, đi vào đường ngược chiều, các đường khác có thể đi được.",
+            "Được đi ngược chiều trên làn dừng xe khẩn cấp trên đường cao tốc.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 96,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi có tín hiệu của xe ưu tiên, người và phương tiện tham gia giao thông đường bộ phải tuân thủ quy định nào dưới đây?",
+        "answers": [
+            "Giảm tốc độ, đi sát lề đường bên phải hoặc dừng lại để nhường đường.",
+            "Tăng tốc độ và đi sát lề đường bên phải để nhường đường.",
+            "Giảm tốc độ, đi sát lề đường bên trái để nhường đường."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 97,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi đang lái xe, phía trước có một xe Cảnh sát giao thông không phát tín hiệu ưu tiên, người lái xe có được phép vượt hay không?",
+        "answers": [
+            "Không được vượt.",
+            "Được phép vượt ở phần đường dành cho người đi bộ qua đường.",
+            "Được vượt khi bảo đảm an toàn."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 98,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi đang lái xe, phía trước có một xe cứu thương đang phát tín hiệu ưu tiên, người lái xe có được phép vượt hay không?",
+        "answers": [
+            "Không được vượt.",
+            "Được vượt khi đang đi trên cầu.",
+            "Được phép vượt khi đi qua nơi giao nhau có ít phương tiện cùng tham gia giao thông.",
+            "Được vượt khi bảo đảm an toàn."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 99,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi tới đường ngang không có người gác, chắn đường bộ, chuông, đèn tín hiệu, người tham gia giao thông đường bộ phải làm gì để bảo đảm an toàn?",
+        "answers": [
+            "Dừng lại về bên phải đường của mình, trước vạch dừng xe và quan sát hai phía, khi không có phương tiện giao thông đường sắt tới mới được đi qua.",
+            "Quan sát hai phía, khi không có phương tiện giao thông đường sắt tới thì nhanh chóng đi qua.",
+            "Dừng lại khoảng cách tối thiểu 3 mét tính từ ray đường sắt gần nhất, khi không có phương tiện giao thông đường sắt tới thì nhanh chóng đi qua."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 100,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Tại đường ngang, cầu chung đường sắt, khi có hiệu lệnh của nhân viên gác chắn, đèn đỏ sáng nhấp nháy, chuông kêu, chắn đường bộ đang dịch chuyển hoặc đã đóng, người tham gia giao thông đường bộ phải làm gì để bảo đảm an toàn?",
+        "answers": [
+            "Dừng lại về bên trái đường của mình, trước vạch dừng xe.",
+            "Dừng lại giữa đường của mình, trước vạch dừng xe.",
+            "Dừng lại về bên phải đường của mình, trước vạch dừng xe."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 101,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi xe ô tô bị hư hỏng, bị tai nạn trên đường ngang, cầu chung đường sắt mà không thể di chuyển ngay khỏi phạm vi an toàn đường sắt, người lái xe và người có mặt xử lý như thế nào là đúng quy định?",
+        "answers": [
+            "Người lái xe và người có mặt phải ngay lập tức báo hiệu để dừng tàu, thực hiện các biện pháp bảo đảm an toàn.",
+            "Để xe lại, tìm cách báo cho người quản lý đường sắt, nhà ga nơi gần nhất.",
+            "Không di chuyển phương tiện, tự khắc phục sửa chữa."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 102,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người tham gia giao thông đường bộ phải dừng lại về bên phải đường của mình trước vạch dừng xe tại đường ngang, cầu chung đường sắt khi có báo hiệu nào dưới đây?",
+        "answers": [
+            "Hiệu lệnh của nhân viên gác chắn.",
+            "Đèn đỏ sáng nhấp nháy, chuông kêu.",
+            "Chắn đường bộ đang dịch chuyển hoặc đã đóng.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 103,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người điều khiển phương tiện tham gia giao thông trong hầm đường bộ ngoài việc phải tuân thủ các quy tắc giao thông còn phải thực hiện những quy định nào dưới đây?",
+        "answers": [
+            "Xe cơ giới, xe máy chuyên dùng phải bật đèn chiếu gần; xe thô sơ phải bật đèn hoặc có vật phát sáng báo hiệu; không dừng xe, đỗ xe trong hầm đường bộ; trường hợp gặp sự cố kỹ thuật hoặc bất khả kháng khác buộc phải dừng xe, đỗ xe, người lái xe, người điều khiển xe máy chuyên dùng phải đưa xe vào vị trí dừng xe, đỗ xe khẩn cấp, nếu không di chuyển được, phải có báo hiệu bằng đèn khẩn cấp và đặt biển hoặc đèn cảnh báo về phía sau xe khoảng cách bảo đảm an toàn.",
+            "Xe cơ giới, xe máy chuyên dùng phải bật đèn chiếu xa; được dừng xe, đỗ xe khi cần thiết.",
+            "Phải cho xe chạy trên một làn đường và chỉ chuyển làn ở nơi được phép; được quay đầu xe, lùi xe khi cần thiết."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 104,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Việc nối giữa xe kéo với xe được kéo trong trường hợp hệ thống hãm của xe được kéo không còn hiệu lực thì xe kéo nhau phải nối bằng cách nào?",
+        "answers": [
+            "Nối bằng dây cáp có độ dài 6 mét.",
+            "Nối bằng dây cáp có độ dài 8 mét.",
+            "Nối bằng thanh nối cứng."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 105,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Xe kéo rơ moóc, xe ô tô đầu kéo khi tham gia giao thông đường bộ phải tuân thủ quy tắc giao thông nào ghi ở dưới đây?",
+        "answers": [
+            "Chỉ được kéo rơ moóc, sơ mi rơ moóc phù hợp với thiết kế của xe; việc kết nối xe kéo với rơ moóc, xe ô tô đầu kéo với sơ mi rơ moóc phải bảo đảm chắc chắn, an toàn.",
+            "Phải có tổng trọng lượng tương đương tổng trọng lượng của rơ moóc hoặc phải có hệ thống hãm có hiệu lực cho rơ moóc.",
+            "Phải được lắp phanh phụ theo quy định để đảm bảo an toàn."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 106,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Luật Trật tự, an toàn giao thông đường bộ quy định về xe kéo xe, xe kéo rơ moóc và xe ô tô đầu kéo kéo sơ mi rơ moóc như thế nào dưới đây?",
+        "answers": [
+            "Một xe ô tô được kéo theo nhiều xe ô tô hoặc xe máy chuyên dùng khác khi xe được kéo không tự chạy được (trừ trường hợp xe vận chuyển hàng siêu trường, siêu trọng).",
+            "Xe được kéo phải có người điều khiển và hệ thống lái của xe đó phải còn hiệu lực; việc nối xe kéo với xe được kéo phải bảo đảm chắc chắn, an toàn; trường hợp hệ thống hãm của xe được kéo không còn hiệu lực thì xe kéo nhau phải nối bằng thanh nối cứng. Phía trước của xe kéo và phía sau của xe được kéo phải có biển báo hiệu, có đèn cảnh báo nhấp nháy màu vàng.",
+            "Cả hai ý trên."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 107,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người điều khiển phương tiện tham gia giao thông đường bộ phải quan sát, giảm tốc độ hoặc dừng lại để bảo đảm an toàn trong các trường hợp nào dưới đây?",
+        "answers": [
+            "Có báo hiệu cảnh báo nguy hiểm hoặc có chướng ngại vật trên đường; chuyển hướng xe chạy hoặc tầm nhìn bị hạn chế.",
+            "Nơi cầu, cống hẹp, đập tràn, đường ngầm, hầm chui, hầm đường bộ; có vật nuôi đi trên đường hoặc chăn thả ở ven đường.",
+            "Điểm dừng xe, đỗ xe trên đường bộ có khách đang lên, xuống xe.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 108,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường mà mỗi chiều đường xe chạy chỉ có một làn đường dành cho xe cơ giới, người lái xe không được vượt xe khác trong trường hợp nào dưới đây?",
+        "answers": [
+            "Có chướng ngại vật phía trước, xe chạy phía trước có tín hiệu vượt xe khác.",
+            "Xe chạy phía trước đã có tín hiệu rẽ phải và tránh về bên phải.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 109,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe được phép vượt xe khác về bên phải trong trường hợp nào dưới đây?",
+        "answers": [
+            "Xe phía trước có tín hiệu rẽ trái hoặc đang rẽ trái hoặc khi xe chuyên dùng đang làm việc trên đường mà không thể vượt bên trái.",
+            "Xe phía trước đang đi sát lề đường bên trái.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 110,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi có xe xin vượt, người lái xe mô tô xử lý như thế nào nếu đủ điều kiện an toàn cho xe phía sau vượt?",
+        "answers": [
+            "Giảm tốc độ, có tín hiệu rẽ phải để báo hiệu cho người điều khiển phương tiện tham gia giao thông đường bộ phía sau biết được vượt và đi sát về bên phải của phần đường xe chạy cho đến khi xe sau đã vượt qua, không được cản trở đối với xe xin vượt.",
+            "Lái xe vào lề đường bên trái và giảm tốc độ để xe phía sau vượt qua, không được gây trở ngại đối với xe xin vượt.",
+            "Tăng tốc độ, đi sát về bên phải của phần đường xe chạy cho đến khi xe sau đã vượt qua."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 111,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Những trường hợp nào dưới đây không được đi trên đường cao tốc, trừ người, phương tiện giao thông đường bộ và thiết bị phục vụ việc quản lý, bảo trì đường cao tốc?",
+        "answers": [
+            "Xe máy chuyên dùng có tốc độ thiết kế nhỏ hơn tốc độ tối thiểu quy định đối với đường cao tốc, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ, xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô, xe gắn máy, xe thô sơ, người đi bộ.",
+            "Xe máy chuyên dùng có tốc độ thiết kế lớn hơn tốc độ tối thiểu quy định đối với đường cao tốc.",
+            "Xe ô tô và xe máy chuyên dùng có tốc độ thiết kế lớn hơn 80 km/h."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 112,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi tham gia giao thông trên đường cao tốc, xe ưu tiên đi làm nhiệm vụ khẩn cấp được đi ngược chiều trong trường hợp nào dưới đây?",
+        "answers": [
+            "Được đi ngược chiều bất cứ làn đường nào của đường cao tốc có thể đi được.",
+            "Chỉ được đi ngược chiều trên làn dừng xe khẩn cấp.",
+            "Chỉ được đi ngược chiều trên làn đường sát dải phân cách của đường cao tốc."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 113,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi tham gia giao thông trên đường cao tốc, người lái xe không được thực hiện hành vi nào sau đây?",
+        "answers": [
+            "Dừng, đỗ xe trên phần đường xe chạy, trừ trường hợp xe không thể di chuyển được vào làn đường khẩn cấp.",
+            "Lùi xe, quay đầu xe.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 114,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi xe gặp sự cố kỹ thuật trên đường cao tốc, bạn phải xử lý như thế nào để bảo đảm an toàn giao thông?",
+        "answers": [
+            "Bật đèn tín hiệu khẩn cấp, dừng xe ngay lập tức và đặt biển báo hiệu nguy hiểm để cảnh báo cho các xe khác.",
+            "Bật tín hiệu khẩn cấp, lập tức đưa xe vào làn đường xe chạy bên phải trong cùng, đặt biển báo hiệu nguy hiểm để cảnh báo cho các xe khác.",
+            "Dừng xe, đỗ xe ở làn dừng khẩn cấp cùng chiều xe chạy và phải có báo hiệu bằng đèn khẩn cấp; trường hợp xe không thể di chuyển được vào làn dừng khẩn cấp, phải có báo hiệu bằng đèn khẩn cấp và đặt biển hoặc đèn cảnh báo về phía sau xe khoảng cách tối thiểu 150 mét, nhanh chóng báo cho cơ quan Cảnh sát giao thông thực hiện nhiệm vụ bảo đảm trật tự, an toàn giao thông trên tuyến hoặc cơ quan quản lý đường cao tốc."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 115,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường cao tốc, người lái xe xử lý như thế nào khi đã vượt quá lối ra của đường định rẽ?",
+        "answers": [
+            "Quay đầu xe, chạy trên lề đường có lối ra và rẽ khỏi đường cao tốc.",
+            "Lùi xe trên lề đường có lối ra và rẽ khỏi đường cao tốc.",
+            "Tiếp tục lái xe và rẽ ở lối ra tiếp theo."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 116,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi xảy ra ùn tắc trên đường cao tốc có làn dừng xe khẩn cấp, người lái xe có được cho xe chạy ở làn dừng xe khẩn cấp để nhanh chóng thoát khỏi khu vực ùn tắc không (trừ xe ưu tiên)?",
+        "answers": [
+            "Có.",
+            "Không."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 117,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi chuẩn bị nhập vào làn đường của đường cao tốc, người lái xe, người điều khiển xe máy chuyên dùng phải thực hiện như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Có tín hiệu xin vào và phải nhường đường cho xe đang chạy trên đường.",
+            "Quan sát xe phía sau bảo đảm khoảng cách an toàn mới cho xe nhập vào làn đường sát bên phải.",
+            "Nếu có làn đường tăng tốc thì phải cho xe chạy trên làn đường đó trước khi nhập vào làn đường của đường cao tốc.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 118,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Theo quy định về độ tuổi, người đủ bao nhiêu tuổi trở lên thì được cấp giấy phép lái xe ô tô tải và ô tô chuyên dùng có khối lượng toàn bộ theo thiết kế trên 3.500 kg đến 7.500 kg; các loại xe ô tô tải quy định cho giấy phép lái xe hạng C1 kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg?",
+        "answers": [
+            "18 tuổi.",
+            "17 tuổi.",
+            "16 tuổi."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 119,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Theo quy định về độ tuổi, người đủ bao nhiêu tuổi trở lên thì được cấp giấy phép lái xe mô tô hai bánh có dung tích xi lanh đến 125 cm3 và xe ô tô chở người đến 8 chỗ (không kể chỗ của người lái xe); xe ô tô tải và ô tô chuyên dùng có khối lượng toàn bộ theo thiết kế đến 3.500 kg?",
+        "answers": [
+            "16 tuổi.",
+            "17 tuổi",
+            "18 tuổi."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 120,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Theo quy định về độ tuổi, người lái xe ô tô chở người (kể cả xe buýt) trên 29 chỗ (không kể chỗ của người lái xe); xe ô tô chở người giường nằm; các loại xe ô tô chở người quy định cho giấy phép lái xe hạng D kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg phải đủ bao nhiêu tuổi trở lên?",
+        "answers": [
+            "23 tuổi.",
+            "24 tuổi.",
+            "27 tuổi.",
+            "30 tuổi."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 121,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Tuổi tối đa của người lái xe ô tô chở người (kể cả xe buýt) trên 29 chỗ (không kể chỗ của người lái xe), xe ô tô chở người giường nằm là bao nhiêu tuổi?",
+        "answers": [
+            "Đủ 55 tuổi đối với nam và đủ 50 tuổi đối với nữ.",
+            "Đủ 55 tuổi đối với nam và nữ.",
+            "Đủ 57 tuổi đối với nam và đủ 55 tuổi đối với nữ."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 122,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Theo quy định về độ tuổi, người lái xe ô tô chở người (kể cả xe buýt) trên 16 chỗ (không kể chỗ của người lái xe) đến 29 chỗ (không kể chỗ của người lái xe); các loại xe ô tô chở người quy định cho giấy phép lái xe hạng D2 kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg phải đủ bao nhiêu tuổi trở lên?",
+        "answers": [
+            "23 tuổi.",
+            "24 tuổi.",
+            "22 tuổi."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 123,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người đủ 16 tuổi đến dưới 18 tuổi chỉ được điều khiển các loại xe nào dưới đây?",
+        "answers": [
+            "Xe mô tô hai bánh có dung tích xi-lanh đến 125 cm3.",
+            "Xe gắn máy.",
+            "Xe ô tô chở người đến 08 chỗ (không kể chỗ của người lái xe); xe ô tô tải và ô tô chuyên dùng có khối lượng toàn bộ theo thiết kế đến 3.500 kg; các loại xe ô tô quy định cho giấy phép lái xe hạng B kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg.",
+            "Cả ba ý trên."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 124,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người có Giấy phép lái xe mô tô hạng A1 không được phép điều khiển loại xe nào dưới đây?",
+        "answers": [
+            "Xe mô tô hai bánh có dung tích xi-lanh 125 cm3 hoặc có công suất động cơ điện đến 11 kW.",
+            "Xe mô tô ba bánh.",
+            "Cả hai ý trên."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 125,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người có Giấy phép lái xe mô tô hạng A1 được cấp sau ngày 01/01/2025 được phép điều khiển loại xe nào dưới đây?",
+        "answers": [
+            "Xe mô tô hai bánh có dung tích xi-lanh đến 125 cm3 hoặc có công suất động cơ điện đến 11 kW.",
+            "Xe mô tô ba bánh.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 126,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người có Giấy phép lái xe mô tô hạng A được phép điều khiển loại xe nào dưới đây?",
+        "answers": [
+            "Xe mô tô hai bánh có dung tích xi-lanh đến 125 cm3 hoặc có công suất động cơ điện đến 11 kW.",
+            "Xe mô tô hai bánh có dung tích xi-lanh trên 125 cm3 hoặc có công suất động cơ điện trên 11 kW.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 127,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người có Giấy phép lái xe ô tô hạng B được phép điều khiển loại xe nào dưới đây?",
+        "answers": [
+            "Xe ô tô chở người đến 08 chỗ (không kể chỗ của người lái xe).",
+            "Xe ô tô tải và ô tô chuyên dùng có khối lượng toàn bộ theo thiết kế đến 3.500 kg.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 128,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người có Giấy phép lái xe hạng C1 được điều khiển loại xe nào dưới đây?",
+        "answers": [
+            "Xe ô tô tải và ô tô chuyên dùng có khối lượng toàn bộ theo thiết kế trên 7.500 kg; các loại xe ô tô tải quy định cho giấy phép lái xe hạng C1 kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg.",
+            "Xe ô tô tải và ô tô chuyên dùng có khối lượng toàn bộ theo thiết kế trên 3.500 kg đến 7.500 kg; các loại xe ô tô tải quy định cho giấy phép lái xe hạng C1 kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg.",
+            "Cả hai ý trên."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 129,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người có Giấy phép lái xe hạng C được điều khiển loại xe nào dưới đây?",
+        "answers": [
+            "Xe ô tô tải và ô tô chuyên dùng có khối lượng toàn bộ theo thiết kế trên 3.500 kg đến 7.500 kg; các loại xe ô tô tải quy định cho giấy phép lái xe hạng C1 kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg.",
+            "Xe ô tô tải và ô tô chuyên dùng có khối lượng toàn bộ theo thiết kế trên 7.500 kg; các loại xe ô tô tải quy định cho giấy phép lái xe hạng C kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 130,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người có Giấy phép lái xe hạng D1 được điều khiển loại xe nào dưới đây?",
+        "answers": [
+            "Xe ô tô chở người (kể cả xe buýt) trên 16 chỗ (không kể chỗ của người lái xe) đến 29 chỗ (không kể chỗ của người lái xe); các loại xe ô tô chở người quy định cho giấy phép lái xe hạng D1 kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg.",
+            "Xe ô tô chở người trên 08 chỗ (không kể chỗ của người lái xe) đến 16 chỗ (không kể chỗ của người lái xe); các loại xe ô tô chở người quy định cho giấy phép lái xe hạng D1 kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg.",
+            "Cả hai ý trên."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 131,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người có Giấy phép lái xe hạng D2 được điều khiển loại xe nào dưới đây?",
+        "answers": [
+            "Xe ô tô chở người (kể cả xe buýt) trên 16 chỗ (không kể chỗ của người lái xe) đến 29 chỗ (không kể chỗ của người lái xe); các loại xe ô tô chở người quy định cho giấy phép lái xe hạng D2 kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg.",
+            "Xe ô tô chở người trên 08 chỗ (không kể chỗ của người lái xe) đến 16 chỗ (không kể chỗ của người lái xe); các loại xe ô tô chở người quy định cho giấy phép lái xe hạng D1 kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 132,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người có Giấy phép lái xe hạng D được điều khiển loại xe nào dưới đây?",
+        "answers": [
+            "Xe ô tô chở người (kể cả xe buýt) trên 29 chỗ (không kể chỗ của người lái xe); xe ô tô chở người giường nằm; các loại xe ô tô chở người quy định cho giấy phép lái xe hạng D kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg.",
+            "Xe ô tô chở người (kể cả xe buýt) trên 16 chỗ (không kể chỗ của người lái xe) đến 29 chỗ (không kể chỗ của người lái xe).",
+            "Các loại xe ô tô quy định cho giấy phép lái xe hạng C kéo rơ moóc có khối lượng toàn bộ theo thiết kế trên 750 kg; xe ô tô đầu kéo kéo sơ mi rơ moóc.",
+            "Ý 1 và ý 2."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 133,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người có Giấy phép lái xe hạng BE được điều khiển loại xe nào dưới đây?",
+        "answers": [
+            "Xe ô tô chở người (kể cả xe buýt) trên 29 chỗ (không kể chỗ của người lái xe); xe ô tô chở người giường nằm.",
+            "Các loại xe ô tô quy định cho giấy phép lái xe hạng B kéo rơ moóc có khối lượng toàn bộ theo thiết kế trên 750 kg.",
+            "Xe ô tô chở người (kể cả xe buýt) trên 16 chỗ (không kể chỗ của người lái xe) đến 29 chỗ (không kể chỗ của người lái xe); các loại xe ô tô chở người quy định cho giấy phép lái xe hạng D2 kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 134,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người có Giấy phép lái xe hạng CE được điều khiển loại xe nào dưới đây?",
+        "answers": [
+            "Các loại xe ô tô quy định cho giấy phép lái xe hạng C kéo rơ moóc có khối lượng toàn bộ theo thiết kế trên 750 kg; xe ô tô đầu kéo kéo sơ mi rơ moóc.",
+            "Các loại xe ô tô quy định cho giấy phép lái xe hạng D1 kéo rơ moóc có khối lượng toàn bộ theo thiết kế trên 750 kg.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 135,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người có Giấy phép lái xe hạng DE được điều khiển loại xe nào dưới đây?",
+        "answers": [
+            "Các loại xe ô tô quy định cho giấy phép lái xe hạng D kéo rơ moóc có khối lượng toàn bộ theo thiết kế trên 750 kg; xe ô tô chở khách nối toa.",
+            "Các loại xe ô tô quy định cho giấy phép lái xe hạng C kéo rơ moóc có khối lượng toàn bộ theo thiết kế trên 750 kg; xe ô tô đầu kéo kéo sơ mi rơ moóc.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 136,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người tập lái xe ô tô khi tham gia giao thông đường bộ phải bảo đảm các điều kiện nào dưới đây?",
+        "answers": [
+            "Phải thực hành trên xe tập lái, trên tuyến đường tập lái và có giáo viên dạy lái bảo trợ tay lái.",
+            "Phải mang theo giấy phép xe tập lái.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 137,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe khi tham gia giao thông đường bộ phải đảm bảo các điều kiện nào dưới đây?",
+        "answers": [
+            "Phải đủ tuổi, sức khỏe theo quy định của pháp luật; có giấy phép lái xe đang còn điểm, còn hiệu lực phù hợp với loại xe đang điều khiển do cơ quan có thẩm quyền cấp (trừ người lái xe gắn máy).",
+            "Phải là người đứng tên trong đăng ký xe.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 138,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi tham gia giao thông đường bộ, người lái xe phải mang theo các giấy tờ gì?",
+        "answers": [
+            "Chứng nhận đăng ký xe hoặc bản sao Chứng nhận đăng ký xe có chứng thực kèm bản gốc giấy tờ xác nhận của tổ chức tín dụng, chi nhánh ngân hàng nước ngoài còn hiệu lực trong trường hợp xe đang được thế chấp tại tổ chức tín dụng, chi nhánh ngân hàng nước ngoài.",
+            "Giấy phép lái xe phù hợp với loại xe đang điều khiển; chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường đối với xe cơ giới theo quy định của pháp luật; chứng nhận bảo hiểm bắt buộc trách nhiệm dân sự của chủ xe cơ giới.",
+            "Trường hợp các giấy tờ nêu trên đã được tích hợp vào tài khoản định danh điện tử thì việc xuất trình, kiểm tra có thể thực hiện thông qua tài khoản định danh điện tử.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 139,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Giấy phép lái xe bị thu hồi trong các trường hợp nào sau đây?",
+        "answers": [
+            "Người được cấp giấy phép lái xe không đủ điều kiện sức khỏe theo kết luận của cơ sở khám bệnh, chữa bệnh đối với từng hạng giấy phép lái xe.",
+            "Giấy phép lái xe được cấp sai quy định.",
+            "Giấy phép lái xe đã quá thời hạn tạm giữ hoặc hết thời hiệu thi hành quyết định xử phạt vi phạm hành chính theo quy định của pháp luật về xử lý vi phạm hành chính nếu người vi phạm không đến nhận mà không có lý do chính đáng.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 140,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người có giấy phép lái xe chưa bị trừ hết 12 điểm, được phục hồi điểm giấy phép lái xe trong trường hợp nào sau đây?",
+        "answers": [
+            "Không được phục hồi.",
+            "Được phục hồi đủ 12 điểm, nếu không bị trừ điểm trong thời hạn 12 tháng từ ngày bị trừ điểm gần nhất."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 141,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người có giấy phép lái xe đã bị trừ hết điểm phải làm gì để phục hồi điểm giấy phép lái xe?",
+        "answers": [
+            "Không vi phạm pháp luật trật tự, an toàn giao thông đường bộ trong thời gian 12 tháng kể từ ngày bị trừ hết điểm.",
+            "Sau thời hạn ít nhất là 06 tháng kể từ ngày bị trừ hết điểm, người có phép lái xe được tham gia kiểm tra nội dung kiến thức pháp luật về trật tự, an toàn giao thông đường bộ theo quy định, có kết quả đạt yêu cầu thì được phục hồi đủ 12 điểm.",
+            "Cả hai ý trên."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 142,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trách nhiệm của tổ chức, cá nhân đứng tên trong giấy chứng nhận đăng ký xe khi chưa thực hiện thu hồi chứng nhận đăng ký xe, biển số xe được quy định như thế nào?",
+        "answers": [
+            "Tiếp tục chịu trách nhiệm của chủ xe.",
+            "Không chịu trách nhiệm sau khi đã chuyển nhượng, trao đổi, tặng, cho."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 143,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Để bảo đảm điều kiện tham gia giao thông đường bộ, loại phương tiện nào phải lắp thiết bị giám sát hành trình?",
+        "answers": [
+            "Xe ô tô kinh doanh vận tải.",
+            "Xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) kinh doanh vận tải, xe ô tô đầu kéo, xe cứu thương.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 144,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Tốc độ khai thác tối đa cho phép đối với xe máy chuyên dùng, xe gắn máy và các loại xe tương tự tham gia giao thông trên đường bộ (trừ đường cao tốc) là bao nhiêu km/h?",
+        "answers": [
+            "50 km/h.",
+            "40 km/h.",
+            "60 km/h."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 145,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường bộ, trong khu vực đông dân cư, đường đôi hoặc đường một chiều có từ hai làn xe cơ giới trở lên, xe mô tô hai bánh, ô tô chở người đến 28 chỗ không kể chỗ của người lái xe tham gia giao thông với tốc độ khai thác tối đa cho phép là bao nhiêu?",
+        "answers": [
+            "60 km/h.",
+            "50 km/h.",
+            "40 km/h."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 146,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường bộ (trừ đường cao tốc) trong khu vực đông dân cư, đường hai chiều hoặc đường một chiều có một làn xe cơ giới, xe mô tô hai bánh, ô tô chở người đến 28 chỗ không kể chỗ của người lái xe tham gia giao thông với tốc độ khai thác tối đa cho phép là bao nhiêu?",
+        "answers": [
+            "60 km/h.",
+            "50 km/h.",
+            "40 km/h."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 147,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường bộ (trừ đường cao tốc) trong khu vực đông dân cư, đường hai chiều hoặc đường một chiều có một làn xe cơ giới, loại xe nào dưới đây được tham gia giao thông với tốc độ khai thác tối đa cho phép là 50 km/h?",
+        "answers": [
+            "Ô tô tải, ô tô chở người trên 28 chỗ không kể chỗ của người lái xe.",
+            "Xe gắn máy, xe máy chuyên dùng.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 148,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường bộ (trừ đường cao tốc) trong khu vực đông dân cư, đường đôi hoặc đường một chiều có từ hai làn cơ giới trở lên, loại xe nào dưới đây được tham gia giao thông với tốc độ khai thác tối đa là 60 km/h?",
+        "answers": [
+            "Ô tô tải, ô tô chở người trên 28 chỗ không kể chỗ của người lái xe.",
+            "Xe gắn máy, xe máy chuyên dùng.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 149,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường bộ (trừ đường cao tốc) ngoài khu vực đông dân cư, đường đôi hoặc đường một chiều có từ hai làn xe cơ giới trở lên, loại xe nào dưới đây được tham gia giao thông với tốc độ khai thác tối đa cho phép là 90 km/h?",
+        "answers": [
+            "Xe ô tô chở người đến 28 chỗ không kể chỗ của người lái xe (trừ xe buýt); ô tô tải có trọng tải không lớn hơn 3,5 tấn.",
+            "Xe ô tô chở người trên 28 chỗ không kể chỗ người lái xe (trừ xe buýt); ô tô tải có trọng tải trên 3,5 tấn (trừ ô tô xi téc).",
+            "Xe buýt; ô tô đầu kéo kéo sơ mi rơ moóc (trừ ô tô đầu kéo kéo sơ mi rơ moóc xi téc); xe mô tô; ô tô chuyên dùng (trừ ô tô trộn vữa, ô tô trộn bê tông lưu động)."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 150,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường bộ ngoài khu vực đông dân cư, đường đôi hoặc đường một chiều có từ hai làn xe cơ giới trở lên (trừ đường cao tốc) loại xe nào dưới đây được tham gia giao thông với tốc độ khai thác tối đa cho phép là 80 km/h?",
+        "answers": [
+            "Xe ô tô chở người đến 28 chỗ không kể chỗ của người lái xe (trừ xe buýt); ô tô tải có trọng tải không lớn hơn 3,5 tấn.",
+            "Xe ô tô chở người trên 28 chỗ không kể chỗ người lái xe (trừ xe buýt); ô tô tải có trọng tải trên 3,5 tấn (trừ ô tô xi téc).",
+            "Xe buýt; ô tô đầu kéo kéo sơ mi rơ moóc (trừ ô tô đầu kéo kéo sơ mi rơ moóc xi téc); xe mô tô; ô tô chuyên dùng (trừ ô tô trộn vữa, ô tô trộn bê tông lưu động).",
+            "Ô tô kéo rơ moóc; ô tô kéo xe khác; ô tô trộn vữa, ô tô trộn bê tông lưu động, ô tô xi téc, ô tô đầu kéo kéo sơ mi rơ moóc xi téc, ô tô kéo theo rơ moóc xi téc)."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 151,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường bộ ngoài khu vực đông dân cư, đường đôi hoặc đường một chiều có từ hai làn xe cơ giới trở lên (trừ đường cao tốc) loại xe nào dưới đây được tham gia giao thông với tốc độ khai thác tối đa cho phép là 70 km/h?",
+        "answers": [
+            "Xe ô tô chở người đến 28 chỗ không kể chỗ của người lái xe (trừ xe buýt); ô tô tải có trọng tải không lớn hơn 3,5 tấn.",
+            "Xe ô tô chở người trên 28 chỗ không kể chỗ người lái xe (trừ xe buýt); ô tô tải có trọng tải trên 3,5 tấn (trừ ô tô xi téc).",
+            "Xe buýt; ô tô đầu kéo kéo sơ mi rơ moóc (trừ ô tô đầu kéo kéo sơ mi rơ moóc xi téc); xe mô tô; ô tô chuyên dùng (trừ ô tô trộn vữa, ô tô trộn bê tông lưu động).",
+            "Ô tô kéo rơ moóc; ô tô kéo xe khác; ô tô trộn vữa, ô tô trộn bê tông lưu động, ô tô xi téc, ô tô đầu kéo kéo sơ mi rơ moóc xi téc, ô tô kéo theo rơ moóc xi téc."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 152,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường bộ ngoài khu vực đông dân cư, đường đôi hoặc đường một chiều có từ hai làn xe cơ giới trở lên (trừ đường cao tốc) loại xe nào dưới đây được tham gia giao thông với tốc độ khai thác tối đa cho phép là 60 km/h?",
+        "answers": [
+            "Xe ô tô chở người đến 28 chỗ không kể chỗ của người lái xe (trừ xe buýt); ô tô tải có trọng tải không lớn hơn 3,5 tấn.",
+            "Xe ô tô chở người trên 28 chỗ không kể chỗ người lái xe (trừ xe buýt); ô tô tải có trọng tải trên 3,5 tấn (trừ ô tô xi téc).",
+            "Xe buýt; ô tô đầu kéo kéo sơ mi rơ moóc (trừ ô tô đầu kéo kéo sơ mi rơ moóc xi téc); xe mô tô; ô tô chuyên dùng (trừ ô tô trộn vữa, ô tô trộn bê tông lưu động).",
+            "Ô tô kéo rơ moóc; ô tô kéo xe khác; ô tô trộn vữa, ô tô trộn bê tông lưu động, ô tô xi téc, ô tô đầu kéo kéo sơ mi rơ moóc xi téc, ô tô kéo theo rơ moóc xi téc."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 153,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường bộ ngoài khu vực đông dân cư, đường hai chiều hoặc đường một chiều có một làn xe cơ giới (trừ đường cao tốc), loại xe nào dưới đây được tham gia giao thông với tốc độ khai thác tối đa cho phép là 80 km/h?",
+        "answers": [
+            "Xe ô tô chở người đến 28 chỗ không kể chỗ của người lái xe (trừ xe buýt); ô tô tải có trọng tải không lớn hơn 3,5 tấn.",
+            "Xe ô tô chở người trên 28 chỗ không kể chỗ người lái xe (trừ xe buýt); ô tô tải có trọng tải trên 3,5 tấn (trừ ô tô xi téc).",
+            "Xe buýt; ô tô đầu kéo kéo sơ mi rơ moóc (trừ ô tô đầu kéo kéo sơ mi rơ moóc xi téc); xe mô tô; ô tô chuyên dùng (trừ ô tô trộn vữa, ô tô trộn bê tông lưu động)."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 154,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường bộ ngoài khu vực đông dân cư, đường hai chiều hoặc đường một chiều có một làn xe cơ giới (trừ đường cao tốc), loại xe nào dưới đây được tham gia giao thông với tốc độ khai thác tối đa cho phép là 70 km/h?",
+        "answers": [
+            "Xe ô tô chở người đến 28 chỗ không kể chỗ của người lái xe (trừ xe buýt); ô tô tải có trọng tải không lớn hơn 3,5 tấn.",
+            "Xe ô tô chở người trên 28 chỗ không kể chỗ người lái xe (trừ xe buýt); ô tô tải có trọng tải trên 3,5 tấn (trừ ô tô xi téc).",
+            "Xe buýt; ô tô đầu kéo kéo sơ mi rơ moóc (trừ ô tô đầu kéo kéo sơ mi rơ moóc xi téc); xe mô tô; ô tô chuyên dùng (trừ ô tô trộn vữa, ô tô trộn bê tông lưu động).",
+            "Ô tô kéo rơ moóc; ô tô kéo xe khác; ô tô trộn vữa, ô tô trộn bê tông lưu động, ô tô xi téc, ô tô đầu kéo kéo sơ mi rơ moóc xi téc, ô tô kéo theo rơ moóc xi téc."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 155,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường bộ ngoài khu vực đông dân cư, đường hai chiều hoặc đường một chiều có một làn xe cơ giới (trừ đường cao tốc), loại xe nào dưới đây được tham gia giao thông với tốc độ khai thác tối đa cho phép là 60 km/h?",
+        "answers": [
+            "Xe ô tô chở người đến 28 chỗ không kể chỗ của người lái xe (trừ xe buýt); ô tô tải có trọng tải không lớn hơn 3,5 tấn.",
+            "Xe ô tô chở người trên 28 chỗ không kể chỗ người lái xe (trừ xe buýt); ô tô tải có trọng tải trên 3,5 tấn (trừ ô tô xi téc).",
+            "Xe buýt; ô tô đầu kéo kéo sơ mi rơ moóc (trừ ô tô đầu kéo kéo sơ mi rơ moóc xi téc); xe mô tô; ô tô chuyên dùng (trừ ô tô trộn vữa, ô tô trộn bê tông lưu động).",
+            "Ô tô kéo rơ moóc; ô tô kéo xe khác; ô tô trộn vữa, ô tô trộn bê tông lưu động, ô tô xi téc, ô tô đầu kéo kéo sơ mi rơ moóc xi téc, ô tô kéo theo rơ moóc xi téc."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 156,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trên đường bộ ngoài khu vực đông dân cư, đường hai chiều hoặc đường một chiều có một làn xe cơ giới (trừ đường cao tốc), loại xe nào dưới đây được tham gia giao thông với tốc độ khai thác tối đa cho phép là 50 km/h?",
+        "answers": [
+            "Xe ô tô chở người đến 28 chỗ không kể chỗ của người lái xe (trừ xe buýt); ô tô tải có trọng tải không lớn hơn 3,5 tấn.",
+            "Xe ô tô chở người trên 28 chỗ không kể chỗ người lái xe (trừ xe buýt); ô tô tải có trọng tải trên 3,5 tấn (trừ ô tô xi téc).",
+            "Xe buýt; ô tô đầu kéo kéo sơ mi rơ moóc (trừ ô tô đầu kéo kéo sơ mi rơ moóc xi téc); xe mô tô; ô tô chuyên dùng (trừ ô tô trộn vữa, ô tô trộn bê tông lưu động).",
+            "Ô tô kéo rơ moóc; ô tô kéo xe khác; ô tô trộn vữa, ô tô trộn bê tông lưu động, ô tô xi téc, ô tô đầu kéo kéo sơ mi rơ moóc xi téc, ô tô kéo theo rơ moóc xi téc."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 157,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi tham gia giao thông trên đường bộ (trừ đường cao tốc), loại xe nào dưới đây được tham gia giao thông với tốc độ khai thác tối đa cho phép là 50 km/h?",
+        "answers": [
+            "Xe máy chuyên dùng, xe gắn máy và các loại xe tương tự.",
+            "Xe chở người bốn bánh có gắn động cơ khi tham gia giao thông trong phạm vi và thời gian cho phép hoạt động.",
+            "Xe chở hàng bốn bánh có gắn động cơ khi tham gia giao thông trong phạm vi và thời gian cho phép hoạt động."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 158,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi tham gia giao thông trên đoạn đường không có biển báo \"Cự ly tối thiểu giữa hai xe\", trong điều kiện mặt đường khô ráo, không có sương mù, mặt đường không trơn trượt, địa hình bằng phẳng, đường thẳng, tầm nhìn bảo đảm, xe cơ giới đang chạy với tốc độ từ trên 80 km/h đến 100 km/h, người lái xe phải giữ khoảng cách an toàn với xe đang chạy liền trước tối thiểu là bao nhiêu?",
+        "answers": [
+            "35 m.",
+            "55 m.",
+            "70 m."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 159,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi tham gia giao thông trên đoạn đường không có biển báo \"cự ly tối thiểu giữa hai xe\", trong điều kiện mặt đường khô ráo, không có sương mù, mặt đường không trơn trượt, địa hình bằng phẳng, đường thẳng, tầm nhìn bảo đảm, xe cơ giới đang chạy với tốc độ từ trên 100 km/h đến 120 km/h, người lái xe phải giữ khoảng cách an toàn với xe đang chạy liền trước tối thiểu là bao nhiêu?",
+        "answers": [
+            "55 m.",
+            "70 m.",
+            "100 m."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 160,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi tham gia giao thông trên đoạn đường không có biển báo \"cự ly tối thiểu giữa hai xe\", trong điều kiện mặt đường khô ráo, không có sương mù, mặt đường không trơn trượt, địa hình bằng phẳng, đường thẳng, tầm nhìn bảo đảm, xe cơ giới đang chạy với tốc độ từ trên 60 km/h đến 80 km/h, người lái xe phải giữ khoảng cách an toàn với xe đang chạy liền trước tối thiểu là bao nhiêu?",
+        "answers": [
+            "55 m.",
+            "70 m.",
+            "100 m."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 161,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi tham gia giao thông trên đoạn đường không có biển báo \"cự ly tối thiểu giữa hai xe\", trong điều kiện mặt đường khô ráo, không có sương mù, mặt đường không trơn trượt, địa hình bằng phẳng, đường thẳng, tầm nhìn bảo đảm, xe cơ giới đang chạy với tốc độ 60 km/h, người lái xe phải giữ khoảng cách an toàn với xe đang chạy liền trước tối thiểu là bao nhiêu?",
+        "answers": [
+            "35 m.",
+            "55 m.",
+            "70 m."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 162,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi điều khiển xe chạy với tốc độ dưới 60 km/h, để bảo đảm khoảng cách an toàn giữa hai xe, người lái xe phải điều khiển xe như thế nào?",
+        "answers": [
+            "Chủ động giữ khoảng cách an toàn phù hợp với xe chạy liền trước xe của mình.",
+            "Bảo đảm khoảng cách an toàn tùy thuộc vào mật độ phương tiện, tình hình giao thông thực tế.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 163,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người lái xe phải giảm tốc độ thấp hơn tốc độ tối đa cho phép đến mức cần thiết, chú ý quan sát và chuẩn bị sẵn sàng những tình huống có thể xảy ra để phòng ngừa tai nạn trong các trường hợp nào dưới đây?",
+        "answers": [
+            "Gặp biển báo nguy hiểm và cảnh báo trên đường.",
+            "Gặp biển chỉ dẫn trên đường.",
+            "Gặp biển báo hết mọi lệnh cấm.",
+            "Gặp biển báo hết hạn chế tốc độ tối đa cho phép."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 164,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Xe đưa đón trẻ em mầm non, học sinh được ưu tiên gì khi tham gia giao thông đường bộ?",
+        "answers": [
+            "Tổ chức phân luồng, điều tiết giao thông, bố trí nơi dừng xe, đỗ xe tại khu vực trường học và tại các điểm trên lộ trình đưa đón trẻ em mầm non, học sinh.",
+            "Được bố trí xe dẫn đường để bảo đảm an toàn giao thông.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 165,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Người điều khiển phương tiện tham gia giao thông đường bộ phải quan sát, giảm tốc độ hoặc dừng lại để bảo đảm an toàn trong các trường hợp nào dưới đây?",
+        "answers": [
+            "Tại nơi có vạch kẻ đường hoặc báo hiệu khác dành cho người đi bộ hoặc tại nơi mà người đi bộ, xe lăn của người khuyết tật đang qua đường.",
+            "Nơi đường bộ giao nhau cùng mức với đường bộ, đường bộ giao nhau cùng mức với đường sắt; đường hẹp, đường vòng, đường quanh co, đường đèo, dốc.",
+            "Khu vực có trường học, bệnh viện, bến xe, công trình công cộng tập trung đông người, khu vực đông dân cư, chợ, khu vực đang thi công trên đường bộ, hiện trường vụ tai nạn giao thông đường bộ.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 166,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Tại những đoạn đường không bố trí biển báo hạn chế tốc độ, không bố trí biển báo khoảng cách an toàn tối thiểu giữa hai xe, người lái xe phải thực hiện quy định nào dưới đây để bảo đảm an toàn?",
+        "answers": [
+            "Được phép lái xe không hạn chế tốc độ và khoảng cách an toàn tối thiểu với xe phía trước cùng làn đường hoặc phần đường.",
+            "Được phép lái xe không hạn chế tốc độ và khoảng cách an toàn tối thiểu với xe phía trước cùng làn đường hoặc phần đường khi tham gia giao thông trên đường nhánh.",
+            "Chấp hành quy định về tốc độ, khoảng cách an toàn tối thiểu với xe phía trước cùng làn đường hoặc phần đường."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 167,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Khi gặp xe buýt đang dừng đón, trả khách, người điều khiển xe mô tô phải xử lý như thế nào dưới đây?",
+        "answers": [
+            "Tăng tốc độ để nhanh chóng vượt qua xe buýt.",
+            "Quan sát, giảm tốc độ đi qua xe buýt hoặc dừng lại để bảo đảm an toàn."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 168,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Việc vận chuyển hành khách bằng xe ô tô phải tuân thủ các quy định nào dưới đây?",
+        "answers": [
+            "Đón, trả hành khách đúng nơi quy định; hướng dẫn sử dụng trang thiết bị an toàn trên xe; có biện pháp giữ gìn vệ sinh trong xe; vận chuyển hành khách đúng lịch trình, lộ trình đã đăng ký, trừ trường hợp bất khả kháng; không chở hànhkhách trên nóc xe, trong khoang chở hành lý hoặc để hành khách đu, bám bên ngoài xe.",
+            "Đón, trả hành khách theo yêu cầu của hành khách trên xe; hướng dẫn sử dụng trang thiết bị an toàn trên xe; có biện pháp giữ gìn vệ sinh trong xe; vận chuyển hành khách đúng lịch trình, lộ trình đã đăng ký, trừ trường hợp bất khả kháng; không chở hành khách trên nóc xe, trong khoang chở hành lý hoặc để hành khách đu, bám bên ngoài xe."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 169,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trong hoạt động vận tải đường bộ, các hành vi nào dưới đây bị nghiêm cấm?",
+        "answers": [
+            "Vận chuyển hàng hóa cấm lưu hành.",
+            "Vận chuyển trái phép hoặc không thực hiện đầy đủ các quy định của pháp luật về vận chuyển hàng hóa nguy hiểm.",
+            "Vận chuyển động vật hoang dã.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 170,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trong hoạt động vận tải hành khách, những hành vi nào dưới đây bị nghiêm cấm?",
+        "answers": [
+            "Cạnh tranh nhau nhằm tăng lợi nhuận.",
+            "Giảm giá để thu hút khách.",
+            "Đe dọa, xúc phạm, tranh giành, lôi kéo hành khách; đe doạ, cưỡng ép hành khách sử dụng dịch vụ ngoài ý muốn; chuyển tải, xuống khách hoặc các hành vi khác nhằm trốn tránh phát hiện xe chở quá tải, quá số người theo quy định của pháp luật.",
+            "Cả ba ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 171,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Thời gian lái xe liên tục của người lái xe ô tô kinh doanh vận tải được quy định như thế nào để bảo đảm an toàn giao thông?",
+        "answers": [
+            "Không quá 4 giờ.",
+            "Không quá 6 giờ.",
+            "Không quá 8 giờ.",
+            "Liên tục tùy thuộc vào sức khỏe và khả năng của người lái xe."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 172,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Thời gian làm việc của người lái xe ô tô kinh doanh vận tải trong một ngày được quy định như thế nào để bảo đảm an toàn giao thông?",
+        "answers": [
+            "Không quá 6 giờ trong một ngày.",
+            "Không quá 8 giờ trong một ngày.",
+            "Không quá 10 giờ trong một ngày.",
+            "Không hạn chế tùy thuộc vào sức khỏe và khả năng của người lái xe."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 173,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Trước khi xe khởi hành, người lái xe, nhân viên phục vụ trên xe ô tô vận chuyển hành khách có trách nhiệm nào sau đây?",
+        "answers": [
+            "Kiểm tra các điều kiện bảo đảm an toàn của xe.",
+            "Hướng dẫn cho hành khách về an toàn giao thông đường bộ và thoát hiểm khi gặp sự cố.",
+            "Kiểm tra nhân thân và hành lý của hành khách đi xe.",
+            "Ý 1 và ý 2."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 174,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Xe ô tô kinh doanh vận tải chở trẻ em mầm non, học sinh phải đáp ứng các yêu cầu nào dưới đây?",
+        "answers": [
+            "Có thiết bị ghi nhận hình ảnh trẻ em mầm non, học sinh và thiết bị có chức năng cảnh báo, chống bỏ quên trẻ em trên xe; có niên hạn sử dụng không quá 20 năm; có màu sơn theo quy định của Chính phủ.",
+            "Có dây đai an toàn phù hợp với lứa tuổi hoặc sử dụng xe có ghế ngồi phù hợp với lứa tuổi theo quy định của pháp luật.",
+            "Được cấp chứng nhận đăng kí xe và gắn biển số xe, bảo đảm an toàn kĩ thuật và bảo vệ môi trường theo quy định của pháp luật; xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) phải lắp thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 175,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Việc vận chuyển động vật sống khi tham gia giao thông đường bộ phải thực hiện các yêu cầu nào dưới đây?",
+        "answers": [
+            "Người lái xe phải mang đủ giấy tờ theo quy định của pháp luật.",
+            "Phương tiện vận chuyển phải có kết cấu phù hợp với loại động vật chuyên chở.",
+            "Trong quá trình vận chuyển phải chấp hành các quy định của pháp luật về trật tự, an toàn giao thông đường bộ, vệ sinh dịch tễ, phòng dịch và bảo đảm vệ sinh môi trường.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 176,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Việc vận chuyển hàng hóa nguy hiểm khi tham gia giao thông đường bộ phải chấp hành các quy định nào dưới đây?",
+        "answers": [
+            "Phải có giấy phép vận chuyển; trong trường hợp cần thiết, đơn vị vận chuyển hàng hoá nguy hiểm phải bố trí người áp tải để bảo đảm trật tự, an toàn giao thông đường bộ.",
+            "Phải có giấy phép vận chuyển; không phải bố trí người áp tải khi tham gia giao thông đường bộ."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 177,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Việc lưu hành xe ô tô của người nước ngoài đăng ký tại nước ngoài có tay lái ở bên phải tham gia giao thông tại Việt Nam, xe cơ giới nước ngoài do người nước ngoài đưa vào Việt Nam du lịch được quy định như như thế nào?",
+        "answers": [
+            "Phải chấp hành quy định của pháp luật về trật tự, an toàn giao thông đường bộ của Việt Nam. Trường hợp điều ước quốc tế mà nước Cộng hòa xã hội chủ nghĩa Việt Nam là thành viên có quy định khác thì áp dụng theo điều ước quốc tế đó.",
+            "Tham gia giao thông đúng trong phạm vi, tuyến đường, thời gian đã được cơ quan có thẩm quyền của Việt Nam cấp phép.",
+            "Xe ô tô của người nước ngoài đăng ký tại nước ngoài có tay lái ở bên phải phải đi theo đoàn và có người, phương tiện hỗ trợ, hướng dẫn giao thông.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 178,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Việc sử dụng xe mô tô, xe gắn máy, xe thô sơ để vận chuyển hành khách, hàng hóa phải thực hiện các quy định nào dưới đây để đảm bảo an toàn giao thông?",
+        "answers": [
+            "Kiểm tra điều kiện bảo đảm an toàn của xe trước khi tham gia giao thông đường bộ; mang đủ giấy tờ theo quy định của pháp luật.",
+            "Kiểm tra việc sắp xếp hàng hóa bảo đảm an toàn; không chở quá số người, chở hành lý, hàng hoá vượt quá khối lượng cho phép hoặc vượt quá khổ giới hạn của xe.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 179,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Xe vận chuyển hàng siêu trường, siêu trọng phải thực hiện các quy định nào dưới đây để bảo đảm an toàn giao thông?",
+        "answers": [
+            "Phải chạy với tốc độ quy định trong giấy phép và phải có báo hiệu kích thước của hàng; trường hợp cần thiết, phải có người, phương tiện hỗ trợ lái xe, cảnh báo cho người, phương tiện tham gia giao thông đường bộ khác và thực hiện các biện pháp bảo đảm an toàn giao thông khi vận chuyển hàng siêu trường, siêu trọng trên đường bộ.",
+            "Phải chạy với tốc độ quy định trong giấy phép; phải có người, phương tiện hỗ trợ lái xe, cảnh báo cho người, phương tiện tham gia giao thông đường bộ khác và thực hiện các biện pháp bảo đảm an toàn giao thông đường khi vận chuyển hàng siêu trường, siêu trọng trên đường dành cho giao thông công cộng."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 180,
+        "category": "Quy định chung và quy tắc giao thông đường bộ",
+        "question": "Xe cứu hộ giao thông đường bộ cần thực hiện yêu cầu nào sau đây để bảo đảm trật tự an toàn giao thông?",
+        "answers": [
+            "Xe cứu hộ giao thông đường bộ phải có dấu hiệu nhận diện, niêm yết thông tin trên xe, gắn thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe.",
+            "Phải tuân thủ quy định của pháp luật về khối lượng hàng hóa chuyên chở của xe cứu hộ và khối lượng của xe được cứu hộ ghi trên Chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 181,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Người lái xe kinh doanh vận tải khi thực hiện tốt việc rèn luyện, nâng cao trách nhiệm, đạo đức nghề nghiệp sẽ thu được kết quả như thế nào dưới đây?",
+        "answers": [
+            "Được khách hàng, xã hội tôn trọng; được đồng nghiệp quý mến, giúp đỡ; được doanh nghiệp tin dùng và đóng góp nhiều cho xã hội; thu hút được khách hàng, góp phần quan trọng trong xây dựng thương hiệu, kinh doanh có hiệu quả cao.",
+            "Được cộng điểm vào giấy phép lái xe.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 182,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Những hành vi nào sau đây thể hiện là người có văn hóa giao thông?",
+        "answers": [
+            "Luôn tuân thủ pháp luật về trật tự, an toàn giao thông đường bộ, nhường nhịn và giúp đỡ người khác.",
+            "Đi nhanh, vượt đèn đỏ nếu không có lực lượng Công an.",
+            "Bấm còi và nháy đèn liên tục để cảnh báo xe khác.",
+            "Tránh nhường đường để đi nhanh hơn."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 183,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Người lái xe kinh doanh vận tải cần thực hiện những công việc gì ghi ở dưới đây để thường xuyên rèn luyện nâng cao đạo đức nghề nghiệp?",
+        "answers": [
+            "Quản lý và sử dụng xe tốt; bảo dưỡng xe đúng định kỳ; thực hành tiết kiệm vật tư, nhiên liệu; luôn tu dưỡng bản thân, có lối sống lành mạnh, tác phong làm việc công nghiệp.",
+            "Nắm vững và tự giác chấp hành các quy định của pháp luật về trật tự, an toàn giao thông đường bộ, lái xe an toàn; thực hiện đầy đủ trách nhiệm với khách hàng; có ý thức tổ chức kỷ luật và xây dựng doanh nghiệp vững mạnh; có tinh thần hợp tác, tương trợ, giúp đỡ đồng nghiệp.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 184,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Người lái xe ô tô vận chuyển hành khách phải có những phẩm chất, đạo đức nghề nghiệp gì dưới đây?",
+        "answers": [
+            "Phải có thái độ lịch sự, tôn trọng, thân mật với hành khách; giúp đỡ những người có hoàn cảnh khó khăn, người già, người khuyết tật, phụ nữ có thai, có con nhỏ và trẻ em.",
+            "Luôn tu dưỡng bản thân, có lối sống lành mạnh, khiêm tốn, có tác phong làm việc công nghiệp, không tham gia vào các tệ nạn xã hội; tôn trọng người cùng tham gia giao thông đường bộ và có ý thức bảo vệ môi trường.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 185,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Khái niệm về văn hóa giao thông được hiểu như thế nào là đúng?",
+        "answers": [
+            "Là sự hiểu biết và chấp hành nghiêm chỉnh pháp luật về giao thông, là ý thức trách nhiệm với cộng đồng khi tham gia giao thông.",
+            "Là sự tôn trọng, nhường nhịn, giúp đỡ và ứng xử có văn hóa giữa những người tham gia giao thông với nhau.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 186,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Trên làn đường dành cho ô tô có vũng nước lớn, người lái xe ô tô bắt buộc phải đi qua vũng nước, trên làn đường bên cạnh có nhiều người đang lái xe mô tô tham gia giao thông, người lái xe ô tô xử lý như thế nào khi lái xe qua vũng nước là có văn hóa giao thông?",
+        "answers": [
+            "Cho xe chạy thật nhanh qua vũng nước.",
+            "Giảm tốc độ cho xe chạy chậm qua vũng nước.",
+            "Giảm tốc độ cho xe chạy qua làn đường dành cho mô tô để tránh vũng nước."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 187,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Người lái xe không điều khiển xe đi đúng làn đường quy định, phóng nhanh, vượt ẩu, vượt đèn đỏ, đi vào đường cấm được coi là hành vi\nnào trong các hành vi dưới đây?",
+        "answers": [
+            "Là thiếu văn hóa giao thông, vi phạm pháp luật về trật tự, an toàn giao thông đường bộ.",
+            "Là thiếu văn hóa giao thông."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 188,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Khi sơ cứu người bị tai nạn giao thông đường bộ, có vết thương chảy máu ngoài, phun thành tia và phun mạnh khi mạch đập, bạn phải làm gì dưới đây?",
+        "answers": [
+            "Thực hiện cầm máu trực tiếp.",
+            "Thực hiện cầm máu không trực tiếp (chặn động mach)."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 189,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Người lái xe có văn hóa giao thông khi tham gia giao thông đường bộ phải đáp ứng các điều kiện nào dưới đây?",
+        "answers": [
+            "Hiểu biết và chấp hành nghiêm chỉnh pháp luật về giao thông đường bộ; có ý thức trách nhiệm với cộng đồng khi tham gia giao thông; tôn trọng, nhường nhịn, giúp đỡ và ứng xử có văn hóa với những người cùng tham gia giao thông.",
+            "Điều khiển xe vượt quá tốc độ, đi không đúng làn đường."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 190,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Người lái xe có văn hóa giao thông khi tham gia giao thông phải tuân thủ những quy định nào dưới đây?",
+        "answers": [
+            "Điều khiển xe đi trên phần đường, làn đường có ít phương tiện tham gia giao thông, chỉ đội mũ bảo hiểm ở nơi có biển báo bắt buộc đội mũ bảo hiểm.",
+            "Chấp hành hiệu lệnh, chỉ dẫn của người điều khiển giao thông, quy định về tốc độ, tín hiệu đèn, biển báo hiệu, vạch kẻ đường khi lái xe; nhường đường cho người đi bộ, người già, trẻ em, người khuyết tật."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 191,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Người lái xe mô tô có văn hóa giao thông khi tham gia giao thông phải tuân thủ những quy định nào dưới đây?",
+        "answers": [
+            "Điều khiển xe đi bên phải theo chiều đi của mình; đi đúng phần đường, làn đường quy định; đội mũ bảo hiểm đúng quy chuẩn kỹ thuật quốc gia, cài quai đúng quy cách.",
+            "Điều khiển xe đi trên phần đường, làn đường có ít phương tiện tham gia giao thông.",
+            "Điều khiển xe và đội mũ bảo hiểm ở nơi có biển báo bắt buộc đội mũ bảo hiểm."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 192,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Trong các hành vi dưới đây, người lái xe có văn hóa giao thông phải ứng xử như thế nào?",
+        "answers": [
+            "Điều khiển xe đi bên phải theo chiều đi của mình; đi đúng phần đường, làn đường quy định; dừng, đỗ xe đúng nơi quy định; đã uống rượu, bia thì không lái xe.",
+            "Điều khiển xe đi trên phần đường, làn đường có ít phương tiện giao thông; dừng xe, đỗ xe ở nơi thuận tiện hoặc theo yêu cầu của hành khách, của người thân.",
+            "Dừng và đỗ xe ở nơi thuận tiện cho việc chuyên chở hành khách và giao nhận hàng hóa; sử dụng ít rượu, bia thì có thể lái xe."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 193,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Khi tham gia giao thông việc sử dụng còi xe nên dùng như thế nào để thể hiện là người có văn hóa giao thông?",
+        "answers": [
+            "Chỉ bấm còi khi thật sự cần thiết, không bấm còi liên tục hoặc kéo dài, sử dụng còi với mức âm lượng theo quy định.",
+            "Bấm còi liên tục để các xe khác nhường đường.",
+            "Bấm còi to khi đi qua khu vực đông dân cư.",
+            "Không cần dùng còi, tránh gây tiếng ồn là văn minh."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 194,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Người điều khiển phương tiện tham giao thông đường bộ gây ra tai nạn giao thông đường bộ, người liên quan đến vụ tai nạn giao thông đường bộ có trách nhiệm gì dưới đây?",
+        "answers": [
+            "Dừng ngay phương tiện, cảnh báo nguy hiểm, giữ nguyên hiện trường, trợ giúp người bị nạn và báo tin cho cơ quan Công an, cơ sở khám bệnh, chữa bệnh.",
+            "Ở lại hiện trường vụ tai nạn giao thông đường bộ cho đến khi người của cơ quan Công an đến, trừ trường hợp phải đi cấp cứu, đưa người bị nạn đi cấp cứu hoặc xét thấy bị đe dọa đến tính mạng, sức khỏe nhưng phải đến trình báo ngay cơ quan Công an, Ủy ban nhân dân nơi gần nhất.",
+            "Cung cấp thông tin xác định danh tính về bản thân, người liên quan đến vụ tai nạn giao thông đường bộ và thông tin liên quan của vụ tai nạn giao thông đường bộ cho cơ quan có thẩm quyền.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 195,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Người có mặt tại nơi xảy ra vụ tai giao thông đường bộ có trách nhiệm gì dưới đây?",
+        "answers": [
+            "Giúp đỡ, cứu chữa kịp thời người bị nạn; báo tin ngay cho cơ quan Công an, cơ sở khám bệnh, chữa bệnh hoặc Ủy ban nhân dân nơi gần nhất; tham gia bảo vệ hiện trường; tham gia bảo vệ tài sản của người bị nạn; cung cấp thông tin liên quan về vụ tai nạn theo yêu cầu của cơ quan có thẩm quyền.",
+            "Chụp lại hình ảnh vụ tai nạn (nếu có thiết bị ghi hình) và nhanh chóng rời khỏi hiện trường vụ tai nạn."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 196,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Khi sơ cứu ban đầu cho người bị tai nạn giao thông đường bộ không còn hô hấp, người lái xe và người có mặt tại hiện trường vụ tai nạn phải thực hiện các công việc gì dưới đây?",
+        "answers": [
+            "Đặt nạn nhân nằm ngửa, khai thông đường thở của nạn nhân; thực hiện các biện pháp hô hấp nhân tạo.",
+            "Thực hiện các biện pháp hô hấp nhân tạo."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 197,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Hành vi bỏ trốn sau khi gây tai nạn để trốn tránh trách nhiệm hoặc khi có điều kiện mà cố ý không cứu giúp người bị tai nạn giao thông có bị nghiêm cấm hay không?",
+        "answers": [
+            "Không bị nghiêm cấm.",
+            "Nghiêm cấm tuỳ từng trường hợp cụ thể.",
+            "Bị nghiêm cấm."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 198,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Khi đang lái xe, thấy một người đi bộ đang sang đường trên vạch kẻ đường dành cho người đi bộ, người lái xe nên làm gì?",
+        "answers": [
+            "Giảm tốc độ và nhường đường cho người đi bộ.",
+            "Bấm còi để họ đi nhanh hơn.",
+            "Tiếp tục đi nếu đang vội.",
+            "Vượt qua nếu thấy khoảng trống đủ rộng."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 199,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Khi gặp vụ tai nạn giao thông, người lái xe nên hành động như thế nào?",
+        "answers": [
+            "Chạy đi để tránh rắc rối.",
+            "Dừng xe, hỗ trợ nạn nhân và báo cho cơ quan chức năng.",
+            "Chỉ quan sát rồi tiếp tục di chuyển.",
+            "Chỉ giúp đỡ nếu có người thân trong vụ tai nạn."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 200,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Trong đoạn đường hai chiều tại khu đông dân cư đang ùn tắc, người điều khiển xe mô tô có văn hóa giao thông sẽ lựa chọn cách xử lý tình huống nào dưới đây?",
+        "answers": [
+            "Cho xe lấn sang làn ngược chiều để nhanh chóng thoát khỏi nơi ùn tắc.",
+            "Điều khiển xe trên vỉa hè để nhanh chóng thoát khỏi nơi ùn tắc.",
+            "Kiên nhẫn tuân thủ hướng dẫn của người điều khiển giao thông hoặc tín hiệu đèn giao thông, di chuyển trên đúng phần đường bên phải theo chiều đi, nhường đường cho các phương tiện đi ngược chiều."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 201,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Khi điều khiển phương tiện tham gia giao thông trên đoạn đường bộ đang xảy ra ùn tắc, những hành vi nào dưới đây là thiếu văn hóa?",
+        "answers": [
+            "Bấm còi liên tục thúc giục các phương tiện phía trước nhường đường; đi trên vỉa hè, tận dụng mọi khoảng trống để nhanh chóng thoát khỏi nơi ùn tắc; lấn sang trái đường cố gắng vượt lên xe khác.",
+            "Tuân thủ hướng dẫn của người điều khiển giao thông hoặc tín hiệu giao thông, đi đúng phần đường, làn đường quy định."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 202,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Người lái xe, chủ phương tiện giao thông cơ giới đường bộ nên thực hiện các biện pháp phòng cháy, chữa cháy như thế nào dưới đây?",
+        "answers": [
+            "Không lắp đặt thêm thiết bị điện, phụ kiện không đúng theo thiết kế của nhà sản xuất; tuân thủ quy trình vận hành bảo trì bảo dưỡng định kỳ; thường xuyên kiểm tra phương tiện, khi phát hiện thấy dấu hiệu khác lạ (khó nổ, có hơi xăng, có tiếng kêu bất thường, nhiệt độ của máy cao, có mùi khét) cần khắc phục ngay.",
+            "Khi để xe trong nhà, ở nơi trông giữ xe phải tắt khóa điện, để xa nguồn lửa, nguồn nhiệt; không mua xăng, dầu ở các điểm bán tự phát, không rõ nguồn gốc; không sử dụng các biện pháp “tiết kiệm xăng, dầu” khi chưa được kiểm chứng về mức độ an toàn có thể gây hỏng xe hoặc dẫn đến nguy cơ xảy ra cháy cao.",
+            "Không để các chất dễ cháy, dễ bắt lửa trong xe, dưới yên xe, trong cốp xe, trong khoang động cơ. Đối với xe điện cần chọn địa điểm sạc an toàn, sử dụng các thiết bị sạc đúng cách và giám sát quá trình sạc.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 203,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Người điều khiển phương tiện cơ giới đường bộ phải thực hiện những biện pháp gì dưới đây để chữa cháy trong trường hợp phương tiện bị cháy, xét thấy có khả năng dập tắt đám cháy?",
+        "answers": [
+            "Tắt khoá điện, hô hoán để mọi người đến trợ giúp chữa cháy, gọi Cảnh sát phòng cháy chữa cháy và cứu nạn cứu hộ (điện thoại 114).",
+            "Nếu nhiên liệu chưa trào ra ngoài (ngọn lửa chưa cháy dữ dội) thì có thể sử dụng nước, hoặc bất kỳ chất, phương tiện chữa cháy có được để dập lửa; nếu nhiên liệu đã trào ra ngoài (ngọn lửa cháy dữ dội) thì phải sử dụng các bình chữa cháy, cát, chăn chiên, bao tải, vải nhúng nước để dập lửa.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 204,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Khi phát hiện thấy có ngọn lửa, khói hoặc nhiệt độ cao bất thường từ phương tiện giao thông do mình điều khiển người lái xe phải làm gì trước tiên?",
+        "answers": [
+            "Bình tĩnh, đưa xe sát vào lề đường, tránh xa nơi có nhiều người, nhiều chất dễ cháy và tắt khóa điện, thực hiện các bước chữa cháy.",
+            "Hô hoán để mọi người đến trợ giúp chữa cháy, gọi Cảnh sát giao thông, Cảnh sát phòng cháy chữa cháy và cứu nạn, cứu hộ, lực lượng y tế để sẵn sàng hỗ trợ cứu người.",
+            "Nếu nhiên liệu trào ra ngoài, ngọn lửa chưa cháy dữ dội thì tiếp tục sử dụng nước, hoặc bất kỳ chất, phương tiện chữa cháy có được để dập lửa.",
+            "Cả ba ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 205,
+        "category": "Văn hóa giao thông, đạo đức người lái xe, kỹ năng phòng cháy, chữa cháy và cứu hộ, cứu nạn",
+        "question": "Khi gặp nạn nhân bị bỏng trong vụ tai nạn giao thông, người lái xe cần làm gì?",
+        "answers": [
+            "Gọi số 115 để thông báo về tình trạng tai nạn và yêu cầu hỗ trợ y tế ngay lập tức. Quan sát hiện trường để giúp nạn nhân, đồng thời tránh gây tổn thương cho mình.",
+            "Nhanh chóng loại bỏ nguyên nhân gây bỏng bằng cách tách nạn nhân khỏi vật gây cháy, cởi bỏ quần áo nếu bén lửa, ngâm vùng da bị bỏng vào nước sạch hoặc đắp khăn mát, lưu ý không dùng khăn hoặc nước quá lạnh.",
+            "Nếu nạn nhân còn tỉnh, cần cho uống bù nước. Trong thời tiết lạnh, cần giữ ấm cho cơ thể nạn nhân, sau đó nhanh chóng đưa đến cơ sở y tế gần nhất.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 206,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe mô tô tay ga xuống đường dốc dài, độ dốc cao, người lái xe cần thực hiện các thao tác nào dưới đây để bảo đảm an toàn?",
+        "answers": [
+            "Giữ tay ga ở mức độ phù hợp, sử dụng phanh trước và phanh sau để giảm tốc độ.",
+            "Nhả hết tay ga, tắt động cơ, sử dụng phanh trước và phanh sau để giảm tốc độ.",
+            "Sử dụng phanh trước để giảm tốc độ kết hợp với tắt chìa khóa điện của xe."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 207,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi vào số để khởi hành xe ô tô có số tự động, người lái xe phải thực hiện các thao tác nào để bảo đảm an toàn?",
+        "answers": [
+            "Đạp bàn đạp phanh chân hết hành trình, vào số và nhả phanh đỗ, kiểm tra lại xem có bị nhầm số không rồi mới cho xe lăn bánh.",
+            "Đạp bàn đạp để tăng ga với mức độ phù hợp, vào số và kiểm tra lại xem có bị nhầm số không rồi mới cho xe lăn bánh."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 208,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi nhả phanh đỗ cơ khí điều khiển bằng tay (phanh tay), người lái xe cần phải thực hiện các thao tác nào?",
+        "answers": [
+            "Dùng lực tay phải kéo cần phanh tay về phía sau hết hành trình; nếu khóa hãm bị kẹt cứng phải đẩy mạnh phanh tay về phía trước, sau đó bóp khóa hãm.",
+            "Dùng lực tay phải bóp khóa hãm đẩy cần phanh tay về phía trước hết hành trình; nếu khóa hãm bị kẹt cứng phải kéo cần phanh tay về phía sau đồng thời bóp khóa hãm.",
+            "Dùng lực tay phải đẩy cần phanh tay về phía trước hết hành trình; nếu khóa hãm bị kẹt cứng phải đẩy mạnh phanh tay về phía trước, sau đó bóp khóa hãm."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 209,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi khởi hành ô tô sử dụng hộp số cơ khí trên đường bằng, người lái xe cần thực hiện các thao tác nào theo trình tự dưới đây?",
+        "answers": [
+            "Kiểm tra an toàn xung quanh xe ô tô; nhả từ từ đến 1/2 hành trình bàn đạp ly hợp (côn) và giữ trong khoảng 3 giây; vào số 1; nhả hết phanh tay, báo hiệu bằng còi, đèn trước khi xuất phát; tăng ga đủ để xuất phát, sau đó vừa tăng ga vừa nhả hết côn để cho xe ô tô chuyển động.",
+            "Kiểm tra an toàn xung quanh xe ô tô; đạp ly hợp (côn) hết hành trình; vào số 1; nhả hết phanh tay, báo hiệu bằng còi, đèn trước khi xuất phát; tăng ga đủ để xuấtphát; nhả từ từ đến 1/2 hành trình bàn đạp côn và giữ trong khoảng 3 giây, sau đó vừa tăng ga vừa nhả hết côn để cho xe ô tô chuyển động."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 210,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi quay đầu xe, người lái xe cần phải quan sát và thực hiện các thao tác nào để bảo đảm an toàn giao thông?",
+        "answers": [
+            "Quan sát biển báo hiệu để biết nơi được phép quay đầu; quan sát kỹ địa hình nơi chọn để quay đầu; lựa chọn quỹ đạo quay đầu xe cho thích hợp; quay đầu xe với tốc độ thấp; thường xuyên báo tín hiệu để người, các phương tiện xung quanh được biết; nếu quay đầu xe ở nơi nguy hiểm thì đưa đầu xe về phía nguy hiểm, đưa đuôi xe về phía an toàn.",
+            "Quan sát biển báo hiệu để biết nơi được phép quay đầu; quan sát kỹ địa hình nơi chọn để quay đầu; lựa chọn quỹ đạo quay đầu xe; quay đầu xe với tốc độ tối đa; thường xuyên báo tín hiệu để người, các phương tiện xung quanh được biết; nếu quay đầu xe ở nơi nguy hiểm thì đưa đuôi xe về phía nguy hiểm và đầu xe về phía an toàn."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 211,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi ngồi lái ô tô tư thế chân, lưng, tay của người lái xe như thế nào là đúng để bảo đảm an toàn và thoải mái?",
+        "answers": [
+            "Điều chỉnh ghế sao cho chân có thể đạp phanh và ga dễ dàng, ngồi thẳng lưng, hai tay nắm vô lăng, tay trái nắm ở vị trí 9 đến 10 giờ và tay phải nắm ở vị trí từ 2 đến 4 giờ.",
+            "Ngồi sát vô lăng để dễ quan sát hoặc ngồi tự do, không cần điều chỉnh ghế.",
+            "Ngồi ngả người về phía sau nhiều để thư giãn, chân trái để ở vị trí chân ga, hai tay nắm vô lăng ở vị trí bất kỳ."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 212,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển ô tô lên dốc cao, người lái xe cần thực hiện các thao tác nào dưới đây để bảo đảm an toàn?",
+        "answers": [
+            "Tăng lên số cao từ chân dốc, điều chỉnh ga cho xe nhanh lên dốc; đến gần đỉnh dốc phải tăng ga để xe nhanh chóng qua dốc; về số thấp, đi sát về phía bên phải đường, có tín hiệu (còi, đèn) để báo cho người lái xe đi ngược chiều biết.",
+            "Về số thấp từ chân dốc, điều chỉnh ga cho xe từ từ lên dốc; đến gần đỉnh dốc phải đi chậm, đi sát về phía bên phải đường, có tín hiệu (còi, đèn) để báo cho người lái xe đi ngược chiều biết."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 213,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển ô tô xuống dốc dài, người lái xe cần thực hiện các thao tác nào dưới đây để bảo đảm an toàn?",
+        "answers": [
+            "Tăng lên số cao, nhả bàn đạp ga ở mức độ phù hợp, kết hợp với phanh chân để khống chế tốc độ.",
+            "Về số thấp, nhả bàn đạp ga ở mức độ phù hợp, kết hợp với phanh chân để khống chế tốc độ.",
+            "Về số không (0), nhả bàn đạp ga ở mức độ phù hợp, kết hợp với phanh chân để khống chế tốc độ."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 214,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi xuống dốc, muốn dừng xe, người lái xe cần thực hiện các thao tác nào để bảo đảm an toàn?",
+        "answers": [
+            "Có tín hiệu rẽ phải, điều khiển xe sát vào lề đường bên phải; đạp phanh sớm và mạnh hơn lúc dừng xe trên đường bằng để xe đi với tốc độ chậm đến mức dễ dàng dừng lại được; về số 1, đạp 1/2 ly hợp (côn) cho xe đến chỗ dừng; khi xe đã dừng, về số không (N), đạp phanh chân, sử dụng phanh đỗ.",
+            "Có tín hiệu rẽ phải, điều khiển xe sát vào lề đường bên trái; đạp hết hành trình ly hợp (côn) và nhả bàn đạp ga để xe đi với tốc độ chậm đến mức dễ dàng dừng lại được tại chỗ dừng; khi xe đã dừng, đạp và giữ phanh chân.",
+            "Có tín hiệu rẽ trái, điều khiển xe sát vào lề đường bên phải; đạp phanh sớm và mạnh hơn lúc dừng xe trên đường bằng để xe đi với tốc độ chậm đến mức dễ dàng dừng lại được; về số không (N) để xe đi đến chỗ dừng, khi xe đã dừng, sử dụng phanh đỗ."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 215,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe trên đường vòng người lái xe cần phải làm gì để bảo đảm an toàn?",
+        "answers": [
+            "Quan sát cẩn thận các chướng ngại vật và báo hiệu bằng coi, đèn; giảm tốc độ tới mức cần thiết, về số thấp và thực hiện quay vòng với tốc độ phù hợp với bán kính cong của đường vòng.",
+            "Quan sát cẩn thận các chướng ngại vật và báo hiệu bằng còi, đèn; tăng tốc để nhanh chóng qua đường vòng và giảm tốc độ sau khi qua đường vòng."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 216,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe ô tô rẽ phải, người lái xe cần thực hiện các thao tác nào để bảo đảm an toàn?",
+        "answers": [
+            "Có tín hiệu rẽ phải; quan sát an toàn phía sau; điều khiển xe sang làn đường bên trái; giảm tốc độ và quan sát an toàn phía bên phải để điều khiển xe qua chỗ đường giao nhau.",
+            "Cách chỗ rẽ một khoảng cách an toàn có tín hiệu rẽ phải; giảm tốc độ, quan sát an toàn phía trước, sau, bên phải và điều khiển xe từ từ rẽ phải.",
+            "Cách chỗ rẽ một khoảng cách an toàn có tín hiệu rẽ phải; quan sát an toàn phía sau; điều khiển xe bám sát vào phía phải đường; tăng tốc độ và quan sát an toàn phía bên trái để điều khiển xe qua chỗ đường giao nhau."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 217,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe ô tô rẽ trái, người lái xe cần thực hiện các thao tác nào để bảo đảm an toàn?",
+        "answers": [
+            "Cách chỗ rẽ một khoảng cách an toàn có tín hiệu rẽ trái; giảm tốc độ, quan sát an toàn xung quanh đặc biệt là bên trái; đổi sang làn đường bên trái và điều khiển xe từ từ rẽ trái.",
+            "Cách chỗ rẽ một khoảng cách an toàn có tín hiệu rẽ trái, tăng tốc độ để xe nhanh chóng qua chỗ đường giao nhau; có tín hiệu xin đổi làn đường; quan sát an toàn xung quanh đặc biệt là bên trái; đổi làn đường sang phải để mở rộng vòng cua."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 218,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe sử dụng hộp số cơ khí vượt qua rãnh lớn cắt ngang mặt đường, người lái xe cần thực hiện các thao tác nào để đảm bảo an toàn?",
+        "answers": [
+            "Vào số một (1) và từ từ cho hai bánh xe trước xuống rãnh, tăng ga cho hai bánh xe trước vượt lên khỏi rãnh, tăng số, tăng tốc độ để bánh xe sau vượt qua rãnh.",
+            "Tăng ga, tăng số để hai bánh xe trước và bánh xe sau vượt qua khỏi rãnh và chạy bình thường.",
+            "Vào số một (1) và từ từ cho hai bánh xe trước xuống rãnh, tăng ga cho hai bánh xe trước vượt lên khỏi rãnh, tiếp tục để bánh xe sau từ từ xuống rãnh rồi tăng dần ga cho xe ô tô lên khỏi rãnh."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 219,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe qua đường sắt, người lái xe cần phải thực hiện các thao tác nào dưới đây để bảo đảm an toàn?",
+        "answers": [
+            "Khi có chuông báo hoặc thanh chắn đã hạ xuống, người lái xe phải dừng xe tạm thời đúng khoảng cách an toàn, kéo phanh tay nếu đường dốc hoặc phải chờ lâu.",
+            "Khi không có chuông báo hoặc thanh chắn không hạ xuống, người lái xe cần phải quan sát nếu thấy đủ điều kiện an toàn thì về số thấp, tăng ga nhẹ và không thay đổi số trong quá trình vượt qua đường sắt để tránh động cơ chết máy cho xe cho vượt qua.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 220,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe ô tô tự đổ, người lái xe cần chú ý những điểm gì để bảo đảm an toàn?",
+        "answers": [
+            "Khi chạy trên đường xấu, nhiều ổ gà nên chạy chậm để thùng xe không bị lắc mạnh, không gây hiện tượng lệch \"ben\"; khi chạy vào đường vòng, cần giảm tốc độ, không lấy lái gấp và không phanh gấp.",
+            "Khi chạy trên đường quốc lộ, đường bằng phẳng không cần hạ hết thùng xe xuống.",
+            "Khi đổ hàng phải chọn vị trí có nền đường cứng và phẳng, dừng hẳn xe, kéo hết phanh đỗ; sau đó mới điều khiển cơ cấu nâng \"ben\" để đổ hàng, đổ xong hàng mới hạ thùng xuống.",
+            "Ý 1 và ý 3."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 221,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe tăng số, người lái xe cần chú ý những điểm gì để bảo đảm an toàn?",
+        "answers": [
+            "Không được nhìn xuống buồng lái, cần phải tăng thứ tự từ thấp đến cao, phối hợp các động tác phải nhịp nhàng, chính xác.",
+            "Nhìn xuống buồng lái để biết chính xác vị trí các tay số, cần phải tăng thứ tự từ thấp đến cao, phối hợp các động tác phải nhịp nhàng, vù ga phải phù hợp với tốc độ."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 222,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe giảm số, người lái xe cần phải chú ý những điểm gì để bảo đảm an toàn?",
+        "answers": [
+            "Nhìn xuống buồng lái để biết chính xác vị trí các tay số, cần phải giảm thứ tự từ cao xuống thấp, phối hợp các động tác phải nhịp nhàng, chính xác.",
+            "Không được nhìn xuống buồng lái, cần phải giảm thứ tự từ cao xuống thấp, phối hợp các động tác phải nhịp nhàng, chính xác, vù ga phải phù hợp với tốc độ."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 223,
+        "category": "Kỹ thuật lái xe",
+        "question": "Để giảm tốc độ khi ô tô đi xuống đường dốc dài, người lái xe phải thực hiện các thao tác nào để bảo đảm an toàn?",
+        "answers": [
+            "Nhả bàn đạp ga, đạp ly hợp (côn) hết hành trình, đạp mạnh phanh chân để giảm tốc độ.",
+            "Về số thấp phù hợp, nhả bàn đạp ga, kết hợp đạp phanh chân với mức độ phù hợp để giảm tốc độ."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 224,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển ô tô qua đường ngập nước, người lái xe cần thực hiện các thao tác nào để đảm bảo an toàn?",
+        "answers": [
+            "Tăng lên số cao, tăng ga và giảm ga liên tục để thay đổi tốc độ, giữ vững tay lái để ô tô vượt qua đoạn đường ngập nước.",
+            "Đạp ly hợp (côn) hết hành trình, tăng ga và giảm ga liên tục để thay đổi tốc độ, giữ vững tay lái để ô tô vượt qua đoạn đường ngập nước.",
+            "Quan sát, ước lượng độ ngập nước mà xe ô tô có thể vượt qua an toàn, về số thấp, giữ đều ga và giữ vững tay lái để ô tô vượt qua đoạn đường ngập nước."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 225,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe ô tô tới gần xe chạy ngược chiều vào ban đêm, người lái xe cần thực hiện các thao tác nào để bảo đảm an toàn?",
+        "answers": [
+            "Chuyển từ đèn chiếu xa sang đèn chiếu gần; không nhìn thẳng vào đèn của xe chạy ngược chiều mà nhìn chếch sang phía phải theo chiều chuyển động của xe mình.",
+            "Chuyển từ đèn chiếu gần sang đèn chiếu xa; không nhìn thẳng vào đèn của xe chạy ngược chiều mà nhìn chếch sang phía phải theo chiều chuyển động của xe mình.",
+            "Chuyển từ đèn chiếu xa sang đèn chiếu gần; nhìn thẳng vào đèn của xe chạy ngược chiều để tránh xe bảo đảm an toàn."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 226,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe ô tô trên đường trơn cần chú ý những điểm gì để bảo đảm an toàn?",
+        "answers": [
+            "Giữ vững tay lái cho xe đi đúng vệt bánh xe đi trước, sử dụng số thấp đi chậm, giữ đều ga, đánh lái ngoặt và phanh gấp khi cần thiết.",
+            "Giữ vững tay lái cho xe đi đúng vệt bánh xe đi trước, sử dụng số thấp đi chậm, gài cầu (nếu có), giữ đều ga, không lấy nhiều lái, không đánh lái ngoặt và phanh gấp."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 227,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi động cơ xe ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây là báo hiệu tình trạng gì của xe ô tô?",
+        "answers": [
+            "Đang sử dụng phanh đỗ.",
+            "Nhiệt độ nước làm mát quá mức cho phép.",
+            "Cửa xe đang mở."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-227.jpeg"
+    },
+    {
+        "id": 228,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi động cơ xe ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây là báo hiệu tình trạng gì của xe ô tô?",
+        "answers": [
+            "Đang sử dụng phanh đỗ.",
+            "Thiếu dầu phanh.",
+            "Nhiệt độ nước làm mát tăng quá mức cho phép.",
+            "Áp suất dầu ở mức thấp."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-228.jpeg"
+    },
+    {
+        "id": 229,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi động cơ xe ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây là báo hiệu tình trạng gì của xe ô tô?",
+        "answers": [
+            "Cửa xe đóng chưa chặt hoặc có cửa xe chưa đóng.",
+            "Bộ nạp ắc quy gặp sự cố kỹ thuật.",
+            "Dầu bôi trơn bị thiếu.",
+            "Ý 2 và ý 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-229.jpeg"
+    },
+    {
+        "id": 230,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi động cơ xe ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây là báo hiệu tình trạng gì của xe ô tô?",
+        "answers": [
+            "Thiếu dầu phanh, phanh tay đang hãm.",
+            "Hệ thống túi khí an toàn gặp sự cố.",
+            "Lái xe và người ngồi ghế trước chưa cài dây đai an toàn.",
+            "Cửa đóng chưa chặt, có cửa chưa đóng."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-230.jpeg"
+    },
+    {
+        "id": 231,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi động cơ xe ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây là báo hiệu tình trạng gì của xe ô tô?",
+        "answers": [
+            "Báo hiệu thiếu dầu phanh.",
+            "Áp suất lốp không đủ.",
+            "Đang sử dụng phanh đỗ.",
+            "Sắp hết nhiên liệu."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-231.jpeg"
+    },
+    {
+        "id": 232,
+        "category": "Kỹ thuật lái xe",
+        "question": "Trong các loại nhiên liệu dưới đây, loại nhiên liệu nào giảm thiểu ô nhiễm môi trường?",
+        "answers": [
+            "Xăng và dầu diesel.",
+            "Xăng sinh học và khí sinh học.",
+            "Ý 1 và ý 2."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 233,
+        "category": "Kỹ thuật lái xe",
+        "question": "Các biện pháp tiết kiệm nhiên liệu khi chạy xe?",
+        "answers": [
+            "Bảo dưỡng xe theo định kỳ và có kế hoạch lộ trình trước khi xe chạy.",
+            "Kiểm tra áp suất lốp theo quy định và chạy xe với tốc độ phù hợp với tình trạng mặt đường và mật độ giao thông trên đường.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 234,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi đã đỗ xe ô tô sát lề đường bên phải, người lái xe phải thực hiện các thao tác nào dưới đây khi mở cửa xuống xe để đảm bảo an toàn?",
+        "answers": [
+            "Quan sát tình hình giao thông phía trước, phía sau và phía bên mở cửa xe, mở hé cánh cửa, nếu đảm bảo an toàn thì mở cửa ở mức cần thiết để xuống xe ô tô.",
+            "Mở cánh cửa và quan sát tình hình giao thông phía trước, nếu đảm bảo an toàn thì mở cửa ở mức cần thiết để xuống xe ô tô.",
+            "Mở cánh cửa hết hành trình và nhanh chóng ra khỏi xe ô tô."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 235,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe ô tô qua đường sắt không có rào chắn, không có người điều khiển giao thông, người lái xe phải xử lý như thế nào?",
+        "answers": [
+            "Giảm tốc độ, dừng lại trước vạch dừng, quan sát cả hai phía, nếu không có tàu đi tới, tăng ga nhẹ vượt qua đường sắt.",
+            "Nếu thấy có tàu đi tới thì dừng lại trước vạch dừng, chỉ khi tàu đi qua mới được đi.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 236,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi lái xe ô tô qua đường sắt không có rào chắn, không có người điều khiển giao thông, người lái xe thực hiện thao tác: “giảm tốc độ, dừng lại trước vạch dừng, quan sát cả hai phía, nếu không có tàu đi tới, tăng ga nhẹ vượt qua đường sắt. Nếu thấy có tàu đi tới thì dừng lại trước vạch dừng, chỉ khi tàu đi qua mới được đi” để đảm bảo an toàn là đúng hay không?",
+        "answers": [
+            "Không đúng.",
+            "Đúng.",
+            "Không cần thiết, vì nếu nhìn thấy tàu còn cách xa, người lái xe có thể tăng số cao, tăng ga để cho xe nhanh chóng vượt qua đường sắt."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 237,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe ô tô có hộp số tự động đi vào đường trơn trượt, lầy lội, người lái xe phải xử lý như thế nào để đảm bảo an toàn?",
+        "answers": [
+            "Về số thấp, kết hợp phanh chân để giảm tốc độ.",
+            "Giữ nguyên tay số D, kết hợp phanh đỗ để giảm tốc độ.",
+            "Về số N (số 0), kết hợp phanh chân để giảm tốc độ."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 238,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi động cơ ô tô đã khởi động, muốn điều chỉnh ghế của người lái, người lái xe phải để cần số ở vị trí nào?",
+        "answers": [
+            "Vị trí N hoặc vị trí P hoặc số 0.",
+            "Vị trí D hoặc số 1.",
+            "Vị trí R."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 239,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe ô tô có hộp số tự động, người lái xe sử dụng chân như thế nào là đúng để bảo đảm an toàn?",
+        "answers": [
+            "Không sử dụng chân trái; chân phải điều khiển bàn đạp phanh và bàn đạp ga.",
+            "Chân trái điều khiển bàn đạp phanh, chân phải điều khiển bàn đạp ga.",
+            "Không sử dụng chân phải; chân trái điều khiển bàn đạp phanh và bàn đạp ga."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 240,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi tầm nhìn bị hạn chế bởi sương mù hoặc mưa to, người lái xe phải thực hiện các thao tác nào để bảo đảm an toàn?",
+        "answers": [
+            "Tăng tốc độ, chạy gần xe trước, nhìn đèn hậu để định hướng.",
+            "Giảm tốc độ, chạy cách xa xe trước với khoảng cách an toàn, bật đèn sương mù và đèn chiếu gần.",
+            "Tăng tốc độ, bật đèn pha vượt qua xe chạy trước."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 241,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi đèn pha của xe đi ngược chiều gây chói mắt, làm giảm khả năng quan sát trên đường, người lái xe xử lý như thế nào dưới đây để bảo đảm an toàn?",
+        "answers": [
+            "Giảm tốc độ, giữ vững tay lái, nhìn chếch sang lề đường bên phải.",
+            "Bật đèn pha chiếu xa và giữ nguyên tốc độ.",
+            "Tăng tốc độ, bật đèn pha đối diện xe phía trước."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 242,
+        "category": "Kỹ thuật lái xe",
+        "question": "Để đạt được hiệu quả phanh cao nhất, người lái xe mô tô phải sử dụng các kỹ năng như thế nào dưới đây?",
+        "answers": [
+            "Sử dụng phanh trước.",
+            "Sử dụng phanh sau.",
+            "Giảm hết ga, sử dụng đồng thời cả phanh sau và phanh trước."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 243,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi lái xe ô tô trên mặt đường có nhiều \"ổ gà\", người lái xe phải thực hiện thao tác như thế nào để bảo đảm an toàn?",
+        "answers": [
+            "Giảm tốc độ, về số thấp và giữ đều ga.",
+            "Tăng tốc độ cho xe lướt qua nhanh.",
+            "Tăng tốc độ, đánh lái liên tục để tránh \"ổ gà\"."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 244,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe ô tô gặp mưa to hoặc sương mù, người lái xe phải làm gì để bảo đảm an toàn?",
+        "answers": [
+            "Bật đèn chiếu gần và đèn vàng (nếu có), điều khiển gạt nước, điều khiển ô tô đi với tốc độ chậm để có thể quan sát được; tìm chỗ an toàn dừng xe, bật đèn dừng khẩn cấp báo hiệu cho các xe khác biết.",
+            "Bật đèn chiếu xa và đèn vàng, điều khiển gạt nước, tăng tốc độ điều khiển ô tô qua khỏi khu vực mưa hoặc sương mù.",
+            "Tăng tốc độ, bật đèn pha vượt qua xe chạy phía trước."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 245,
+        "category": "Kỹ thuật lái xe",
+        "question": "Điều khiển xe ô tô trong trời mưa, người lái xe phải xử lý như thế nào để bảo đảm an toàn?",
+        "answers": [
+            "Giảm tốc độ, tăng cường quan sát, không nên phanh gấp, không nên tăng ga hay đánh vô lăng đột ngột, bật đèn chiếu gần, mở chế độ gạt nước ở chế độ phù hợp để đảm bảo quan sát.",
+            "Phanh gấp khi xe đi vào vũng nước và tăng ga ngay sau khi ra khỏi vũng nước.",
+            "Bật đèn chiếu xa, tăng tốc độ điều khiển ô tô qua khỏi khu vực mưa."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 246,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi lùi xe, người lái xe phải xử lý như thế nào để bảo đảm an toàn giao thông?",
+        "answers": [
+            "Quan sát bên trái, bên phải, phía sau xe, có tín hiệu cần thiết và lùi xe với tốc độ phù hợp.",
+            "Quan sát phía trước xe và lùi xe với tốc độ nhanh.",
+            "Quan sát bên trái và phía trước của xe và lùi xe với tốc độ nhanh."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 247,
+        "category": "Kỹ thuật lái xe",
+        "question": "Điều khiển xe ô tô trong khu vực đông dân cư cần lưu ý điều gì dưới đây?",
+        "answers": [
+            "Giảm tốc độ đến mức an toàn, quan sát, nhường đường cho người đi bộ, giữ khoảng cách an toàn với các xe phía trước.",
+            "Đi đúng làn đường quy định, chỉ được chuyển làn đường ở nơi cho phép, nhưng phải quan sát.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 248,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe ô tô nhập vào đường cao tốc người lái xe cần thực hiện như thế nào dưới đây để bảo đảm an toàn giao thông?",
+        "answers": [
+            "Quan sát, phát tín hiệu, nhường đường cho các xe đang chạy trên đường cao tốc, khi đủ điều kiện an toàn thì tăng tốc độ cho xe nhập vào làn đường cao tốc, nếu có làn đường tăng tốc thì phải cho xe chạy trên làn đường đó trước khi cho xe nhập vào làn của đường cao tốc.",
+            "Phát tín hiệu, quan sát các xe đang chạy phía trước, nếu bảo đảm các điều kiện an toàn thì tăng tốc độ cho xe nhập ngay vào làn đường cao tốc.",
+            "Phát tín hiệu và lái xe nhập vào làn đường tăng tốc, quan sát các xe phía sau đang chạy trên đường cao tốc, khi đủ điều kiện an toàn thì giảm tốc độ, từ từ cho xe nhập vào làn đường cao tốc."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 249,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe ô tô ra khỏi đường cao tốc người lái xe cần thực hiện như thế nào dưới đây để bảo đảm an toàn giao thông?",
+        "answers": [
+            "Quan sát phía trước để tìm biển báo chỉ dẫn \"lối ra đường cao tốc\", kiểm tra tình trạng giao thông phía sau và bên phải, nếu bảo đảm điều kiện an toàn thì phát tín hiệu và điều khiển xe chuyển dần sang làn bên phải, nếu có làn đường giảm tốc thì phải cho xe di chuyển trên làn đường đó trước khi ra khỏi đường cao tốc.",
+            "Quan sát phía trước để tìm biển báo chỉ dẫn \"lối ra đường cao tốc\", trường hợp vượt qua \"lối ra đường cao tốc\" thì phát tín hiệu, di chuyển sang làn đường giảm tốc và lùi xe quay trở lại."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 250,
+        "category": "Kỹ thuật lái xe",
+        "question": "Người lái xe được dừng xe, đỗ xe trên làn dừng khẩn cấp của đường cao tốc trong trường hợp nào dưới đây?",
+        "answers": [
+            "Xe gặp sự cố, tai nạn hoặc trường hợp khẩn cấp không thể di chuyển bình thường.",
+            "Để nghỉ ngơi, đi vệ sinh, chụp ảnh, làm việc riêng...",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 251,
+        "category": "Kỹ thuật lái xe",
+        "question": "Trên đường đôi muốn vượt xe kéo rơ moóc phía trước, người lái xe phải xử lý như thế nào?",
+        "answers": [
+            "Giữ khoảng cách an toàn, tránh đi vào vị trí điểm mù của xe kéo rơ moóc, bật xi nhan trái đồng thời kết hợp đèn, còi xin vượt.",
+            "Khi xe kéo rơ moóc đã có tín hiệu cho vượt (không có chướng ngại vật phía trước và xe đi ngược chiều), thấy đủ điều kiện an toàn thì vượt dứt khoát, không di chuyển song song bên cạnh xe kéo rơ moóc.",
+            "Khi vượt qua, phải quan sát gương chiếu hậu bên phải nếu có khoảng trống an toàn mới được cho xe chạy vào làn của mình, tắt xi nhan và tiếp tục hành trình.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 252,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe ô tô xuống đường dốc dài, độ dốc cao, người lái xe số tự động cần thực hiện các thao tác nào dưới đây để bảo đảm an toàn?",
+        "answers": [
+            "Nhả bàn đạp ga, về số thấp, đạp phanh chân với mức độ phù hợp để giảm tốc độ.",
+            "Nhả bàn đạp ga, về số N đạp phanh chân và kéo phanh tay để giảm tốc độ."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 253,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi đi từ đường nhánh ra đường chính, người lái xe phải xử lý như thế nào là đúng?",
+        "answers": [
+            "Quan sát, giảm tốc độ, phát tín hiệu, nhường đường cho xe trên đường chính từ bất kỳ hướng nào tới.",
+            "Nháy đèn, bấm còi để xe đi trên đường chính biết và tăng tốc độ cho xe đi ra đường chính.",
+            "Quan sát xe đang đi trên đường chính, nếu là xe có kích thước lớn hơn thì nhường đường, xe có kích thước nhỏ hơn thì tăng tốc độ cho xe đi ra đường chính."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 254,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi đang lái xe mô tô hoặc ô tô, nếu có nhu cầu sử dụng điện thoại để nhắn tin hoặc gọi điện, người lái xe phải thực hiện như thế nào trong các tình huống nêu dưới đây?",
+        "answers": [
+            "Giảm tốc độ để bảo đảm an toàn với xe phía trước và sử dụng điện thoại để liên lạc.",
+            "Giảm tốc độ để dừng xe ở nơi cho phép sau đó sử dụng điện thoại để liên lạc.",
+            "Tăng tốc độ để cách xa xe phía sau và sử dụng điện thoại để liên lạc."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 255,
+        "category": "Kỹ thuật lái xe",
+        "question": "Những thói quen nào dưới đây khi điều khiển xe mô tô tay ga tham gia giao thông dễ gây tai nạn nguy hiểm?",
+        "answers": [
+            "Sử dụng còi.",
+            "Phanh đồng thời cả phanh trước và phanh sau.",
+            "Chỉ sử dụng phanh trước."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 256,
+        "category": "Kỹ thuật lái xe",
+        "question": "Người ngồi trên xe ô tô cần thực hiện những thao tác mở cửa như thế nào dưới đây để xuống xe để bảo đảm an toàn?",
+        "answers": [
+            "Quan sát phía trước, phía sau và bên phía mở cửa để phát hiện các phương tiện đang di chuyển tới gần, khi đủ điều kiện an toàn, mở hé cửa, sau đó mở ở mức cần thiết để xuống xe.",
+            "Quan sát tình hình giao thông phía trước, không cần quan sát phía sau và bên mở cửa; mở cánh cửa hết hành trình và nhanh chóng ra khỏi xe ô tô."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 257,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi điều khiển xe mô tô quay đầu, người lái xe cần thực hiện như thế nào để bảo đảm an toàn?",
+        "answers": [
+            "Bật tín hiệu báo rẽ trước khi quay đầu, từ từ giảm tốc độ đến mức có thể dừng lại.",
+            "Chỉ quay đầu xe tại những nơi được phép quay đầu.",
+            "Quan sát an toàn các phương tiện tới từ phía trước, phía sau, hai bên đồng thời nhường đường cho xe từ bên phải và phía trước đi tới.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 258,
+        "category": "Kỹ thuật lái xe",
+        "question": "Tay ga trên xe mô tô hai bánh có tác dụng gì dưới đây?",
+        "answers": [
+            "Để điều khiển xe chạy về phía trước.",
+            "Để điều tiết công suất động cơ qua đó điều khiển tốc độ của xe.",
+            "Để điều khiển xe chạy lùi.",
+            "Ý 1 và ý 2."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 259,
+        "category": "Kỹ thuật lái xe",
+        "question": "Gương chiếu hậu của xe mô tô hai bánh có tác dụng gì dưới đây?",
+        "answers": [
+            "Để quan sát an toàn phía bên trái khi chuẩn bị rẽ trái.",
+            "Để quan sát an toàn phía bên phải khi chuẩn bị rẽ phải.",
+            "Để quan sát an toàn phía sau của bên trái và bên phải trước khi chuyển hướng.",
+            "Để quan sát an toàn phía trước cả bên trái và bên phải trước khi chuyển hướng."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 260,
+        "category": "Kỹ thuật lái xe",
+        "question": "Để bảo đảm an toàn khi tham gia giao thông, người lái xe mô tô hai bánh cần điều khiển tay ga như thế nào?",
+        "answers": [
+            "Tăng ga thật mạnh, giảm ga từ từ.",
+            "Tăng ga thật mạnh, giảm ga thật nhanh.",
+            "Tăng ga từ từ, giảm ga thật nhanh.",
+            "Tăng ga từ từ, giảm ga từ từ."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": true
+    },
+    {
+        "id": 261,
+        "category": "Kỹ thuật lái xe",
+        "question": "Để tránh đổ, ngã khi điều khiển xe mô tô hai bánh ở nơi đường xấu, nhỏ và hẹp, người lái xe cần xử lý như thế nào?",
+        "answers": [
+            "Đi ở tốc độ thấp, quan sát liên tục khoảng cách từ 05 m đến 10 m phía trước để điều chỉnh sớm hướng di chuyển.",
+            "Trong quá trình di chuyển không nên dùng phanh trước tránh làm khóa bánh dẫn hướng.",
+            "Không được lắc người sang trái hoặc phải nhiều, trọng tâm cơ thể cần trùng với trọng tâm của xe.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 262,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi lái xe ô tô điện xuống dốc dài, đổ đèo, người lái xe cần chú ý những vấn đề gì để bảo đảm an toàn?",
+        "answers": [
+            "Kiểm tra hệ thống an toàn, pin của xe trước khi xuất phát.",
+            "Nhả chân ga để phanh tái sinh hoạt động.",
+            "Rà phanh chân để kịp thời xử lý tình huống khẩn cấp.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 263,
+        "category": "Kỹ thuật lái xe",
+        "question": "Khi lái xe ô tô điện qua khu vực ngập nước, người lái xe cần phải chú ý những vấn đề gì?",
+        "answers": [
+            "Người lái xe phải tìm hiểu khả năng chìm trong nước của xe để xác định cung đường di chuyển.",
+            "Giữ vững tay lái, đi đều ga, tránh không để xe chết máy giữa dòng, không nên dừng xe trên đường ngập nước.",
+            "Lái xe tốc độ chậm, không tạo sóng và giữ khoảng cách an toàn với các phương tiện xung quanh, nhất là người đi bộ.",
+            "Cả ba ý trên."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 264,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Phương pháp kiểm tra mức dầu bôi trơn động cơ nào dưới đây là đúng?",
+        "answers": [
+            "Kiểm tra que thăm dầu trên các-te. Quan sát vệt dầu trên que thăm, mức dầu này phải nằm ở mức tối đa được thể hiện trên que thăm.",
+            "Rút que thăm dầu trên các-te. Quan sát vệt dầu trên que thăm, mức dầu này phải nằm ở mức tối thiểu được thể hiện trên que thăm.",
+            "Rút que thăm dầu trên các-te, lau sạch que thăm sau đó cắm vào các-te và rút ra quan sát vệt dầu trên que thăm, mức dầu phải nằm trong khoảng vạch mức tối thiểu và tối đa được thể hiện trên que thăm."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 265,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Xe ô tô tham gia giao thông đường bộ phải bảo đảm các quy định về chất lượng, an toàn kỹ thuật và bảo vệ môi trường nào dưới đây?",
+        "answers": [
+            "Kính chắn gió, kính cửa phải là loại kính an toàn, bảo đảm tầm nhìn cho người điều khiển; có đủ hệ thống hãm và hệ thống chuyển hướng có hiệu lực, tay lái xe ô tô ở bên trái của xe, có còi với âm lượng đúng quy chuẩn kỹ thuật.",
+            "Có đủ đèn chiếu sáng gần và xa, đèn soi biển số, đèn báo hãm, đèn tín hiệu; có đủ bộ phận giảm thanh, giảm khói, các kết cấu phải đủ độ bền và bảo đảm tính năng vận hành ổn định.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 266,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Xe mô tô và xe ô tô tham gia giao thông trên đường bộ có bắt buộc phải đủ bộ phận giảm thanh không?",
+        "answers": [
+            "Không bắt buộc.",
+            "Bắt buộc.",
+            "Tùy từng trường hợp."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 267,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Xe ô tô tham gia giao thông trên đường bộ phải có đủ các loại đèn nào dưới đây?",
+        "answers": [
+            "Đèn chiếu sáng gần và xa.",
+            "Đèn soi biển số, đèn báo hãm và đèn tín hiệu.",
+            "Dàn đèn pha trên nóc xe.",
+            "Ý 1 và ý 2."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 268,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Kính chắn gió của xe ô tô phải bảo đảm yêu cầu nào dưới đây?",
+        "answers": [
+            "Là loại kính an toàn, kính nhiều lớp, đúng quy cách, không rạn nứt, bảo đảm hình ảnh quan sát rõ ràng, không bị méo mó.",
+            "Là loại kính trong suốt, không rạn nứt, bảo đảm tầm nhìn cho người điều khiển về phía trước mặt và hai bên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 269,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Bánh xe, lốp lắp cho xe ô tô phải bảo đảm an toàn kỹ thuật như thế nào dưới đây?",
+        "answers": [
+            "Bánh xe phải có kết cấu chắc chắn, lắp đặt đúng quy cách của nhà sản xuât.",
+            "Lốp phải đủ số lượng, đủ áp suất, không phồng rộp, đúng cỡ lốp của nhà sản xuất hoặc tài liệu kỹ thuật quy định; lốp trên cùng một trục của xe sử dụng trong điều kiện hoạt động bình thường phải cùng kiểu loại.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 270,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Hệ thống lái trên xe ô tô phải bảo đảm yêu cầu nào dưới đây?",
+        "answers": [
+            "Bảo đảm cho xe chuyển hướng chính xác, điều khiển nhẹ nhàng, an toàn ở mọi vận tốc và tải trọng trong phạm vi tính năng kỹ thuật cho phép của xe.",
+            "Khi hoạt động các cơ cấu chuyển động của hệ thống lái không được va chạm với bất kỳ bộ phận nào của xe; khi quay vô lăng lái về bên phải và bên trái thì không được có sự khác biệt đáng kể về lực tác động lên vành tay lái.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 271,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Mục đích của bảo dưỡng thường xuyên đối với xe ô tô có tác dụng gì dưới đây?",
+        "answers": [
+            "Bảo dưỡng ô tô thường xuyên làm cho ô tô luôn luôn có tính năng kỹ thuật tốt, giảm cường độ hao mòn của các chi tiết, kéo dài tuổi thọ của xe.",
+            "Ngăn ngừa và phát hiện kịp thời các hư hỏng và sai lệch kỹ thuật để khắc phục, giữ gìn được hình thức bên ngoài.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 272,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Trong các nguyên nhân nêu dưới đây, nguyên nhân nào làm động cơ diesel không nổ?",
+        "answers": [
+            "Hết nhiên liệu, lõi lọc nhiên liệu bị tắc, lọc khí bị tắc, nhiên liệu lẫn không khí, tạp chất.",
+            "Hết nhiên liệu, lõi lọc nhiên liệu bị tắc, lọc khí bị tắc, nhiên liệu lẫn không khí, không có tia lửa điện.",
+            "Hết nhiên liệu, lõi lọc nhiên liệu bị tắc, lọc khí bị tắc, nhiên liệu lẫn không khí và nước, không có tia lửa điện."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 273,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Ống xả lắp trên xe ô tô phải bảo đảm yêu cầu an toàn kỹthuật nào dưới đây?",
+        "answers": [
+            "Ống xả không được đặt ở vị trí có thể gây cháy xe hoặc ảnh hưởng đến người ngồi trên xe và gây cản trở hoạt động của hệ thống khác.",
+            "Miệng thoát khí thải của ống xả không được hướng về phía trước và không được hướng về bên phải theo chiều tiến của xe.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 274,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Dây đai an toàn lắp trên xe ô tô phải bảo đảm yêu cầu an toàn kỹ thuật nào dưới đây?",
+        "answers": [
+            "Đủ số lượng, lắp đặt chắc chắn không bị rách, đứt, khóa cài đóng, mở nhẹ nhàng, không tự mở, không bị kẹt; kéo ra thu vào dễ dàng, cơ cấu hãm giữ chặtdây khi giật dây đột ngột.",
+            "Đủ số lượng, lắp đặt chắc chắn không bị rách, đứt, khóa cài đóng, mở nhẹ nhàng, không tự mở, không bị kẹt; kéo ra thu vào dễ dàng, cơ cấu hãm mở ra khi giật dây đột ngột.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 275,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Thế nào là động cơ 4 kỳ?",
+        "answers": [
+            "Là loại động cơ: để hoàn thành một chu trình công tác của động cơ, pít tông thực hiện 2 (hai) hành trình, trong đó có một lần sinh công.",
+            "Là loại động cơ: để hoàn thành một chu trình công tác của động cơ, pít tông thực hiện 4 (bốn) hành trình, trong đó có một lần sinh công."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 276,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Công dụng của hệ thống bôi trơn đối với động cơ ô tô?",
+        "answers": [
+            "Cung cấp một lượng dầu bôi trơn đủ và sạch dưới áp suất nhất định đi bôi trơn cho các chi tiết của động cơ để giảm ma sát, giảm mài mòn, làm kín, làm sạch, làm mát và chống gỉ.",
+            "Cung cấp một lượng nhiên liệu đầy đủ và sạch để cho động cơ ô tô hoạt động.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 277,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Niên hạn sử dụng của xe ô tô tải (tính bắt đầu từ năm sản xuất) không quá bao nhiêu năm?",
+        "answers": [
+            "15 năm.",
+            "20 năm.",
+            "25 năm."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 278,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Niên hạn sử dụng của xe ô tô chở người trên 8 chỗ ngồi (không kể chỗ của người lái xe) tính bắt đầu từ năm sản xuất không quá bao nhiêu năm?",
+        "answers": [
+            "5 năm.",
+            "20 năm.",
+            "25 năm."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 279,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Hãy nêu công dụng của động cơ xe ô tô?",
+        "answers": [
+            "Khi làm việc, nhiệt năng được biến đổi thành cơ năng làm trục khủy động cơ quay, truyền lực đến các bánh xe chủ động tạo ra chuyển động tịnh tiến cho xe ô tô.",
+            "Khi làm việc, cơ năng được biến đổi thành nhiệt năng và truyền đến các bánh xe chủ động tạo ra chuyển động tịnh tiến cho xe ô tô.",
+            "Cả hai ý trên."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 280,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Hãy nêu công dụng hệ thống truyền lực của xe ô tô?",
+        "answers": [
+            "Dùng để truyền mô men quay từ động cơ tới các bánh xe chủ động của xe ô tô.",
+            "Dùng để thay đổi hướng chuyển động hoặc giữ cho xe ô tô chuyển động ổn định theo hướng xác định.",
+            "Dùng để làm giảm tốc độ, dừng chuyển động của xe ô tô."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 281,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Hãy nêu công dụng ly hợp (côn) của xe ô tô?",
+        "answers": [
+            "Dùng để truyền mô men xoắn giữa các trục không cùng nằm trên một đường thẳng và góc lệch trục luôn thay đổi trong quá trình xe ô tô chuyển động.",
+            "Dùng để truyền hoặc ngắt truyền động từ động cơ đến hộp số của xe ô tô.",
+            "Dùng để truyền truyền động từ hộp số đến bánh xe chủ động của ô tô."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 282,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Hãy nêu công dụng hộp số của xe ô tô?",
+        "answers": [
+            "Truyền và tăng mô men xoắn giữa các trục vuông góc nhau, bảo đảm cho các bánh xe chủ động quay với tốc độ khác nhau khi sức cản chuyển động ở bánh xe hai bên không bằng nhau.",
+            "Truyền và thay đổi mô men xoắn giữa các trục không cùng nằm trên một đường thẳng và góc lệch trục luôn thay đổi trong quá trình ô tô chuyển động, chuyển số êm dịu, dễ điều khiển.",
+            "Truyền và thay đổi mô men từ động cơ đến bánh xe chủ động, cắt truyền động từ động cơ đến bánh xe chủ động, bảo đảm cho xe ô tô chuyển động lùi."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 283,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Hãy nêu công dụng hệ thống lái của xe ô tô?",
+        "answers": [
+            "Dùng để thay đổi mô men từ động cơ tới các bánh xe chủ động khi xe ô tô chuyển động theo hướng xác định.",
+            "Dùng để thay đổi mô men giữa các trục vuông góc nhau khi xe ô tô chuyển động theo hướng xác định.",
+            "Dùng để thay đổi hướng chuyển động hoặc giữ cho xe ô tô chuyển động ổn định theo hướng xác định."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 284,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Hãy nêu công dụng hệ thống phanh của xe ô tô?",
+        "answers": [
+            "Dùng để giảm tốc độ, dừng chuyển động của xe ô tô và giữ cho xe ô tô đứng yên trên dốc.",
+            "Dùng để thay đổi hướng chuyển động hoặc giữ cho xe ô tô chuyển động ổn định theo hướng xác định.",
+            "Dùng để truyền hoặc ngắt truyền động từ động cơ đến bánh xe chủ động của xe ô tô."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 285,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Đèn phanh trên xe mô tô có tác dụng gì dưới đây?",
+        "answers": [
+            "Có tác dụng cảnh báo cho các xe phía sau biết xe đang giảm tốc để chủ động tránh hoặc giảm tốc để tránh va chạm.",
+            "Có tác dụng định vị vào ban đêm với các xe từ phía sau tới để tránh va chạm.",
+            "Cả hai ý trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 286,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Khi động cơ ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây, báo hiệu tình trạng như thế nào của xe ô tô?",
+        "answers": [
+            "Nhiệt độ nước làm mát động cơ quá ngưỡng cho phép.",
+            "Áp suất lốp không đủ.",
+            "Đang hãm phanh tay.",
+            "Cần kiểm tra động cơ."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-286.jpeg"
+    },
+    {
+        "id": 287,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Khi động cơ ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây, báo hiệu tình trạng như thế nào của xe ô tô?",
+        "answers": [
+            "Báo hiệu hệ thống chống bó cứng khi phanh bị lỗi.",
+            "Áp suất lốp không đủ.",
+            "Đang hãm phanh tay.",
+            "Cần kiểm tra động cơ."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-287.jpeg"
+    },
+    {
+        "id": 288,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Khi động cơ ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây, báo hiệu tình trạng như thế nào của xe ô tô?",
+        "answers": [
+            "Báo hiệu thiếu dầu phanh.",
+            "Áp suất lốp không đủ.",
+            "Đang hãm phanh tay.",
+            "Sắp hết nhiên liệu."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-288.jpeg"
+    },
+    {
+        "id": 289,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Khi động cơ ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây, báo hiệu tình trạng như thế nào của xe ô tô?",
+        "answers": [
+            "Báo hiệu hệ thống chống bó cứng phanh bị lỗi.",
+            "Áp suất lốp không đủ.",
+            "Đang hãm phanh tay.",
+            "Sắp hết nhiên liệu."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-289.jpeg"
+    },
+    {
+        "id": 290,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Khi khởi động xe ô tô số tự động có trang bị chìa khóa thông minh có cần đạp hết hành trình bàn đạp chân phanh hay không?",
+        "answers": [
+            "Phải đạp hết hành trình bàn đạp chân phanh.",
+            "Không cần đạp phanh.",
+            "Tùy từng trường hợp."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-290.jpeg"
+    },
+    {
+        "id": 291,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Ắc quy được trang bị trên xe ô tô có tác dụng gì dưới đây?",
+        "answers": [
+            "Giúp người lái xe kịp thời tạo xung lực tối đa lên hệ thống phanh trong khoảnh khắc đầu tiên của tình huống khẩn cấp.",
+            "Ổn định chuyển động của xe ô tô khi đi vào đường vòng.",
+            "Hỗ trợ người lái xe khởi hành ngang dốc.",
+            "Để tích trữ điện năng, cung cấp cho các phụ tải khi máy phát chưa làm việc."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 292,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Máy phát điện được trang bị trên xe ô tô có tác dụng gì dưới đây?",
+        "answers": [
+            "Để phát điện năng cung cấp cho các phụ tải làm việc và nạp điện cho ắc quy.",
+            "Ổn định chuyển động của xe ô tô khi đi vào đường vòng.",
+            "Hỗ trợ người lái xe khởi hành ngang dốc.",
+            "Để tích trữ điện năng và cung cấp điện cho các phụ tải làm việc."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 293,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Dây đai an toàn được trang bị trên xe ô tô có tác dụng gì dưới đây?",
+        "answers": [
+            "Ổn định chuyển động của xe ô tô khi đi vào đường vòng.",
+            "Giữ chặt người lái và hành khách trên ghế ngồi khi xe ô tô đột ngột dừng lại."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 294,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Túi khí được trang bị trên xe ô tô có tác dụng gì dưới đây?",
+        "answers": [
+            "Giữ chặt người lái và hành khách trên ghế ngồi khi xe ô tô đột ngột dừng lại.",
+            "Giảm khả năng va đập của một số bộ phận cơ thể quan trọng với các vật thể trong xe.",
+            "Hấp thụ một phần lực va đập lên người lái và hành khách.",
+            "Ý 2 và ý 3."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false
+    },
+    {
+        "id": 295,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Khi động cơ ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây không tắt trong thời gian dài, báo hiệu tình trạng như thế nào của xe ô tô?",
+        "answers": [
+            "Nhiệt độ nước làm mát động cơ quá ngưỡng cho phép.",
+            "Áp suất lốp không đủ.",
+            "Đang hãm phanh tay.",
+            "Hệ thống lái gặp sự cố."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-295.jpeg"
+    },
+    {
+        "id": 296,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Trên xe ô tô có trang bị thiết bị như hình vẽ dưới đây có tác dụng gì?",
+        "answers": [
+            "Dùng để kích (hay nâng) xe ô tô.",
+            "Vặn ốc lắp bánh xe.",
+            "Ổn định chuyển động của xe ô tô khi đi vào đường vòng.",
+            "Giữ chặt người lái và hành khách trên ghế ngồi khi xe ô tô đột ngột dừng lại."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-296.jpeg"
+    },
+    {
+        "id": 297,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Trên xe ô tô có trang bị thiết bị như hình vẽ dưới đây, dùng để làm gì?",
+        "answers": [
+            "Thay lốp xe.",
+            "Chữa cháy.",
+            "Phá cửa kính xe ô tô trong các trường hợp khẩn cấp.",
+            "Vặn ốc để tháo lắp bánh xe."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-297.jpeg"
+    },
+    {
+        "id": 298,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Trên xe ô tô có trang bị thiết bị như hình vẽ dưới đây, dùng để làm gì?",
+        "answers": [
+            "Thay lốp xe.",
+            "Chữa cháy trong các trường hợp hỏa hoạn.",
+            "Cầm máu cho người bị nạn."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-298.jpeg"
+    },
+    {
+        "id": 299,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Nút bấm biểu tượng như hình vẽ trên xe ô tô có ý nghĩa như thế nào?",
+        "answers": [
+            "Báo hiệu xin đường cho xe đi thẳng.",
+            "Báo hiệu hệ thống phanh bị lỗi.",
+            "Báo hiệu xe đang ở tình huống nguy hiểm.",
+            "Báo hiệu đến thời gian cần bảo dưỡng."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-299.png"
+    },
+    {
+        "id": 300,
+        "category": "Cấu tạo và sửa chữa",
+        "question": "Khi động cơ đã hoạt động, bảng đồng hồ xuất hiện biểu tượng hình vẽ dưới đây, báo hiệu tình trạng như thế nào của xe?",
+        "answers": [
+            "Báo hiệu hệ thống túi khí đã bật.",
+            "Báo hiệu đèn chiếu sáng xa đã bật.",
+            "Báo hiệu chế độ lái tiết kiệm nhiên liệu đã bật.",
+            "Báo hiệu đèn cảnh báo khoảng cách đã bật."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-300.png"
+    },
+    {
+        "id": 301,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cấm các loại xe cơ giới đi vào, trừ xe máy hai bánh, xe gắn máy và các loại xe ưu tiên theo quy định?",
+        "answers": [
+            "Biển 1.3. Biển 1 và biển 3.",
+            "Biển 2.4. Cả ba biển."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-301.jpeg"
+    },
+    {
+        "id": 302,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cấm xe ô tô tải?",
+        "answers": [
+            "Cả ba biển.3. Biển 1 và biển 3.",
+            "Biển 2 và biển 3.4. Biển 1 và biển 2."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-302.jpeg"
+    },
+    {
+        "id": 303,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cấm máy kéo?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2 và biển 3.",
+            "Biển 1 và biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-303.jpeg"
+    },
+    {
+        "id": 304,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu cấm xe mô tô ba bánh chở hàng đi qua?",
+        "answers": [
+            "Biển 1 và biển 2.",
+            "Biển 1 và biển 3.",
+            "Biển 2 và biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-304.jpeg"
+    },
+    {
+        "id": 305,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào dưới đây xe gắn máy được phép đi vào?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-305.jpeg"
+    },
+    {
+        "id": 306,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu cấm xe mô tô đi vào?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-306.jpeg"
+    },
+    {
+        "id": 307,
+        "category": "Báo hiệu đường bộ",
+        "question": "Khi gặp biển nào thì xe mô tô hai bánh được đi vào?",
+        "answers": [
+            "Không biển nào.",
+            "Biển 1 và biển 2.",
+            "Biển 2 và biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-307.jpeg"
+    },
+    {
+        "id": 308,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cho phép xe ô tô con được vượt?",
+        "answers": [
+            "Biển 1 và biển 2.",
+            "Biển 2.",
+            "Biển 1 và biển 3.",
+            "Biển 2 và biển 3."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-308.jpeg"
+    },
+    {
+        "id": 309,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào không cho phép xe ô tô con vượt?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-309.jpeg"
+    },
+    {
+        "id": 310,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cấm xe ô tô tải vượt?",
+        "answers": [
+            "Biển 1.",
+            "Biển 1 và biển 2.",
+            "Biển 1 và biển 3.",
+            "Biển 2 và biển 3."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-310.jpeg"
+    },
+    {
+        "id": 311,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cấm xe tải vượt?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-311.jpeg"
+    },
+    {
+        "id": 312,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào xe ô tô con được phép vượt?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-312.jpeg"
+    },
+    {
+        "id": 313,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cấm quay đầu xe?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Không biển nào.",
+            "Cả hai biển."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-313.jpeg"
+    },
+    {
+        "id": 314,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cấm xe rẽ trái?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-314.jpeg"
+    },
+    {
+        "id": 315,
+        "category": "Báo hiệu đường bộ",
+        "question": "Khi gặp biển nào xe được rẽ trái?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Không biển nào."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-315.jpeg"
+    },
+    {
+        "id": 316,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cấm xe ô tô rẽ trái?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-316.jpeg"
+    },
+    {
+        "id": 317,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cấm các phương tiện rẽ phải?",
+        "answers": [
+            "Biển 1 và biển 2.",
+            "Biển 1 và biển 3.",
+            "Biển 2 và biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-317.jpeg"
+    },
+    {
+        "id": 318,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cấm các phương tiện rẽ trái?",
+        "answers": [
+            "Biển 1 và biển 2.",
+            "Biển 1 và biển 3.",
+            "Biển 2 và biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-318.jpeg"
+    },
+    {
+        "id": 319,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào dưới đây chỉ cấm xe ô tô quay đầu?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Biển 1 và biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-319.jpeg"
+    },
+    {
+        "id": 320,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào dưới đây cấm xe ô tô rẽ trái và quay đầu?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Biển 1 và biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-320.jpeg"
+    },
+    {
+        "id": 321,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cấm xe taxi mà không cấm các phương tiện khác?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Không biển nào."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-321.jpeg"
+    },
+    {
+        "id": 322,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào xe được phép rẽ trái?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Không biển nào."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-322.jpeg"
+    },
+    {
+        "id": 323,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào xe quay đầu không bị cấm?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-323.jpeg"
+    },
+    {
+        "id": 324,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào xe được phép quay đầu nhưng không được rẽ trái?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-324.jpeg"
+    },
+    {
+        "id": 325,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào là biển \"Cấm đi ngược chiều\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả ba biển."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-325.jpeg"
+    },
+    {
+        "id": 326,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào dưới đây các phương tiện không được phép đi vào?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 1 và biển 2."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-326.jpeg"
+    },
+    {
+        "id": 327,
+        "category": "Báo hiệu đường bộ",
+        "question": "Gặp biển nào người lái xe không được đỗ xe vào ngày chẵn?",
+        "answers": [
+            "Biển 1.",
+            "Biển 1 và biển 3.",
+            "Biển 2 và biển 3.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-327.jpeg"
+    },
+    {
+        "id": 328,
+        "category": "Báo hiệu đường bộ",
+        "question": "Gặp biển nào người lái xe không được đỗ xe vào ngày lẻ?",
+        "answers": [
+            "Biển 1 và biển 2.",
+            "Biển 2.",
+            "Biển 2 và biển 3.",
+            "Biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-328.jpeg"
+    },
+    {
+        "id": 329,
+        "category": "Báo hiệu đường bộ",
+        "question": "Khi gặp biển nào xe ưu tiên theo luật định vẫn phải dừng lại?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả ba biển."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-329.jpeg"
+    },
+    {
+        "id": 330,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cấm tất cả các loại xe cơ giới và thô sơ đi lại trên đường, trừ xe ưu tiên theo luật định (nếu đường vẫn cho xe chạy được)?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-330.jpeg"
+    },
+    {
+        "id": 331,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào là biển \"Cấm xe chở hàng nguy hiểm\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-331.jpeg"
+    },
+    {
+        "id": 332,
+        "category": "Báo hiệu đường bộ",
+        "question": "Gặp biển nào xe xích lô được phép đi vào?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Biển 1 và biển 2."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-332.jpeg"
+    },
+    {
+        "id": 333,
+        "category": "Báo hiệu đường bộ",
+        "question": "Gặp biển nào xe lam, xe xích lô máy được phép đi vào?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-333.jpeg"
+    },
+    {
+        "id": 334,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển báo này có ý nghĩa như thế nào?",
+        "answers": [
+            "Đường cấm súc vật vận tải hàng hóa.",
+            "Đường cấm súc vật vận tải hành khách.",
+            "Đường cấm súc vật vận tải hàng hóa hoặc hành khách dù kéo xe hay chở trên lưng đi qua."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-334.png"
+    },
+    {
+        "id": 335,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển báo này có ý nghĩa như thế nào?",
+        "answers": [
+            "Tốc độ tối đa cho phép về ban đêm cho các phương tiện là 70 km/h.",
+            "Tốc độ tối thiểu cho phép về ban đêm cho các phương tiện là 70 km/h."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-335.png"
+    },
+    {
+        "id": 336,
+        "category": "Báo hiệu đường bộ",
+        "question": "Khi gặp các biển này xe ưu tiên theo luật định (có tải trọng hay chiều cao toàn bộ vượt quá chỉ số ghi trên biển) có được phép đi qua hay không?",
+        "answers": [
+            "Được phép.",
+            "Không được phép."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-336.jpeg"
+    },
+    {
+        "id": 337,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào hạn chế chiều cao của xe và hàng?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-337.jpeg"
+    },
+    {
+        "id": 338,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển số 2 có ý nghĩa như thế nào?",
+        "answers": [
+            "Cho phép xe ô tô có tải trọng trục lớn hơn 7 tấn đi qua.",
+            "Cho phép xe ô tô có tải trọng trên trục xe từ 7 tấn trở xuống đi qua."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-338.jpeg"
+    },
+    {
+        "id": 339,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển số 3 có ý nghĩa như thế nào?",
+        "answers": [
+            "Cấm các loại xe có tải trọng toàn bộ trên 10 tấn đi qua.",
+            "Hạn chế khối lượng hàng hóa chở trên xe.",
+            "Hạn chế tải trọng trên trục xe."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-339.jpeg"
+    },
+    {
+        "id": 340,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cấm máy kéo kéo theo rơ moóc?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-340.jpeg"
+    },
+    {
+        "id": 341,
+        "category": "Báo hiệu đường bộ",
+        "question": "Khi gặp biển số 1, xe ô tô tải có được đi vào không?",
+        "answers": [
+            "Được đi vào.",
+            "Không được đi vào."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-341.jpeg"
+    },
+    {
+        "id": 342,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào không có hiệu lực đối với xe ô tô tải không kéo moóc?",
+        "answers": [
+            "Biển 1 và biển 2.",
+            "Biển 2 và biển 3.",
+            "Biển 1 và biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-342.jpeg"
+    },
+    {
+        "id": 343,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cấm máy kéo?",
+        "answers": [
+            "Biển 1 và biển 2.",
+            "Biển 1 và biển 3.",
+            "Biển 2 và biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-343.jpeg"
+    },
+    {
+        "id": 344,
+        "category": "Báo hiệu đường bộ",
+        "question": "Khi gặp biển này, xe mô tô ba bánh chở hàng có được phép rẽ trái hoặc rẽ phải hay không?",
+        "answers": [
+            "Được phép.",
+            "Không được phép."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-344.jpeg"
+    },
+    {
+        "id": 345,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển này có hiệu lực đối với xe mô tô hai bánh, ba bánh chở hàng không?",
+        "answers": [
+            "Có.",
+            "Không."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-345.jpeg"
+    },
+    {
+        "id": 346,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển này có ý nghĩa như thế nào?",
+        "answers": [
+            "Cấm xe cơ giới (trừ xe ưu tiên theo luật định) đi thẳng.",
+            "Cấm các loại xe cơ giới và xe mô tô (trừ xe ưu tiên theo luật định) đi về bên trái và bên phải.",
+            "Hướng trái và phải không cấm xe cơ giới."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-346.jpeg"
+    },
+    {
+        "id": 347,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển phụ đặt dưới biển cấm bóp còi có ý nghĩa như thế nào?",
+        "answers": [
+            "Báo khoảng cách đến nơi cấm bóp còi.",
+            "Chiều dài đoạn đường cấm bóp còi từ nơi đặt biển.",
+            "Báo cấm dùng còi có độ vang xa 500m."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-347.jpeg"
+    },
+    {
+        "id": 348,
+        "category": "Báo hiệu đường bộ",
+        "question": "Chiều dài đoạn đường 500 m từ nơi đặt biển này, người lái xe có được phép bấm còi không?",
+        "answers": [
+            "Được phép.",
+            "Không được phép."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-348.jpeg"
+    },
+    {
+        "id": 349,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào xe mô tô hai bánh được đi vào?",
+        "answers": [
+            "Biển 1 và biển 2.",
+            "Biển 1 và biển 3.",
+            "Biển 2 và biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-349.jpeg"
+    },
+    {
+        "id": 350,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào xe mô tô hai bánh không được đi vào?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-350.jpeg"
+    },
+    {
+        "id": 351,
+        "category": "Báo hiệu đường bộ",
+        "question": "Ba biển này có hiệu lực như thế nào?",
+        "answers": [
+            "Cấm các loại xe ở biển phụ đi vào.",
+            "Cấm các loại xe cơ giới đi vào trừ loại xe ở biển phụ."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-351.jpeg"
+    },
+    {
+        "id": 352,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu chiều dài đoạn đường phải giữ cự ly tối thiểu giữa hai xe?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-352.jpeg"
+    },
+    {
+        "id": 353,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu khoảng cách thực tế từ nơi đặt biển đến nơi cần cự ly tối thiểu giữa hai xe?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-353.jpeg"
+    },
+    {
+        "id": 354,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển này có ý nghĩa như thế nào?",
+        "answers": [
+            "Cấm dừng xe về hướng bên trái.",
+            "Cấm dừng và đỗ xe theo hướng bên phải.",
+            "Được phép đỗ xe và dừng xe theo hướng bên phải."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-354.jpeg"
+    },
+    {
+        "id": 355,
+        "category": "Báo hiệu đường bộ",
+        "question": "Theo hướng bên phải có được phép đỗ xe, dừng xe không?",
+        "answers": [
+            "Không được phép.",
+            "Được phép."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-355.jpeg"
+    },
+    {
+        "id": 356,
+        "category": "Báo hiệu đường bộ",
+        "question": "Gặp biển này, xe ô tô sơ mi rơ moóc có chiều dài toàn bộ kể cả xe, moóc và hàng lớn hơn trị số ghi trên biển có được phép đi vào hay không?",
+        "answers": [
+            "Không được phép.",
+            "Được phép."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-356.png"
+    },
+    {
+        "id": 357,
+        "category": "Báo hiệu đường bộ",
+        "question": "Xe ô tô chở hàng vượt quá phía trước và sau thùng xe, mỗi phía quá 10% chiều dài toàn bộ thân xe, tổng chiều dài xe (cả hàng) từ trước đến sau nhỏ hơn trị số ghi trên biển thì có được phép đi vào không?",
+        "answers": [
+            "Không được phép.",
+            "Được phép."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-357.png"
+    },
+    {
+        "id": 358,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển này có ý nghĩa như thế nào?",
+        "answers": [
+            "Cấm ô tô buýt.",
+            "Cấm xe ô tô khách.",
+            "Cấm xe ô tô con."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-358.png"
+    },
+    {
+        "id": 359,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển này có ý nghĩa như thế nào?",
+        "answers": [
+            "Hạn chế chiều cao của xe và hàng.",
+            "Hạn chế chiều ngang của xe và hàng.",
+            "Hạn chế chiều dài của xe và hàng."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-359.png"
+    },
+    {
+        "id": 360,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào là biển \"Tốc độ tối đa cho phép về ban đêm\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-360.jpeg"
+    },
+    {
+        "id": 361,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển báo nào báo hiệu bắt đầu đoạn đường vào phạm vi khu dân cư, các phương tiện tham gia giao thông phải tuân theo các quy định đi đường được áp dụng ở khu đông dân cư?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-361.jpeg"
+    },
+    {
+        "id": 362,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu hạn chế tốc độ của phương tiện không vượt quá trị số ghi trên biển?",
+        "answers": [
+            "12Biển 1.",
+            "Biển 2."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-362.png"
+    },
+    {
+        "id": 363,
+        "category": "Báo hiệu đường bộ",
+        "question": "Trong các biển báo dưới đây biển nào báo hiệu \"Kết thúc đường cao tốc\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-363.jpeg"
+    },
+    {
+        "id": 364,
+        "category": "Báo hiệu đường bộ",
+        "question": "Số 50 ghi trên biển báo dưới đây có ý nghĩa như thế nào?",
+        "answers": [
+            "Tốc độ tối đa các xe cơ giới được phép chạy.",
+            "Tốc độ tối thiểu các xe cơ giới được phép chạy."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-364.png"
+    },
+    {
+        "id": 365,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào dưới đây chỉ dẫn bắt đầu đường cao tốc phân làn đường có tốc độ khác nhau?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-365.jpeg"
+    },
+    {
+        "id": 366,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển báo dưới đây có ý nghĩa như thế nào?",
+        "answers": [
+            "Báo hiệu tốc độ tối đa cho phép các xe cơ giới chạy.",
+            "Báo hiệu tốc độ tối thiểu cho phép các xe cơ giới chạy."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-366.png"
+    },
+    {
+        "id": 367,
+        "category": "Báo hiệu đường bộ",
+        "question": "Gặp biển nào người lái xe phải nhường đường cho người đi bộ?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-367.jpeg"
+    },
+    {
+        "id": 368,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào chỉ đường dành cho người đi bộ, các loại xe không được đi vào khi gặp biển này?",
+        "answers": [
+            "Biển 1.",
+            "Biển 1 và biển 3.",
+            "Biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-368.jpeg"
+    },
+    {
+        "id": 369,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Đường dành cho xe thô sơ\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-369.jpeg"
+    },
+    {
+        "id": 370,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu sắp đến chỗ giao nhau nguy hiểm?",
+        "answers": [
+            "Biển 1.",
+            "Biển 1 và biển 2.",
+            "Biển 2 và biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-370.jpeg"
+    },
+    {
+        "id": 371,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Giao nhau với đường sắt có rào chắn\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2 và biển 3.",
+            "Biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-371.jpeg"
+    },
+    {
+        "id": 372,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Giao nhau có tín hiệu đèn\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-372.jpeg"
+    },
+    {
+        "id": 373,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu nguy hiểm giao nhau với đường sắt?",
+        "answers": [
+            "Biển 1 và biển 2.",
+            "Biển 1 và biển 3.",
+            "Biển 2 và biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-373.jpeg"
+    },
+    {
+        "id": 374,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu đường bộ giao nhau với đường sắt không có rào chắn?",
+        "answers": [
+            "Biển 1 và biển 2.",
+            "Biển 1 và biển 3.",
+            "Biển 2 và biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-374.jpeg"
+    },
+    {
+        "id": 375,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu sắp đến chỗ giao nhau giữa đường bộ và đường sắt?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Biển 1 và biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-375.jpeg"
+    },
+    {
+        "id": 376,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Cửa chui\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-376.jpeg"
+    },
+    {
+        "id": 377,
+        "category": "Báo hiệu đường bộ",
+        "question": "Hai biển này có ý nghĩa như thế nào?",
+        "answers": [
+            "Để chỉ nơi đường sắt giao vuông góc với đường bộ không có rào chắn.",
+            "Để báo trước sắp đến vị trí giao cắt đường bộ với đường sắt cùng mức, không vuông góc và không có người gác, không có rào chắn.",
+            "Nơi đường sắt giao nhau với đường bộ."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-377.jpeg"
+    },
+    {
+        "id": 378,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Nơi đường sắt giao vuông góc với đường bộ\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Biển 1 và biển 2."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-378.jpeg"
+    },
+    {
+        "id": 379,
+        "category": "Báo hiệu đường bộ",
+        "question": "Các biển này có ý nghĩa như thế nào?",
+        "answers": [
+            "Nơi đường sắt giao nhau với đường bộ.",
+            "Nơi đường sắt giao vuông góc với đường bộ.",
+            "Để báo trước sắp đến vị trí đường sắt giao không vuông góc với đường bộ, không có người gác và không có rào chắn."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-379.jpeg"
+    },
+    {
+        "id": 380,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Hết đoạn đường ưu tiên\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-380.jpeg"
+    },
+    {
+        "id": 381,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu, chỉ dẫn xe đi trên đường này được quyền ưu tiên qua nơi giao nhau?",
+        "answers": [
+            "Biển 1 và biển 2.",
+            "Biển 1 và biển 3.",
+            "Biển 2 và biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-381.jpeg"
+    },
+    {
+        "id": 382,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Giao nhau với đường không ưu tiên\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Biển 2 và biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-382.jpeg"
+    },
+    {
+        "id": 383,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Giao nhau với đường ưu tiên\"?",
+        "answers": [
+            "Biển 1 và biển 3.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-383.jpeg"
+    },
+    {
+        "id": 384,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Đường bị thu hẹp\"?",
+        "answers": [
+            "Biển 1 và biển 2.",
+            "Biển 1 và biển 3.",
+            "Biển 2 và biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-384.jpeg"
+    },
+    {
+        "id": 385,
+        "category": "Báo hiệu đường bộ",
+        "question": "Khi gặp biển nào, người lái xe phải giảm tốc độ, chú ý xe đi ngược chiều, xe đi ở phía đường bị hẹp phải nhường đường cho xe đi ngược chiều?",
+        "answers": [
+            "Biển 1.",
+            "Biển 1 và biển 3.",
+            "Biển 2 và biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-385.jpeg"
+    },
+    {
+        "id": 386,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Giao nhau với đường ưu tiên\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-386.jpeg"
+    },
+    {
+        "id": 387,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Đường giao nhau\" của các tuyến đường cùng cấp?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-387.jpeg"
+    },
+    {
+        "id": 388,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Giao nhau với đường không ưu tiên\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-388.jpeg"
+    },
+    {
+        "id": 389,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Đường hai chiều\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-389.jpeg"
+    },
+    {
+        "id": 390,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu phải giảm tốc độ, nhường đường cho xe cơ giới đi ngược chiều qua đường hẹp?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-390.jpeg"
+    },
+    {
+        "id": 391,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào chỉ dẫn \"Được ưu tiên qua đường hẹp\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Biển 2 và biển 3."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-391.jpeg"
+    },
+    {
+        "id": 392,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Đường đôi\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-392.jpeg"
+    },
+    {
+        "id": 393,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Đường đôi\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-393.jpeg"
+    },
+    {
+        "id": 394,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Kết thúc đường đôi\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-394.jpeg"
+    },
+    {
+        "id": 395,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Giao nhau với đường hai chiều\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-395.jpeg"
+    },
+    {
+        "id": 396,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Đường hai chiều\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-396.jpeg"
+    },
+    {
+        "id": 397,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Giao nhau với đường hai chiều\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-397.jpeg"
+    },
+    {
+        "id": 398,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Chú ý chướng ngại vật\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2 và biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-398.jpeg"
+    },
+    {
+        "id": 399,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào chỉ dẫn cho người tham gia giao thông biết vị trí và khoảng cách có làn đường cứu nạn hay làn thoát xe khẩn cấp?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-399.jpeg"
+    },
+    {
+        "id": 400,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Đường hầm\"?",
+        "answers": [
+            "Cả ba biển.",
+            "Biển 2.",
+            "Biển 2 và biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-400.jpeg"
+    },
+    {
+        "id": 401,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào dưới đây là biển \"Cầu hẹp\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-401.jpeg"
+    },
+    {
+        "id": 402,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào dưới đây là biển \"Cầu quay - cầu cất\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-402.jpeg"
+    },
+    {
+        "id": 403,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào dưới đây là biển \"Kè, vực sâu phía trước\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-403.jpeg"
+    },
+    {
+        "id": 404,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào sau đây là biển \"Kè, vực sâu bên đường phía bên trái\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Biển 1 và biển 2."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-404.jpeg"
+    },
+    {
+        "id": 405,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào sau đây là biển \"Kè, vực sâu bên đường phía bên phải\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-405.jpeg"
+    },
+    {
+        "id": 406,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào sau đây là biển \"Đường trơn\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-406.jpeg"
+    },
+    {
+        "id": 407,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào sau đây là biển \"Lề đường nguy hiểm\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-407.jpeg"
+    },
+    {
+        "id": 408,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào sau đây báo trước gần tới đoạn đường đang tiến hành thi công sửa chữa?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Không biển nào."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-408.jpeg"
+    },
+    {
+        "id": 409,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào sau đây cảnh báo nguy hiểm đoạn đường thường xảy ra tai nạn?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-409.jpeg"
+    },
+    {
+        "id": 410,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào dưới đây báo hiệu đoạn đường hay xảy ra ùn tắc giao thông?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-410.jpeg"
+    },
+    {
+        "id": 411,
+        "category": "Báo hiệu đường bộ",
+        "question": "Gặp biển nào người tham gia giao thông phải đi chậm và thận trọng đề phòng khả năng xuất hiện và di chuyển bất ngờ của trẻ em trên mặt đường?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-411.jpeg"
+    },
+    {
+        "id": 412,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào chỉ dẫn nơi bắt đầu đoạn đường dành cho người đi bộ?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-412.jpeg"
+    },
+    {
+        "id": 413,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào dưới đây báo hiệu gần đến đoạn đường thường có trẻ em đi ngang qua?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-413.jpeg"
+    },
+    {
+        "id": 414,
+        "category": "Báo hiệu đường bộ",
+        "question": "Gặp biển nào dưới đây người tham gia giao thông cần phải điều chỉnh tốc độ xe chạy cho thích hợp, đề phòng gió ngang thổi mạnh gây lật xe?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-414.jpeg"
+    },
+    {
+        "id": 415,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào sau đây là biển \"Dốc xuống nguy hiểm\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-415.png"
+    },
+    {
+        "id": 416,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào sau đây là biển \"Dốc lên nguy hiểm\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-416.png"
+    },
+    {
+        "id": 417,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển báo này có ý nghĩa như thế nào?",
+        "answers": [
+            "Chỗ ngoặt nguy hiểm có nguy cơ lật xe bên phải khi đường cong vòng sang trái.",
+            "Chỗ ngoặt nguy hiểm có nguy cơ lật xe bên trái khi đường cong vòng sang phải."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-417.png"
+    },
+    {
+        "id": 418,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển báo này có ý nghĩa như thế nào?",
+        "answers": [
+            "Báo trước đoạn đường có gió ngang.",
+            "Báo trước đoạn đường trơn trượt.",
+            "Báo trước sắp đến bến phà."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-418.png"
+    },
+    {
+        "id": 419,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển báo này có ý nghĩa như thế nào?",
+        "answers": [
+            "Báo hiệu đường có ổ gà, lồi lõm.",
+            "Báo hiệu đường có gồ giảm tốc phía trước."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-419.png"
+    },
+    {
+        "id": 420,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển báo này có ý nghĩa như thế nào?",
+        "answers": [
+            "Báo hiệu đường có ổ gà, lồi lõm.",
+            "Báo hiệu đường có gồ giảm tốc phía trước."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-420.png"
+    },
+    {
+        "id": 421,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển báo dưới đây có ý nghĩa như thế nào?",
+        "answers": [
+            "Để báo trước gần tới đoạn đường có hiện tượng đất đá từ trên ta luy dương sụt lở bất ngờ gây nguy hiểm cho xe cộ và người đi đường.",
+            "Để báo trước nơi có kết cấu mặt đường rời rạc, khi phương tiện đi qua, làm cho các viên đá, sỏi văng lên gây nguy hiểm và mất an toàn cho người và phương tiện tham gia giao thông.",
+            "Để cảnh báo những đoạn nền đường yếu, đoạn đường đang theo dõi lún mà việc vận hành xe ở tốc độ cao có thể gây nguy hiểm."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-421.png"
+    },
+    {
+        "id": 422,
+        "category": "Báo hiệu đường bộ",
+        "question": "Các biển báo này có ý nghĩa như thế nào?",
+        "answers": [
+            "Để báo trước gần tới đoạn đường có hiện tượng đất đá từ trên ta luy dương sụt lở bất ngờ gây nguy hiểm cho xe cộ và người đi đường.",
+            "Để báo trước nơi có kết cấu mặt đường rời rạc, khi phương tiện đi qua, làm cho các viên đá, sỏi văng lên gây nguy hiểm và mất an toàn cho người và phương tiện tham gia giao thông.",
+            "Để cảnh báo những đoạn nền đường yếu, đoạn đường đang theo dõi lún mà việc vận hành xe ở tốc độ cao có thể gây nguy hiểm."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-422.jpeg"
+    },
+    {
+        "id": 423,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển báo này có ý nghĩa như thế nào?",
+        "answers": [
+            "Để báo trước gần tới đoạn đường có hiện tượng đất đá từ trên ta luy dương sụt lở bất ngờ gây nguy hiểm cho xe cộ và người đi đường.",
+            "Để báo trước nơi có kết cấu mặt đường rời rạc, khi phương tiện đi qua, làm cho các viên đá, sỏi văng lên gây nguy hiểm và mất an toàn cho người và phương tiện tham gia giao thông.",
+            "Để cảnh báo những đoạn nền đường yếu, đoạn đường đang theo dõi lún mà việc vận hành xe ở tốc độ cao có thể gây nguy hiểm."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-423.png"
+    },
+    {
+        "id": 424,
+        "category": "Báo hiệu đường bộ",
+        "question": "Gặp biển báo này người lái xe phải xử lý thế nào?",
+        "answers": [
+            "Đi chậm, quan sát và dừng lại nếu gặp gia súc trên đường.",
+            "Bấm còi to để gia súc tránh đường và nhanh chóng di chuyển qua đoạn đường có gia súc."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-424.png"
+    },
+    {
+        "id": 425,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển báo này có ý nghĩa như thế nào?",
+        "answers": [
+            "Báo hiệu khu vực nguy hiểm thường xuyên có sét đánh.",
+            "Báo hiệu khu vực có đường dây điện cắt ngang phía trên tuyến đường."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-425.png"
+    },
+    {
+        "id": 426,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu các phương tiện phải đi đúng làn đường quy định và tuân thủ tốc độ tối đa cho phép?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-426.jpeg"
+    },
+    {
+        "id": 427,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu các phương tiện phải tuân thủ tốc độ tối đa cho phép trên từng làn đường?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-427.jpeg"
+    },
+    {
+        "id": 428,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Đường dành cho xe ô tô\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-428.jpeg"
+    },
+    {
+        "id": 429,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Hết đoạn đường dành cho xe ô tô\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-429.jpeg"
+    },
+    {
+        "id": 430,
+        "category": "Báo hiệu đường bộ",
+        "question": "Khi gặp biển nào thì các phương tiện không được đi vào, trừ xe ô tô và xe mô tô?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-430.jpeg"
+    },
+    {
+        "id": 431,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển này có ý nghĩa như thế nào?",
+        "answers": [
+            "Chỉ hướng đi phải theo.",
+            "Biển báo hiệu cho người lái xe biết số lượng làn đường trên mặt đường và hướng đi trên mỗi làn đường phải theo.",
+            "Chỉ hướng đường phải theo."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-431.png"
+    },
+    {
+        "id": 432,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào (đặt trước ngã ba, ngã tư) cho phép xe được rẽ sang hướng khác?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Không biển nào."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-432.jpeg"
+    },
+    {
+        "id": 433,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Hướng đi thẳng phải theo\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-433.png"
+    },
+    {
+        "id": 434,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Đường một chiều\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-434.png"
+    },
+    {
+        "id": 435,
+        "category": "Báo hiệu đường bộ",
+        "question": "Trong các biển dưới đây biển nào là biển \"Hết tốc độ tối đa cho phép\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-435.jpeg"
+    },
+    {
+        "id": 436,
+        "category": "Báo hiệu đường bộ",
+        "question": "Hiệu lực của biển \"Tốc độ tối đa cho phép\" hết tác dụng khi gặp biển nào dưới đây?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Biển 1 và biển 2."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-436.jpeg"
+    },
+    {
+        "id": 437,
+        "category": "Báo hiệu đường bộ",
+        "question": "Trong các biển dưới đây biển nào là biển \"Hết tốc độ tối thiểu\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-437.jpeg"
+    },
+    {
+        "id": 438,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào dưới đây báo hiệu hết cấm vượt?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Biển 2 và biển 3."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-438.jpeg"
+    },
+    {
+        "id": 439,
+        "category": "Báo hiệu đường bộ",
+        "question": "Trong các biển dưới đây biển nào là biển \"Hết mọi lệnh cấm\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-439.jpeg"
+    },
+    {
+        "id": 440,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cho phép được quay đầu xe đi theo hướng ngược lại khi đặt biển trước ngã ba, ngã tư?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Không biển nào."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-440.jpeg"
+    },
+    {
+        "id": 441,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào không cho phép rẽ phải?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Biển 1 và biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-441.jpeg"
+    },
+    {
+        "id": 442,
+        "category": "Báo hiệu đường bộ",
+        "question": "Khi đến chỗ giao nhau, gặp biển nào thì người lái xe không được cho xe đi thẳng, phải rẽ sang hướng khác?",
+        "answers": [
+            "Biển 1 và biển 2.",
+            "Biển 1 và biển 3.",
+            "Biển 2 và biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-442.jpeg"
+    },
+    {
+        "id": 443,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào cho phép quay đầu xe?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-443.png"
+    },
+    {
+        "id": 444,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào chỉ dẫn tên đường trên các tuyến đường đối ngoại?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3.",
+            "Biển 1 và biển 2."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-444.jpeg"
+    },
+    {
+        "id": 445,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển số 1 có ý nghĩa như thế nào?",
+        "answers": [
+            "Biển chỉ dẫn hết cấm đỗ xe theo giờ trong khu vực.",
+            "Biển chỉ dẫn hết hiệu lực khu vực đỗ xe trên các tuyến đường đối ngoại.",
+            "Biển chỉ dẫn khu vực đỗ xe trên các tuyến đường đối ngoại."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-445.jpeg"
+    },
+    {
+        "id": 446,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển số 3 có ý nghĩa như thế nào?",
+        "answers": [
+            "Biển chỉ dẫn khu vực cấm đỗ xe trên các tuyến đường đối ngoại.",
+            "Biển chỉ dẫn khu vực đỗ xe trên các tuyến đường đối ngoại.",
+            "Biển hạn chế tốc độ tối đa trong khu vực.",
+            "Biển chỉ dẫn hết hiệu lực khu vực cấm đỗ xe theo giờ trên các tuyến đường đối ngoại."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-446.jpeg"
+    },
+    {
+        "id": 447,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Đường phía trước có làn đường dành cho ô tô khách\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-447.png"
+    },
+    {
+        "id": 448,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Rẽ ra đường có làn đường dành cho ô tô khách\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-448.png"
+    },
+    {
+        "id": 449,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào đặt trên đường chính trước khi đến nơi đường giao nhau để rẽ vào đường cụt?",
+        "answers": [
+            "Biển 1 và 2.",
+            "Cả ba biển.",
+            "Không biển nào."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-449.png"
+    },
+    {
+        "id": 450,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào chỉ dẫn cho người đi bộ sử dụng cầu vượt qua đường?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển.",
+            "Không biển nào."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-450.png"
+    },
+    {
+        "id": 451,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào chỉ dẫn cho người đi bộ sử dụng hầm chui qua đường?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển.",
+            "Không biển nào."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-451.png"
+    },
+    {
+        "id": 452,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Nơi đỗ xe dành cho người khuyết tật\"?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-452.jpeg"
+    },
+    {
+        "id": 453,
+        "category": "Báo hiệu đường bộ",
+        "question": "Gặp biển báo này, người lái xe phải đỗ xe như thế nào?",
+        "answers": [
+            "Đỗ xe hoàn toàn trên hè phố.",
+            "Đỗ xe hoàn toàn dưới lòng đường.",
+            "Đỗ từ 1/2 thân xe trở lên trên hè phố."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-453.jpeg"
+    },
+    {
+        "id": 454,
+        "category": "Báo hiệu đường bộ",
+        "question": "Gặp biển báo này, người tham gia giao thông phải xử lý như thế nào?",
+        "answers": [
+            "Dừng xe tại khu vực có trạm Cảnh sát giao thông.",
+            "Tiếp tục lưu thông với tốc độ bình thường.",
+            "Phải giảm tốc độ đến mức an toàn và không được vượt khi đi qua khu vực này."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-454.png"
+    },
+    {
+        "id": 455,
+        "category": "Báo hiệu đường bộ",
+        "question": "Gặp biển báo dưới đây, người lái xe có bắt buộc phải chạy vòng theo đảo an toàn theo hướng mũi tên khi muốn chuyển hướng hay không?",
+        "answers": [
+            "Bắt buộc.",
+            "Không bắt buộc."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-455.png"
+    },
+    {
+        "id": 456,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào dưới đây chỉ dẫn địa giới hành chính giữa các thành phố, tỉnh, huyện?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-456.jpeg"
+    },
+    {
+        "id": 457,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Cầu vượt liên thông\"?",
+        "answers": [
+            "Biển 2 và biển 3.",
+            "Biển 1 và biển 2.",
+            "Biển 1 và biển 3.",
+            "Cả ba biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-457.jpeg"
+    },
+    {
+        "id": 458,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển số 1 có ý nghĩa như thế nào?",
+        "answers": [
+            "Đi thẳng hoặc rẽ trái trên cầu vượt.",
+            "Đi thẳng hoặc rẽ phải trên cầu vượt.",
+            "Báo hiệu cầu vượt liên thông."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-458.jpeg"
+    },
+    {
+        "id": 459,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu \"Tuyến đường cầu vượt cắt qua\"?",
+        "answers": [
+            "Biển 1 và biển 2.",
+            "Biển 1 và biển 3.",
+            "Biển 2 và biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-459.jpeg"
+    },
+    {
+        "id": 460,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển báo dưới đây có ý nghĩa như thế nào?",
+        "answers": [
+            "Chỉ dẫn khoảng cách đến làn đường cứu nạn (làn thoát xe khẩn cấp).",
+            "Báo hiệu đường cụt phía trước.",
+            "Báo hiệu nút giao gần nhất phía trước.",
+            "Báo hiệu trạm dừng nghỉ phía trước."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-460.jpeg"
+    },
+    {
+        "id": 461,
+        "category": "Báo hiệu đường bộ",
+        "question": "Tại đoạn đường có biển \"Làn đường dành riêng cho từng loại xe\" dưới đây, các phương tiện có được phép chuyển sang làn khác để đi theo hành trình mong muốn khi đến gần nơi đường bộ giao nhau hay không?",
+        "answers": [
+            "Được phép chuyển sang làn khác.",
+            "Không được phép chuyển sang làn khác, chỉ được đi trong làn quy định theo biển."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-461.jpeg"
+    },
+    {
+        "id": 462,
+        "category": "Báo hiệu đường bộ",
+        "question": "Tại đoạn đường có cắm biển dưới đây, xe tải và xe khách có được phép đi vào không?",
+        "answers": [
+            "Có.",
+            "Không."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-462.png"
+    },
+    {
+        "id": 463,
+        "category": "Báo hiệu đường bộ",
+        "question": "Tại đoạn đường có cắm biển dưới đây, xe tải và xe khách có được phép đi vào không?",
+        "answers": [
+            "Có.",
+            "Không."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-463.png"
+    },
+    {
+        "id": 464,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào báo hiệu kết thúc đường cao tốc?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-464.jpeg"
+    },
+    {
+        "id": 465,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển này có ý nghĩa như thế nào?",
+        "answers": [
+            "Chỉ dẫn sắp đến vị trí nhập làn xe.",
+            "Chỉ dẫn vị trí nhập làn xe cách 250 m.",
+            "Chỉ dẫn vị trí nhập làn cách trạm thu phí 250 m."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-465.jpeg"
+    },
+    {
+        "id": 466,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào chỉ dẫn nhập làn xe?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Cả hai biển."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-466.png"
+    },
+    {
+        "id": 467,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển này có ý nghĩa như thế nào?",
+        "answers": [
+            "Bắt đầu đường cao tốc.",
+            "Chỉ dẫn địa giới đường cao tốc, chiều dài đường cao tốc.",
+            "Tên và ký hiệu đường cao tốc, giá trị hạn chế tốc độ tối đa và tối thiểu.",
+            "Ý 1 và ý 3."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-467.jpeg"
+    },
+    {
+        "id": 468,
+        "category": "Báo hiệu đường bộ",
+        "question": "Ý nghĩa các biểu tượng ghi trên biển chỉ dẫn là như thế nào?",
+        "answers": [
+            "Xăng dầu, ăn uống, thông tin, sửa chữa xe.",
+            "Xăng dầu, ăn uống, nhà nghỉ, sửa chữa xe.",
+            "Xăng dầu, ăn uống, cấp cứu, sửa chữa xe."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-468.jpeg"
+    },
+    {
+        "id": 469,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển này có ý nghĩa như thế nào?",
+        "answers": [
+            "Chỉ dẫn đến trạm kiểm tra tải trọng xe.",
+            "Chỉ dẫn hướng rẽ vào nơi đặt trạm kiểm tra tải trọng xe.",
+            "Chỉ dẫn khoảng cách đến trạm kiểm tra tải trọng xe cách 750 m."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-469.jpeg"
+    },
+    {
+        "id": 470,
+        "category": "Báo hiệu đường bộ",
+        "question": "Trên đường cao tốc, gặp biển nào thì người lái xe đi theo hướng bên trái để tránh chướng ngại vật?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-470.jpeg"
+    },
+    {
+        "id": 471,
+        "category": "Báo hiệu đường bộ",
+        "question": "Trên đường cao tốc, gặp biển nào thì người lái xe đi theo hướng bên phải để tránh chướng ngại vật?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-471.jpeg"
+    },
+    {
+        "id": 472,
+        "category": "Báo hiệu đường bộ",
+        "question": "Trên đường cao tốc, gặp biển nào thì người lái xe đi được cả hai hướng (bên trái hoặc bên phải) để tránh chướng ngại vật?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-472.jpeg"
+    },
+    {
+        "id": 473,
+        "category": "Báo hiệu đường bộ",
+        "question": "Trên đường cao tốc, gặp biển nào người lái xe phải chú ý đổi hướng đi khi sắp vào đường cong nguy hiểm?",
+        "answers": [
+            "Biển 1 và biển 2.",
+            "Biển 1 và biển 3.",
+            "Biển 2.",
+            "Biển 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-473.jpeg"
+    },
+    {
+        "id": 474,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển nào chỉ dẫn người lái xe đi được cả hai hướng?",
+        "answers": [
+            "Biển 1.",
+            "Biển 2."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-474.png"
+    },
+    {
+        "id": 475,
+        "category": "Báo hiệu đường bộ",
+        "question": "Biển này có ý nghĩa như thế nào?",
+        "answers": [
+            "Chỉ dẫn chướng ngại vật phía trước để cảnh báo phía trước có sự cản trở lưu thông bình thường (nằm bên trong phần xe chạy hay ngay sát phần đường xe chạy) và chỉ dẫn hướng đi qua đó cần đặt biển.",
+            "Chỉ dẫn hướng rẽ để nhắc người điều khiển phương tiện chuẩn bị đổi hướng đi khi sắp vào đường cong nguy hiểm, có bán kính cong nhỏ."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-475.png"
+    },
+    {
+        "id": 476,
+        "category": "Báo hiệu đường bộ",
+        "question": "Vạch mũi tên chỉ hướng trên mặt đường nào dưới đây cho phép xe chỉ được đi thẳng và rẽ phải?",
+        "answers": [
+            "Vạch 1.",
+            "Vạch 2 và vạch 3.",
+            "Vạch 3.",
+            "Vạch 1 và vạch 2."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-476.png"
+    },
+    {
+        "id": 477,
+        "category": "Báo hiệu đường bộ",
+        "question": "Vạch kẻ đường nào dưới đây là vạch phân chia các làn xe cùng chiều?",
+        "answers": [
+            "Vạch 1.",
+            "Vạch 2.",
+            "Vạch 3.",
+            "Vạch 1 và vạch 2."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-477.png"
+    },
+    {
+        "id": 478,
+        "category": "Báo hiệu đường bộ",
+        "question": "Vạch kẻ đường nào dưới đây là vạch phân chia hai chiều xe chạy (vạch tim đường), xe không được lấn làn, không được đè lên vạch?",
+        "answers": [
+            "Vạch 1.",
+            "Vạch 2.",
+            "Vạch 3.",
+            "Cả ba vạch."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-478.png"
+    },
+    {
+        "id": 479,
+        "category": "Báo hiệu đường bộ",
+        "question": "Vạch kẻ đường nào dưới đây là vạch phân chia hai chiều xe chạy (vạch tim đường)?",
+        "answers": [
+            "Vạch 1.",
+            "Vạch 2.",
+            "Vạch 3.",
+            "Vạch 1 và vạch 3."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-479.png"
+    },
+    {
+        "id": 480,
+        "category": "Báo hiệu đường bộ",
+        "question": "Các vạch dưới đây có tác dụng như thế nào?",
+        "answers": [
+            "Phân chia hai chiều xe chạy ngược chiều nhau.",
+            "Phân chia các làn xe chạy cùng chiều nhau."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-480.png"
+    },
+    {
+        "id": 481,
+        "category": "Báo hiệu đường bộ",
+        "question": "Các vạch dưới đây có tác dụng như thế nào?",
+        "answers": [
+            "Phân chia hai chiều xe chạy ngược chiều nhau.",
+            "Phân chia các làn xe chạy cùng chiều nhau."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-481.png"
+    },
+    {
+        "id": 482,
+        "category": "Báo hiệu đường bộ",
+        "question": "Khi gặp vạch kẻ đường nào các xe được phép đè vạch?",
+        "answers": [
+            "Vạch 1.",
+            "Vạch 2.",
+            "Vạch 3.",
+            "Vạch 1 và vạch 3."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-482.png"
+    },
+    {
+        "id": 483,
+        "category": "Báo hiệu đường bộ",
+        "question": "Vạch dưới đây có tác dụng như thế nào?",
+        "answers": [
+            "Để xác định làn đường.",
+            "Báo hiệu người lái xe chỉ được phép đi thẳng.",
+            "Dùng để xác định khoảng cách giữa các phương tiện trên đường."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-483.jpeg"
+    },
+    {
+        "id": 484,
+        "category": "Báo hiệu đường bộ",
+        "question": "Vạch dưới đây có ý nghĩa như thế nào?",
+        "answers": [
+            "Báo cho người điều khiển không được dừng phương tiện trong phạm vi phần mặt đường có bố trí vạch để tránh ùn tắc giao thông.",
+            "Báo hiệu sắp đến chỗ có bố trí vạch đi bộ qua đường.",
+            "Dùng để xác định khoảng cách giữa các phương tiện trên đường."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-484.png"
+    },
+    {
+        "id": 485,
+        "category": "Báo hiệu đường bộ",
+        "question": "Vạch dưới đây có ý nghĩa như thế nào?",
+        "answers": [
+            "Vị trí dừng xe của các phương tiện vận tải hành khách công cộng.",
+            "Báo cho người điều khiển được dừng phương tiện trong phạm vi phần mặt đường có bố trí vạch để tránh ùn tắc giao thông.",
+            "Dùng để xác định vị trí giữa các phương tiện trên đường."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-485.jpeg"
+    },
+    {
+        "id": 486,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, xe nào chấp hành đúng quy tắc giao thông?",
+        "answers": [
+            "Xe khách, xe tải, xe mô tô.",
+            "Xe tải, xe mô tô.",
+            "Chỉ xe con."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-486.jpeg"
+    },
+    {
+        "id": 487,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe tải, xe khách, xe con, xe mô tô.",
+            "Xe tải, xe mô tô, xe khách, xe con.",
+            "Xe khách, xe tải, xe con, xe mô tô.",
+            "Xe mô tô, xe khách, xe tải, xe con."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-487.jpeg"
+    },
+    {
+        "id": 488,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe công an đi làm nhiệm vụ khẩn cấp, xe con, xe tải, xe khách.",
+            "Xe công an đi làm nhiệm vụ khẩn cấp, xe khách, xe con, xe tải.",
+            "Xe công an đi làm nhiệm vụ khẩn cấp, xe tải, xe khách, xe con.",
+            "Xe con, xe công an đi làm nhiệm vụ khẩn cấp, xe tải, xe khách."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-488.jpeg"
+    },
+    {
+        "id": 489,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe tải, xe công an đi làm nhiệm vụ khẩn cấp, xe khách, xe con.",
+            "Xe công an đi làm nhiệm vụ khẩn cấp, xe khách, xe con, xe tải.",
+            "Xe công an đi làm nhiệm vụ khẩn cấp, xe con, xe tải, xe khách.",
+            "Xe công an đi làm nhiệm vụ khẩn cấp, xe tải, xe khách, xe con."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-489.jpeg"
+    },
+    {
+        "id": 490,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe tải, xe con, xe mô tô.",
+            "Xe con, xe tải, xe mô tô.",
+            "Xe mô tô, xe con, xe tải.",
+            "Xe con, xe mô tô, xe tải."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-490.jpeg"
+    },
+    {
+        "id": 491,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào phải nhường đường trong trường hợp này?",
+        "answers": [
+            "Xe con.",
+            "Xe tải."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-491.jpeg"
+    },
+    {
+        "id": 492,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Trường hợp này xe nào được quyền đi trước?",
+        "answers": [
+            "Xe mô tô.",
+            "Xe con."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-492.jpeg"
+    },
+    {
+        "id": 493,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe con (A), xe cứu thương đi làm nhiệm vụ cấp cứu, xe con (B).",
+            "Xe cứu thương đi làm nhiệm vụ cấp cứu, xe con (B), xe con (A).",
+            "Xe con (B), xe con (A), xe cứu thương đi làm nhiệm vụ cấp cứu."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-493.jpeg"
+    },
+    {
+        "id": 494,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe cứu thương đi làm nhiệm vụ cấp cứu, xe chữa cháy đi làm nhiệm vụ chữa cháy, xe con.",
+            "Xe chữa cháy đi làm nhiệm vụ chữa cháy, xe cứu thương đi làm nhiệm vụ cấp cứu, xe con.",
+            "Xe cứu thương đi làm nhiệm vụ cấp cứu, xe con, xe chữa cháy đi làm nhiệm vụ chữa cháy."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-494.jpeg"
+    },
+    {
+        "id": 495,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào được quyền đi trước trong trường hợp này?",
+        "answers": [
+            "Xe mô tô.",
+            "Xe cứu thương đi làm nhiệm vụ cấp cứu."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-495.jpeg"
+    },
+    {
+        "id": 496,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, xe nào phải nhường đường đi cuối cùng qua nơi giao nhau này?",
+        "answers": [
+            "Xe khách.",
+            "Xe tải.",
+            "Xe con."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-496.jpeg"
+    },
+    {
+        "id": 497,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, xe nào phải nhường đường là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe con.",
+            "Xe tải."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-497.jpeg"
+    },
+    {
+        "id": 498,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào được quyền đi trước trong trường hợp này?",
+        "answers": [
+            "Xe công an đi làm nhiệm vụ khẩn cấp.",
+            "Xe chữa cháy đi làm nhiệm vụ chữa cháy."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-498.jpeg"
+    },
+    {
+        "id": 499,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo tín hiệu đèn, xe nào được phép đi?",
+        "answers": [
+            "Xe con và xe khách.",
+            "Xe mô tô."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-499.jpeg"
+    },
+    {
+        "id": 500,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo tín hiệu đèn, xe nào đi là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe khách, xe mô tô.",
+            "Xe con, xe tải.",
+            "Xe tải, xe mô tô."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-500.jpeg"
+    },
+    {
+        "id": 501,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Trong trường hợp này xe nào được quyền đi trước?",
+        "answers": [
+            "Xe công an đi làm nhiệm vụ khẩn cấp.",
+            "Xe quân sự đi làm nhiệm vụ khẩn cấp."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-501.jpeg"
+    },
+    {
+        "id": 502,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo tín hiệu đèn, xe tải đi theo hướng nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Hướng 2, 3, 4.",
+            "Chỉ hướng 1.",
+            "Hướng 1 và 2.",
+            "Hướng 3 và 4."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-502.jpeg"
+    },
+    {
+        "id": 503,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Các xe đi theo hướng mũi tên, những xe nào vi phạm quy tắc giao thông?",
+        "answers": [
+            "Xe khách, xe tải, xe mô tô.",
+            "Xe tải, xe con, xe mô tô.",
+            "Xe khách, xe con, xe mô tô."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-503.jpeg"
+    },
+    {
+        "id": 504,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe khách, xe tải, xe mô tô, xe con.",
+            "Xe con, xe khách, xe tải, xe mô tô.",
+            "Xe mô tô, xe tải, xe khách, xe con.",
+            "Xe mô tô, xe tải, xe con, xe khách."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-504.jpeg"
+    },
+    {
+        "id": 505,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Trong trường hợp này xe nào đỗ vi phạm quy tắc giao thông?",
+        "answers": [
+            "Xe tải.",
+            "Xe con và mô tô.",
+            "Cả ba xe.",
+            "Xe con và xe tải."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-505.jpeg"
+    },
+    {
+        "id": 506,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, xe nào được quyền đi trước?",
+        "answers": [
+            "Xe tải.",
+            "Xe con (B).",
+            "Xe con (A)."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-506.jpeg"
+    },
+    {
+        "id": 507,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, những hướng nào xe gắn máy được phép đi?",
+        "answers": [
+            "Cả ba hướng.",
+            "Chỉ hướng 1 và 3.",
+            "Chỉ hướng 1."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-507.jpeg"
+    },
+    {
+        "id": 508,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào đỗ vi phạm quy tắc giao thông?",
+        "answers": [
+            "Cả hai xe.",
+            "Không xe nào vi phạm.",
+            "Chỉ xe mô tô vi phạm.",
+            "Chỉ xe tải vi phạm."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-508.jpeg"
+    },
+    {
+        "id": 509,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào đỗ vi phạm quy tắc giao thông?",
+        "answers": [
+            "Chỉ xe mô tô.",
+            "Chỉ xe tải.",
+            "Cả ba xe.",
+            "Chỉ xe mô tô và xe tải."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-509.jpeg"
+    },
+    {
+        "id": 510,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe tải kéo xe mô tô ba bánh như hình này có đúng quy tắc giao thông không?",
+        "answers": [
+            "Đúng.",
+            "Không đúng."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-510.jpeg"
+    },
+    {
+        "id": 511,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, hướng nào xe không được phép đi?",
+        "answers": [
+            "Hướng 2 và 5.",
+            "Chỉ hướng 1."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-511.jpeg"
+    },
+    {
+        "id": 512,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, những hướng nào xe ô tô không được phép đi?",
+        "answers": [
+            "Hướng 1 và 2.",
+            "Hướng 3.",
+            "Hướng 1 và 4.",
+            "Hướng 2 và 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-512.jpeg"
+    },
+    {
+        "id": 513,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào vượt đúng quy tắc giao thông?",
+        "answers": [
+            "Cả hai xe đều đúng.",
+            "Xe con.",
+            "Xe khách."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-513.jpeg"
+    },
+    {
+        "id": 514,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, gặp biển hướng đi phải theo đặt trước ngã tư, những hướng nào xe được phép đi?",
+        "answers": [
+            "Hướng 2 và 3.",
+            "Hướng 1, 2 và 3.",
+            "Hướng 1 và 3."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-514.jpeg"
+    },
+    {
+        "id": 515,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe kéo nhau như hình này có vi phạm quy tắc giao thông không?",
+        "answers": [
+            "Không.",
+            "Vi phạm."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-515.jpeg"
+    },
+    {
+        "id": 516,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào phải nhường đường trong trường hợp này?",
+        "answers": [
+            "Xe khách.",
+            "Xe tải."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-516.jpeg"
+    },
+    {
+        "id": 517,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào được quyền đi trước trong trường hợp này?",
+        "answers": [
+            "Xe con.",
+            "Xe mô tô."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-517.jpeg"
+    },
+    {
+        "id": 518,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe kéo nhau trong trường hợp này đúng quy định không?",
+        "answers": [
+            "Không đúng.",
+            "Đúng."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-518.jpeg"
+    },
+    {
+        "id": 519,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, những hướng nào xe ô tô con được phép đi?",
+        "answers": [
+            "Hướng 1.",
+            "Hướng 1, 3 và 4.",
+            "Hướng 2, 3 và 4.",
+            "Cả bốn hướng."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-519.jpeg"
+    },
+    {
+        "id": 520,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe con (A), xe mô tô, xe con (B), xe đạp.",
+            "Xe con (B), xe đạp, xe mô tô, xe con (A).",
+            "Xe con (A), xe con (B), xe mô tô + xe đạp.",
+            "Xe mô tô + xe đạp, xe con (A), xe con (B)."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-520.jpeg"
+    },
+    {
+        "id": 521,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, những hướng nào xe tải được phép đi?",
+        "answers": [
+            "Chỉ hướng 1.",
+            "Hướng 1, 3 và 4.",
+            "Hướng 1, 2 và 3.",
+            "Cả bốn hướng."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-521.jpeg"
+    },
+    {
+        "id": 522,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Những hướng nào xe tải được phép đi?",
+        "answers": [
+            "Cả ba hướng.",
+            "Hướng 2 và 3."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-522.jpeg"
+    },
+    {
+        "id": 523,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Những hướng nào xe ô tô tải được phép đi?",
+        "answers": [
+            "Chỉ hướng 1.",
+            "Hướng 1 và 4.",
+            "Hướng 1 và 5.",
+            "Hướng 1, 4 và 5."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-523.jpeg"
+    },
+    {
+        "id": 524,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Những hướng nào xe ô tô tải được phép đi?",
+        "answers": [
+            "Cả bốn hướng.",
+            "Trừ hướng 2.",
+            "Hướng 2, 3 và 4.",
+            "Trừ hướng 4."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-524.jpeg"
+    },
+    {
+        "id": 525,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào được quyền đi trước trong trường hợp này?",
+        "answers": [
+            "Xe mô tô.",
+            "Xe con."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-525.jpeg"
+    },
+    {
+        "id": 526,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe ô tô con đi theo chiều mũi tên có vi phạm quy tắc giao thông không?",
+        "answers": [
+            "Không vi phạm.",
+            "Vi phạm."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-526.jpeg"
+    },
+    {
+        "id": 527,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào vi phạm quy tắc giao thông?",
+        "answers": [
+            "Xe khách.",
+            "Xe mô tô.",
+            "Xe con.",
+            "Xe con và xe mô tô."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-527.jpeg"
+    },
+    {
+        "id": 528,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Các xe đi như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Các xe ở phía tay phải và tay trái của người điều khiển được phép đi thẳng.",
+            "Cho phép các xe ở mọi hướng được phép rẽ phải.",
+            "Tất cả các xe phải dừng lại trước ngã tư, trừ những xe đã ở trong ngã tư được phép tiếp tục đi."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-528.jpeg"
+    },
+    {
+        "id": 529,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, xe nào được phép đi?",
+        "answers": [
+            "Xe mô tô, xe con.",
+            "Xe con, xe tải.",
+            "Xe mô tô, xe tải.",
+            "Cả ba xe."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-529.jpeg"
+    },
+    {
+        "id": 530,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe con vượt xe tải như trường hợp này có đúng không?",
+        "answers": [
+            "Đúng.",
+            "Không đúng."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-530.jpeg"
+    },
+    {
+        "id": 531,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào vượt đúng quy tắc giao thông?",
+        "answers": [
+            "Xe tải.",
+            "Cả hai xe.",
+            "Xe con."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-531.jpeg"
+    },
+    {
+        "id": 532,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Đi theo hướng mũi tên, xe nào vi phạm quy tắc giao thông?",
+        "answers": [
+            "Xe chữa cháy đi làm nhiệm vụ chữa cháy.",
+            "Xe tải.",
+            "Cả hai xe."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-532.jpeg"
+    },
+    {
+        "id": 533,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe khách, xe tải, xe con.",
+            "Xe con, xe tải, xe khách.",
+            "Xe tải, xe khách, xe con."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-533.jpeg"
+    },
+    {
+        "id": 534,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe khách và xe tải, xe con.",
+            "Xe tải, xe khách, xe con.",
+            "Xe con, xe khách, xe tải."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-534.jpeg"
+    },
+    {
+        "id": 535,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Những hướng nào xe ô tô tải được phép đi?",
+        "answers": [
+            "Cả bốn hướng.",
+            "Chỉ hướng 1 và 2.",
+            "Trừ hướng 4."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-535.jpeg"
+    },
+    {
+        "id": 536,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng?",
+        "answers": [
+            "Xe công an đi làm nhiệm vụ khẩn cấp, xe con, xe tải, xe khách.",
+            "Xe con, xe khách và xe công an đi làm nhiệm vụ khẩn cấp, xe tải.",
+            "Xe công an đi làm nhiệm vụ khẩn cấp, xe con, xe khách, xe tải.",
+            "Xe con, xe tải, xe khách, xe công an đi làm nhiệm vụ khẩn cấp."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-536.jpeg"
+    },
+    {
+        "id": 537,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Những hướng nào ô tô tải được phép đi?",
+        "answers": [
+            "Cả bốn hướng.",
+            "Hướng 1, 2 và 3.",
+            "Hướng 1 và 4.",
+            "Hướng 1, 3 và 4."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-537.jpeg"
+    },
+    {
+        "id": 538,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Trong hình dưới đây, xe nào chấp hành đúng quy tắc giao thông?",
+        "answers": [
+            "Chỉ xe khách, xe mô tô.",
+            "Tất cả các loại xe trên.",
+            "Không xe nào chấp hành đúng quy tắc giao thông."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-538.jpeg"
+    },
+    {
+        "id": 539,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo hướng mũi tên, những hướng nào xe mô tô được phép đi?",
+        "answers": [
+            "Cả ba hướng.",
+            "Hướng 1 và 2.",
+            "Hướng 1 và 3.",
+            "Hướng 2 và 3."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-539.jpeg"
+    },
+    {
+        "id": 540,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Trong trường hợp này, thứ tự xe đi như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe công an đi làm nhiệm vụ khẩn cấp, xe quân sự đi làm nhiệm vụ khẩn cấp, xe con + xe mô tô.",
+            "Xe quân sự đi làm nhiệm vụ khẩn cấp, xe công an đi làm nhiệm vụ khẩn cấp, xe con + xe mô tô.",
+            "Xe mô tô + xe con, xe quân sự đi làm nhiệm vụ khẩn cấp, xe công an đi làm nhiệm vụ khẩn cấp."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-540.jpeg"
+    },
+    {
+        "id": 541,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào phải nhường đường là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe A.",
+            "Xe B."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-541.jpeg"
+    },
+    {
+        "id": 542,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe con quay đầu đi ngược lại như hình vẽ dưới có vi phạm quy tắc giao thông không?",
+        "answers": [
+            "Không vi phạm.",
+            "Vi phạm."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-542.jpeg"
+    },
+    {
+        "id": 543,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Trong hình dưới, những xe nào vi phạm quy tắc giao thông?",
+        "answers": [
+            "Xe con (E), xe mô tô (C).",
+            "Xe tải (A), xe mô tô (D).",
+            "Xe khách (B), xe mô tô (C).",
+            "Xe khách (B), xe mô tô (D)."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-543.jpeg"
+    },
+    {
+        "id": 544,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Để điều khiển cho xe đi thẳng, người lái xe phải làm gì là đúng quy tắc giao thông?",
+        "answers": [
+            "Nhường xe con rẽ trái trước.",
+            "Đi thẳng không nhường."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-544.jpeg"
+    },
+    {
+        "id": 545,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Người lái xe điều khiển xe đi theo hướng nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Chỉ hướng 2.",
+            "Hướng 1 và 2.",
+            "Tất cả các hướng trừ hướng 3.",
+            "Tất cả các hướng trừ hướng 4."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-545.jpeg"
+    },
+    {
+        "id": 546,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào phải nhường đường là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe con (A).",
+            "Xe con (B)."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-546.jpeg"
+    },
+    {
+        "id": 547,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Người lái xe điều khiển xe rẽ trái như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Rẽ trái ngay trước xe buýt.",
+            "Rẽ trái trước xe tải.",
+            "Nhường đường cho xe buýt và xe tải."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-547.jpeg"
+    },
+    {
+        "id": 548,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Trong hình dưới, những xe nào vi phạm quy tắc giao thông?",
+        "answers": [
+            "Xe con (B), xe mô tô (C).",
+            "Xe con (A), xe mô tô (C).",
+            "Xe con (E), xe mô tô (D).",
+            "Tất cả các loại xe trên."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-548.jpeg"
+    },
+    {
+        "id": 549,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào đi trước là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe của bạn.",
+            "Xe tải."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-549.jpeg"
+    },
+    {
+        "id": 550,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Người lái xe có thể quay đầu xe như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Quay đầu theo hướng A.",
+            "Quay đầu theo hướng B.",
+            "Cấm quay đầu."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-550.jpeg"
+    },
+    {
+        "id": 551,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe con và xe tải, xe của bạn.",
+            "Xe của bạn, xe tải, xe con.",
+            "Xe của bạn và xe con, xe tải.",
+            "Xe của bạn, xe tải + xe con."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-551.jpeg"
+    },
+    {
+        "id": 552,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Khi muốn vượt xe tải, người lái xe phải làm gì là đúng quy tắc giao thông?",
+        "answers": [
+            "Tăng tốc cho xe chạy vượt qua.",
+            "Bật tín hiệu báo hiệu bằng đèn hoặc còi, khi đủ điều kiện an toàn, tăng tốc cho xe chạy vượt qua.",
+            "Đánh lái sang làn bên trái và tăng tốc cho xe chạy vượt qua."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-552.jpeg"
+    },
+    {
+        "id": 553,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo tín hiệu đèn, xe nào phải dừng lại là đúng quy tắc giao thông?",
+        "answers": [
+            "Xe khách, xe mô tô.",
+            "Xe tải, xe mô tô.",
+            "Xe con, xe tải."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-553.jpeg"
+    },
+    {
+        "id": 554,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Trong hình dưới, những xe nào chấp hành quy tắc giao thông?",
+        "answers": [
+            "Xe tải ( D), xe con (B).",
+            "Xe con (A), xe con (C), xe con (E), xe buýt (G).",
+            "Xe con (A), xe con (B), xe tải (D)."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-554.jpeg"
+    },
+    {
+        "id": 555,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Người lái xe có được phép vượt xe tải để đi thẳng trong trường hợp này không?",
+        "answers": [
+            "Được vượt.",
+            "Cấm vượt."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-555.jpeg"
+    },
+    {
+        "id": 556,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Bạn có được phép vượt xe mô tô phía trước không?",
+        "answers": [
+            "Cho phép.",
+            "Không được vượt."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-556.jpeg"
+    },
+    {
+        "id": 557,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Người lái xe dừng tại vị trí nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Vị trí A và B.",
+            "Vị trí A và C.",
+            "Vị trí B và C.",
+            "Cả ba vị trí A, B, C."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-557.jpeg"
+    },
+    {
+        "id": 558,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Bạn được dừng xe ở vị trí nào trong tình huống này?",
+        "answers": [
+            "Được phép dừng ở vị trí A.",
+            "Được phép dừng ở vị trí B.",
+            "Được phép dừng ở vị trí A và B.",
+            "Không được dừng."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-558.jpeg"
+    },
+    {
+        "id": 559,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Theo tín hiệu đèn của xe cơ giới, xe nào vi phạm quy tắc giao thông?",
+        "answers": [
+            "Xe mô tô.",
+            "Xe ô tô con.",
+            "Không xe nào vi phạm.",
+            "Cả hai xe."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-559.jpeg"
+    },
+    {
+        "id": 560,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Các xe đi theo hướng mũi tên, xe nào vi phạm quy tắc giao thông?",
+        "answers": [
+            "Xe con.",
+            "Xe tải.",
+            "Xe con, xe tải."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-560.jpeg"
+    },
+    {
+        "id": 561,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Các xe đi theo hướng mũi tên, những xe nào vi phạm quy tắc giao thông?",
+        "answers": [
+            "Xe tải, xe con.",
+            "Xe khách, xe con.",
+            "Xe khách, xe tải."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-561.jpeg"
+    },
+    {
+        "id": 562,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Các xe đi theo hướng mũi tên, xe nào vi phạm quy tắc giao thông?",
+        "answers": [
+            "Xe con, xe tải, xe khách.",
+            "Xe tải, xe khách, xe mô tô.",
+            "Xe khách, xe mô tô, xe con.",
+            "Cả bốn xe."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-562.jpeg"
+    },
+    {
+        "id": 563,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Các xe đi theo hướng mũi tên, xe nào vi phạm quy tắc giao thông?",
+        "answers": [
+            "Xe khách, xe tải.",
+            "Xe khách, xe con.",
+            "Xe con, xe tải.",
+            "Xe khách, xe tải, xe con."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-563.jpeg"
+    },
+    {
+        "id": 564,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Trong tình huống dưới đây, để tránh xe phía trước bị hỏng đột xuất trên đường, người lái xe phải làm gì?",
+        "answers": [
+            "Đánh lái sang trái cho xe vượt qua.",
+            "Quan sát phía trước, phía sau, khi đủ điều kiện an toàn, bật tín hiệu bằng đèn hoặc còi rồi cho xe chạy vượt qua.",
+            "Cấm vượt."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-564.jpeg"
+    },
+    {
+        "id": 565,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Các xe đi theo hướng mũi tên, xe nào chấp hành đúng quy tắc giao thông?",
+        "answers": [
+            "Xe tải, xe mô tô.",
+            "Xe khách, xe mô tô.",
+            "Xe tải, xe con.",
+            "Xe mô tô, xe con."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-565.jpeg"
+    },
+    {
+        "id": 566,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Trong hình dưới, những xe nào vi phạm quy tắc giao thông?",
+        "answers": [
+            "Xe con (A), xe con (B), xe tải (D).",
+            "Xe tải (D), xe con (E), xe buýt (G).",
+            "Xe tải ( D), xe con (B).",
+            "Xe con (B), xe con (C)."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-566.jpeg"
+    },
+    {
+        "id": 567,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Các xe đi theo thứ tự nào là đúng quy tắc giao thông đường bộ?",
+        "answers": [
+            "Xe của bạn, xe mô tô, xe con.",
+            "Xe con, xe của bạn, xe mô tô.",
+            "Xe mô tô, xe con, xe của bạn."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-567.jpeg"
+    },
+    {
+        "id": 568,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Các xe đi theo thứ tự nào là đúng quy tắc giao thông đường bộ?",
+        "answers": [
+            "Xe của bạn, xe mô tô, xe con.",
+            "Xe con, xe của bạn, xe mô tô.",
+            "Xe mô tô, xe con, xe của bạn."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-568.jpeg"
+    },
+    {
+        "id": 569,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào phải dừng lại trong trường hợp này?",
+        "answers": [
+            "Xe con.",
+            "Xe của bạn.",
+            "Cả hai xe."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-569.jpeg"
+    },
+    {
+        "id": 570,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe của bạn được đi theo hướng nào trong trường hợp này?",
+        "answers": [
+            "Đi thẳng, rẽ trái.",
+            "Đi thẳng, rẽ phải.",
+            "Rẽ trái.",
+            "Đi thẳng, rẽ phải, rẽ trái."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-570.jpeg"
+    },
+    {
+        "id": 571,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe của bạn được đi theo hướng nào trong trường hợp này?",
+        "answers": [
+            "Chuyển sang làn đường bên phải và rẽ phải.",
+            "Dừng lại trước vạch dừng và rẽ phải khi đèn xanh.",
+            "Dừng lại trước vạch dừng và đi thẳng hoặc rẽ trái khi đèn xanh."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-571.jpeg"
+    },
+    {
+        "id": 572,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Bạn xử lý như thế nào trong trường hợp này?",
+        "answers": [
+            "Tăng tốc độ, rẽ phải trước xe tải và xe đạp.",
+            "Giảm tốc độ, rẽ phải sau xe tải và xe đạp.",
+            "Tăng tốc độ, rẽ phải trước xe đạp."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-572.jpeg"
+    },
+    {
+        "id": 573,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Bạn xử lý như thế nào trong trường hợp này?",
+        "answers": [
+            "Tăng tốc độ, rẽ phải trước xe con màu xanh phía trước và người đi bộ.",
+            "Giảm tốc độ, để người đi bộ qua đường và rẽ phải trước xe con màu xanh.",
+            "Giảm tốc độ, để người đi bộ qua đường và rẽ phải sau xe con màu xanh."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-573.jpeg"
+    },
+    {
+        "id": 574,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Bạn xử lý như thế nào trong trường hợp này?",
+        "answers": [
+            "Nhường đường cho xe khách và đi trước xe đạp.",
+            "Nhường đường cho xe đạp và đi trước xe khách.",
+            "Nhường đường cho xe đạp và xe khách."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-574.jpeg"
+    },
+    {
+        "id": 575,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào phải nhường đường trong trường hợp này?",
+        "answers": [
+            "Xe con.",
+            "Xe tải.",
+            "Xe của bạn."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-575.jpeg"
+    },
+    {
+        "id": 576,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào phải nhường đường trong trường hợp này?",
+        "answers": [
+            "Xe đi ngược chiều.",
+            "Xe của bạn."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-576.jpeg"
+    },
+    {
+        "id": 577,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Bạn xử lý như thế nào khi lái xe ô tô vượt qua đoàn người đi xe đạp có tổ chức?",
+        "answers": [
+            "Tăng tốc độ, chuyển sang làn đường bên trái để vượt.",
+            "Không được vượt những người đi xe đạp."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-577.jpeg"
+    },
+    {
+        "id": 578,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Phía trước có một xe đang lùi vào nơi đỗ, xe con phía trước đang chuyển sang làn đường bên trái, bạn xử lý như thế nào trong trường hợp này?",
+        "answers": [
+            "Nếu phía sau không có xe xin vượt, chuyển sang làn đường bên trái.",
+            "Nếu phía sau có xe xin vượt, thì giảm tốc độ, ở lại làn đường, dừng lại khi cần thiết.",
+            "Tăng tốc độ trên làn đường của mình và vượt xe con.",
+            "Ý 1 và ý 2."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-578.jpeg"
+    },
+    {
+        "id": 579,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Bạn xử lý như thế nào khi xe phía trước đang lùi ra khỏi nơi đỗ?",
+        "answers": [
+            "Chuyển sang nửa đường bên trái để đi tiếp.",
+            "Bấm còi, nháy đèn báo hiệu và đi tiếp.",
+            "Giảm tốc độ, dừng lại nhường đường."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-579.jpeg"
+    },
+    {
+        "id": 580,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Phía trước có một xe màu xanh đang vượt xe màu vàng trên làn đường của bạn, bạn xử lý như thế nào trong trường hợp này?",
+        "answers": [
+            "Phanh xe giảm tốc độ và đi sát lề đường bên phải.",
+            "Bấm còi, nháy đèn báo hiệu, giữ nguyên tốc độ và đi tiếp.",
+            "Phanh xe giảm tốc độ và đi sát vào lề đường bên trái."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-580.jpeg"
+    },
+    {
+        "id": 581,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe tải phía trước có tín hiệu xin chuyển làn đường, bạn xử lý như thế nào trong trường hợp này?",
+        "answers": [
+            "Bật tín hiệu xin chuyển làn đường sang trái để vượt xe tải.",
+            "Phanh xe giảm tốc độ chờ xe tải phía trước chuyển làn đường.",
+            "Bấm còi báo hiệu và vượt qua xe tải trên làn đường của mình."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-581.jpeg"
+    },
+    {
+        "id": 582,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Bạn xử lý như thế nào trong trường hợp này?",
+        "answers": [
+            "Tăng tốc độ và đi thẳng qua ngã tư.",
+            "Dừng xe trước vạch dừng.",
+            "Giảm tốc độ và đi thẳng qua ngã tư."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-582.jpeg"
+    },
+    {
+        "id": 583,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Các xe đi theo thứ tự nào là đúng quy tắc giao thông đường bộ?",
+        "answers": [
+            "Xe của bạn, xe mô tô, xe đạp.",
+            "Xe mô tô, xe đạp, xe của bạn.",
+            "Xe đạp, xe mô tô, xe của bạn."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-583.jpeg"
+    },
+    {
+        "id": 584,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Các xe đi theo thứ tự nào là đúng quy tắc giao thông đường bộ?",
+        "answers": [
+            "Xe của bạn, xe tải, xe con.",
+            "Xe con, xe tải, xe của bạn.",
+            "Xe tải, xe của bạn, xe con.",
+            "Xe của bạn, xe con, xe tải."
+        ],
+        "correct": 3,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-584.jpeg"
+    },
+    {
+        "id": 585,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào phải nhường đường trong trường hợp này?",
+        "answers": [
+            "Xe của bạn.",
+            "Xe con."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-585.jpeg"
+    },
+    {
+        "id": 586,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào phải nhường đường trong trường hợp này?",
+        "answers": [
+            "Xe con.",
+            "Xe của bạn."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-586.jpeg"
+    },
+    {
+        "id": 587,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Bạn xử lý như thế nào trong trường hợp này?",
+        "answers": [
+            "Tăng tốc độ, đi qua vạch người đi bộ sang đường, để người đi bộ sang đường sau.",
+            "Giảm tốc độ, đi qua vạch người đi bộ sang đường, để người đi bộ sang đường sau.",
+            "Giảm tốc độ, để người đi bộ sang đường trước, sau đó cho xe đi qua vạch người đi bộ sang đường."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-587.jpeg"
+    },
+    {
+        "id": 588,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào được đi trước trong trường hợp này?",
+        "answers": [
+            "Xe con.",
+            "Xe của bạn."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-588.jpeg"
+    },
+    {
+        "id": 589,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Các xe đi theo thứ tự nào là đúng quy tắc giao thông đường bộ?",
+        "answers": [
+            "Xe con, xe tải, xe của bạn.",
+            "Xe tải, xe con, xe của bạn.",
+            "Xe tải, xe của bạn, xe con."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-589.jpeg"
+    },
+    {
+        "id": 590,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Bạn xử lý như thế nào trong trường hợp này?",
+        "answers": [
+            "Tăng tốc độ cho xe lấn sang phần đường bên trái.",
+            "Giảm tốc độ cho xe lấn sang phần đường bên trái.",
+            "Giảm tốc độ cho xe đi sát phần đường bên phải."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-590.jpeg"
+    },
+    {
+        "id": 591,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào được đi trước trong trường hợp này?",
+        "answers": [
+            "Xe tải.",
+            "Xe của bạn."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-591.jpeg"
+    },
+    {
+        "id": 592,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe nào dừng đúng theo quy tắc giao thông?",
+        "answers": [
+            "Xe con.",
+            "Xe mô tô.",
+            "Cả 2 xe đều đúng."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-592.jpeg"
+    },
+    {
+        "id": 593,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Các xe đi theo thứ tự nào là đúng quy tắc giao thông đường bộ?",
+        "answers": [
+            "Xe tải, xe đạp, xe của bạn.",
+            "Xe của bạn, xe đạp, xe tải.",
+            "Xe của bạn, xe tải, xe đạp."
+        ],
+        "correct": 2,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-593.jpeg"
+    },
+    {
+        "id": 594,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Để điều khiển xe rẽ trái, bạn chọn hướng đi nào dưới đây?",
+        "answers": [
+            "Hướng 1.",
+            "Hướng 2.",
+            "Cả hai hướng đều được."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-594.jpeg"
+    },
+    {
+        "id": 595,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Khi gặp xe ngược chiều bật đèn pha trong tình huống dưới dây, bạn xử lý như thế nào?",
+        "answers": [
+            "Bật đèn chiếu xa, tăng tốc độ vượt xe cùng chiều.",
+            "Giữ nguyên đèn chiếu gần, giảm tốc độ, đi sau xe phía trước.",
+            "Giữ nguyên đèn chiếu gần, tăng tốc độ vượt xe cùng chiều."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-595.jpeg"
+    },
+    {
+        "id": 596,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Xe của bạn đang di chuyển gần đến khu vực giao cắt với đường sắt, khi rào chắn đang dịch chuyển, bạn điều khiển xe như thế nào là đúng quy tắc giao thông?",
+        "answers": [
+            "Quan sát nếu thấy không có tàu thì tăng tốc cho xe vượt qua đường sắt.",
+            "Dừng lại trước rào chắn một khoảng cách an toàn.",
+            "Ra tín hiệu, yêu cầu người gác chắn tàu kéo chậm barie để xe bạn qua."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-596.jpeg"
+    },
+    {
+        "id": 597,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Trong tình huống dưới đây, xe con màu đỏ nhập làn đường cao tốc theo hướng mũi tên là đúng hay sai?",
+        "answers": [
+            "Đúng.",
+            "Sai."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-597.jpeg"
+    },
+    {
+        "id": 598,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Trong tình huống dưới đây, xe con màu đỏ có được phép vượt khi xe con màu xanh đang vượt xe tải hay không?",
+        "answers": [
+            "Được vượt.",
+            "Không được vượt."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-598.jpeg"
+    },
+    {
+        "id": 599,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Trong tình huống dưới đây, xe con màu vàng vượt xe con màu đỏ là đúng quy tắc giao thông hay không?",
+        "answers": [
+            "Đúng.",
+            "Không đúng."
+        ],
+        "correct": 0,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-599.jpeg"
+    },
+    {
+        "id": 600,
+        "category": "Giải thế sa hình và kỹ năng xử lý tình huống giao thông",
+        "question": "Trong tình huống dưới đây, xe đầu kéo kéo rơ moóc (xe container) đang rẽ phải, xe con màu xanh và xe máy phía sau xe container đi như thế nào để bảo đảm an toàn?",
+        "answers": [
+            "Vượt về phía bên phải để đi tiếp.",
+            "Giảm tốc độ chờ xe container rẽ xong rồi tiếp tục đi.",
+            "Vượt về phía bên trái để đi tiếp."
+        ],
+        "correct": 1,
+        "explanation": "",
+        "isCritical": false,
+        "image": "https://laihay.vn/wp-content/uploads/2025/05/hinh-cau-hoi-600.jpeg"
+    }
 ];
